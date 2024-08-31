@@ -1,0 +1,24 @@
+from __future__ import annotations
+
+from dataclasses import dataclass
+from typing import Literal
+
+from ..types import ForumTopicIcon, ForumTopicInfo
+from .base import BaseMethod
+
+
+@dataclass(kw_only=True)
+class CreateForumTopic(BaseMethod):
+    """
+    Creates a topic in a forum supergroup chat; requires can_manage_topics administrator or can_create_topics member right in the supergroup
+    """
+
+    __type__: Literal["createForumTopic"] = "createForumTopic"
+    __returning_type__ = ForumTopicInfo
+
+    chat_id: int
+    """Identifier of the chat"""
+    name: str
+    """Name of the topic; 1-128 characters"""
+    icon: ForumTopicIcon
+    """Icon of the topic. Icon color must be one of 0x6FB9F0, 0xFFD67E, 0xCB86DB, 0x8EEE98, 0xFF93B2, or 0xFB6F5F. Telegram Premium users can use any custom emoji as topic icon, other users can use only a custom emoji returned by getForumTopicDefaultIcons"""

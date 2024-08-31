@@ -1,0 +1,15 @@
+from __future__ import annotations
+
+from dataclasses import dataclass
+from typing import Literal
+
+from .base import BaseType
+
+
+@dataclass(kw_only=True)
+class ChatMembersFilterRestricted(BaseType):
+    """
+    Returns users under certain restrictions in the chat; can be used only by administrators in a supergroup
+    """
+
+    __type__: Literal["chatMembersFilterRestricted"] = "chatMembersFilterRestricted"
