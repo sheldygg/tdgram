@@ -6,7 +6,7 @@ from typing import TYPE_CHECKING, Literal
 from .base import BaseType
 
 if TYPE_CHECKING:
-    from . import PremiumGiveawayParameters
+    from . import GiveawayParameters
 
 
 @dataclass(kw_only=True)
@@ -17,7 +17,7 @@ class StorePaymentPurposePremiumGiveaway(BaseType):
 
     __type__: Literal["storePaymentPurposePremiumGiveaway"] = "storePaymentPurposePremiumGiveaway"
 
-    parameters: PremiumGiveawayParameters
+    parameters: GiveawayParameters
     """Giveaway parameters"""
     currency: str
     """ISO 4217 currency code of the payment currency"""

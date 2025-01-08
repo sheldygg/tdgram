@@ -10,7 +10,7 @@ from .base import BaseMethod
 @dataclass(kw_only=True)
 class ReuseStarSubscription(BaseMethod):
     """
-    Reuses an active subscription and joins the subscribed chat again
+    Reuses an active Telegram Star subscription to a channel chat and joins the chat again
     """
 
     __type__: Literal["reuseStarSubscription"] = "reuseStarSubscription"

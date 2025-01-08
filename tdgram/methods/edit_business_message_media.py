@@ -10,7 +10,7 @@ from .base import BaseMethod
 @dataclass(kw_only=True)
 class EditBusinessMessageMedia(BaseMethod):
     """
-    Edits the content of a message with an animation, an audio, a document, a photo or a video in a message sent on behalf of a business account; for bots only
+    Edits the media content of a message with a text, an animation, an audio, a document, a photo or a video in a message sent on behalf of a business account; for bots only
     """
 
     __type__: Literal["editBusinessMessageMedia"] = "editBusinessMessageMedia"

@@ -6,7 +6,7 @@ from typing import TYPE_CHECKING, Literal
 from .base import BaseType
 
 if TYPE_CHECKING:
-    from . import ReportChatSponsoredMessageOption
+    from . import ReportOption
 
 
 @dataclass(kw_only=True)
@@ -21,5 +21,5 @@ class ReportChatSponsoredMessageResultOptionRequired(BaseType):
 
     title: str
     """Title for the option choice"""
-    options: list[ReportChatSponsoredMessageOption]
+    options: list[ReportOption]
     """List of available options"""

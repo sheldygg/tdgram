@@ -47,7 +47,7 @@ class Message(BaseType):
     is_from_offline: bool
     """True, if the message was sent because of a scheduled action by the message sender, for example, as away, or greeting service message"""
     can_be_saved: bool
-    """True, if content of the message can be saved locally or copied"""
+    """True, if content of the message can be saved locally or copied using inputMessageForwarded or forwardMessages with copy options"""
     has_timestamped_media: bool
     """True, if media timestamp entities refers to a media in this message as opposed to a media in the replied message"""
     is_channel_post: bool
@@ -57,9 +57,9 @@ class Message(BaseType):
     contains_unread_mention: bool
     """True, if the message contains an unread mention for the current user"""
     date: int
-    """Point in time (Unix timestamp) when the message was sent"""
+    """Point in time (Unix timestamp) when the message was sent; 0 for scheduled messages"""
     edit_date: int
-    """Point in time (Unix timestamp) when the message was last edited"""
+    """Point in time (Unix timestamp) when the message was last edited; 0 for scheduled messages"""
     forward_info: MessageForwardInfo | None = None
     """Information about the initial message sender; may be null if none or unknown"""
     import_info: MessageImportInfo | None = None

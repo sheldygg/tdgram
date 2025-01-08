@@ -17,7 +17,7 @@ from .methods import (
     AddLogMessage,
     AddMessageReaction,
     AddNetworkStatistics,
-    AddPaidMessageReaction,
+    AddPendingPaidMessageReaction,
     AddProxy,
     AddQuickReplyShortcutInlineQueryResultMessage,
     AddQuickReplyShortcutMessage,
@@ -69,6 +69,7 @@ from .methods import (
     CheckQuickReplyShortcutName,
     CheckRecoveryEmailAddressCode,
     CheckStickerSetName,
+    CheckWebAppFileDownload,
     CleanFileName,
     ClearAllDraftMessages,
     ClearAutosaveSettingsExceptions,
@@ -86,8 +87,10 @@ from .methods import (
     CloseSecretChat,
     CloseStory,
     CloseWebApp,
+    CommitPendingPaidMessageReactions,
     ConfirmQrCodeAuthentication,
     ConfirmSession,
+    ConnectAffiliateProgram,
     CreateBasicGroupChat,
     CreateBusinessChatLink,
     CreateCall,
@@ -96,6 +99,7 @@ from .methods import (
     CreateChatInviteLink,
     CreateChatSubscriptionInviteLink,
     CreateForumTopic,
+    CreateGroupCall,
     CreateInvoiceLink,
     CreateNewBasicGroupChat,
     CreateNewSecretChat,
@@ -141,6 +145,7 @@ from .methods import (
     DisableAllSupergroupUsernames,
     DisableProxy,
     DiscardCall,
+    DisconnectAffiliateProgram,
     DisconnectAllWebsites,
     DisconnectWebsite,
     DownloadFile,
@@ -173,6 +178,7 @@ from .methods import (
     EditStarSubscription,
     EditStory,
     EditStoryCover,
+    EditUserStarSubscription,
     EnableProxy,
     EndGroupCall,
     EndGroupCallRecording,
@@ -194,6 +200,7 @@ from .methods import (
     GetAutoDownloadSettingsPresets,
     GetAutosaveSettings,
     GetAvailableChatBoostSlots,
+    GetAvailableGifts,
     GetBackgroundUrl,
     GetBankCardInfo,
     GetBasicGroup,
@@ -260,6 +267,8 @@ from .methods import (
     GetCloseFriends,
     GetCollectibleItemInfo,
     GetCommands,
+    GetConnectedAffiliateProgram,
+    GetConnectedAffiliatePrograms,
     GetConnectedWebsites,
     GetContacts,
     GetCountries,
@@ -294,7 +303,10 @@ from .methods import (
     GetForumTopicLink,
     GetForumTopics,
     GetGameHighScores,
+    GetGiftUpgradePreview,
+    GetGiveawayInfo,
     GetGreetingStickers,
+    GetGrossingWebAppBots,
     GetGroupCall,
     GetGroupCallInviteLink,
     GetGroupCallStreams,
@@ -348,6 +360,7 @@ from .methods import (
     GetNetworkStatistics,
     GetNewChatPrivacySettings,
     GetOption,
+    GetOwnedBots,
     GetOwnedStickerSets,
     GetPassportAuthorizationForm,
     GetPassportAuthorizationFormAvailableElements,
@@ -358,15 +371,15 @@ from .methods import (
     GetPhoneNumberInfo,
     GetPhoneNumberInfoSync,
     GetPollVoters,
-    GetPopularWebAppBots,
     GetPreferredCountryLanguage,
     GetPremiumFeatures,
     GetPremiumGiftCodePaymentOptions,
-    GetPremiumGiveawayInfo,
+    GetPremiumInfoSticker,
     GetPremiumLimit,
     GetPremiumState,
     GetPremiumStickerExamples,
     GetPremiumStickers,
+    GetPreparedInlineMessage,
     GetProxies,
     GetProxyLink,
     GetPushReceiverId,
@@ -393,6 +406,7 @@ from .methods import (
     GetSecretChat,
     GetStarAdAccountUrl,
     GetStarGiftPaymentOptions,
+    GetStarGiveawayPaymentOptions,
     GetStarPaymentOptions,
     GetStarRevenueStatistics,
     GetStarSubscriptions,
@@ -400,8 +414,10 @@ from .methods import (
     GetStarWithdrawalUrl,
     GetStatisticalGraph,
     GetStickerEmojis,
+    GetStickerOutline,
     GetStickers,
     GetStickerSet,
+    GetStickerSetName,
     GetStorageStatistics,
     GetStorageStatisticsFast,
     GetStory,
@@ -430,6 +446,8 @@ from .methods import (
     GetUser,
     GetUserChatBoosts,
     GetUserFullInfo,
+    GetUserGift,
+    GetUserGifts,
     GetUserLink,
     GetUserPrivacySettingRules,
     GetUserProfilePhotos,
@@ -437,6 +455,7 @@ from .methods import (
     GetVideoChatAvailableParticipants,
     GetVideoChatRtmpUrl,
     GetWebAppLinkUrl,
+    GetWebAppPlaceholder,
     GetWebAppUrl,
     GetWebPageInstantView,
     HideContactCloseBirthdays,
@@ -447,7 +466,7 @@ from .methods import (
     JoinChat,
     JoinChatByInviteLink,
     JoinGroupCall,
-    LaunchPrepaidPremiumGiveaway,
+    LaunchPrepaidGiveaway,
     LeaveChat,
     LeaveGroupCall,
     LoadActiveStories,
@@ -494,6 +513,7 @@ from .methods import (
     RemoveFileFromDownloads,
     RemoveInstalledBackground,
     RemoveMessageReaction,
+    RemoveMessageSenderBotVerification,
     RemoveNotification,
     RemoveNotificationGroup,
     RemovePendingPaidMessageReactions,
@@ -543,13 +563,15 @@ from .methods import (
     RevokeChatInviteLink,
     RevokeGroupCallInviteLink,
     SaveApplicationLogEvent,
+    SavePreparedInlineMessage,
+    SearchAffiliatePrograms,
     SearchBackground,
     SearchCallMessages,
+    SearchChatAffiliateProgram,
     SearchChatMembers,
     SearchChatMessages,
     SearchChatRecentLocationMessages,
     SearchChats,
-    SearchChatsNearby,
     SearchChatsOnServer,
     SearchContacts,
     SearchEmojis,
@@ -575,6 +597,7 @@ from .methods import (
     SearchUserByPhoneNumber,
     SearchUserByToken,
     SearchWebApp,
+    SellGift,
     SendAuthenticationFirebaseSms,
     SendBotStartMessage,
     SendBusinessMessage,
@@ -586,6 +609,7 @@ from .methods import (
     SendChatAction,
     SendCustomRequest,
     SendEmailAddressVerificationCode,
+    SendGift,
     SendInlineQueryResultMessage,
     SendMessage,
     SendMessageAlbum,
@@ -622,6 +646,7 @@ from .methods import (
     SetBusinessStartPage,
     SetChatAccentColor,
     SetChatActiveStoriesList,
+    SetChatAffiliateProgram,
     SetChatAvailableReactions,
     SetChatBackground,
     SetChatClientData,
@@ -661,7 +686,6 @@ from .methods import (
     SetGroupCallTitle,
     SetInactiveSessionTtl,
     SetInlineGameScore,
-    SetLocation,
     SetLoginEmailAddress,
     SetLogStream,
     SetLogTagVerbosityLevel,
@@ -670,6 +694,7 @@ from .methods import (
     SetMessageFactCheck,
     SetMessageReactions,
     SetMessageSenderBlockList,
+    SetMessageSenderBotVerification,
     SetName,
     SetNetworkType,
     SetNewChatPrivacySettings,
@@ -703,6 +728,7 @@ from .methods import (
     SetSupergroupUnrestrictBoostCount,
     SetSupergroupUsername,
     SetTdlibParameters,
+    SetUserEmojiStatus,
     SetUsername,
     SetUserPersonalProfilePhoto,
     SetUserPrivacySettingRules,
@@ -734,6 +760,7 @@ from .methods import (
     TestSquareInt,
     TestUseUpdate,
     ToggleAllDownloadsArePaused,
+    ToggleBotCanManageEmojiStatus,
     ToggleBotIsAddedToAttachmentMenu,
     ToggleBotUsernameIsActive,
     ToggleBusinessConnectedBotChatIsPaused,
@@ -748,6 +775,7 @@ from .methods import (
     ToggleForumTopicIsClosed,
     ToggleForumTopicIsPinned,
     ToggleGeneralForumTopicIsHidden,
+    ToggleGiftIsSaved,
     ToggleGroupCallEnabledStartNotification,
     ToggleGroupCallIsMyVideoEnabled,
     ToggleGroupCallIsMyVideoPaused,
@@ -773,12 +801,14 @@ from .methods import (
     ToggleSupergroupUsernameIsActive,
     ToggleUsernameIsActive,
     TransferChatOwnership,
+    TransferGift,
     TranslateMessageText,
     TranslateText,
     UnpinAllChatMessages,
     UnpinAllMessageThreadMessages,
     UnpinChatMessage,
     UpgradeBasicGroupChatToSupergroupChat,
+    UpgradeGift,
     UploadStickerFile,
     ValidateOrderInfo,
     ViewMessages,
@@ -790,6 +820,9 @@ from .tdjson import BaseTDJsonClient, TDJsonClient
 from .types import (
     AccountTtl,
     AddedReactions,
+    AffiliateProgramParameters,
+    AffiliateProgramSortOrder,
+    AffiliateType,
     AnimatedEmoji,
     Animations,
     ArchiveChatListSettings,
@@ -879,12 +912,13 @@ from .types import (
     ChatRevenueStatistics,
     ChatRevenueTransactions,
     Chats,
-    ChatsNearby,
     ChatStatistics,
     CheckChatUsernameResult,
     CheckStickerSetNameResult,
     CollectibleItemInfo,
     CollectibleItemType,
+    ConnectedAffiliateProgram,
+    ConnectedAffiliatePrograms,
     ConnectedWebsites,
     Contact,
     Count,
@@ -916,6 +950,7 @@ from .types import (
     ForumTopicIcon,
     ForumTopicInfo,
     ForumTopics,
+    FoundAffiliatePrograms,
     FoundChatBoosts,
     FoundChatMessages,
     FoundFileDownloads,
@@ -926,6 +961,10 @@ from .types import (
     FoundUsers,
     FoundWebApp,
     GameHighScores,
+    Gifts,
+    GiftUpgradePreview,
+    GiveawayInfo,
+    GiveawayParameters,
     GroupCall,
     GroupCallId,
     GroupCallStreams,
@@ -997,6 +1036,7 @@ from .types import (
     Ok,
     OptionValue,
     OrderInfo,
+    Outline,
     PassportAuthorizationForm,
     PassportElement,
     PassportElements,
@@ -1013,12 +1053,12 @@ from .types import (
     PremiumFeatures,
     PremiumGiftCodeInfo,
     PremiumGiftCodePaymentOptions,
-    PremiumGiveawayInfo,
-    PremiumGiveawayParameters,
     PremiumLimit,
     PremiumLimitType,
     PremiumSource,
     PremiumState,
+    PreparedInlineMessage,
+    PreparedInlineMessageId,
     Proxies,
     Proxy,
     ProxyType,
@@ -1033,14 +1073,17 @@ from .types import (
     RecommendedChatFolders,
     RecoveryEmailAddress,
     ReplyMarkup,
+    ReportChatResult,
     ReportChatSponsoredMessageResult,
     ReportReason,
+    ReportStoryResult,
     ResendCodeReason,
     ResetPasswordResult,
     RtmpUrl,
     SavedMessagesTags,
     ScopeAutosaveSettings,
     ScopeNotificationSettings,
+    SearchMessagesChatTypeFilter,
     SearchMessagesFilter,
     Seconds,
     SecretChat,
@@ -1049,6 +1092,7 @@ from .types import (
     Sessions,
     ShippingOption,
     SponsoredMessages,
+    StarGiveawayPaymentOptions,
     StarPaymentOptions,
     StarRevenueStatistics,
     StarSubscriptionPricing,
@@ -1076,6 +1120,7 @@ from .types import (
     Supergroup,
     SupergroupFullInfo,
     SupergroupMembersFilter,
+    TargetChatTypes,
     TemporaryPasswordState,
     TestBytes,
     TestInt,
@@ -1094,8 +1139,11 @@ from .types import (
     TrendingStickerSets,
     Update,
     Updates,
+    UpgradeGiftResult,
     User,
     UserFullInfo,
+    UserGift,
+    UserGifts,
     UserLink,
     UserPrivacySetting,
     UserPrivacySettingRules,
@@ -1103,6 +1151,7 @@ from .types import (
     UserSupportInfo,
     ValidatedOrderInfo,
     WebAppInfo,
+    WebAppOpenParameters,
     WebPageInstantView,
 )
 
@@ -1979,7 +2028,7 @@ class Client:
         request_timeout: float = 10.0,
     ) -> Message:
         """
-        Returns information about a message
+        Returns information about a message. Returns a 404 error if the message doesn't exist
         :param chat_id: Identifier of the chat the message belongs to
         :param message_id: Identifier of the message to get
         :param request_timeout: Request timeout
@@ -1999,7 +2048,7 @@ class Client:
         request_timeout: float = 10.0,
     ) -> Message:
         """
-        Returns information about a message, if it is available without sending network request. This is an offline request
+        Returns information about a message, if it is available without sending network request. Returns a 404 error if message isn't available locally. This is an offline request
         :param chat_id: Identifier of the chat the message belongs to
         :param message_id: Identifier of the message to get
         :param request_timeout: Request timeout
@@ -2038,7 +2087,7 @@ class Client:
         request_timeout: float = 10.0,
     ) -> Message:
         """
-        Returns information about a newest pinned message in the chat
+        Returns information about a newest pinned message in the chat. Returns a 404 error if the message doesn't exist
         :param chat_id: Identifier of the chat the message belongs to
         :param request_timeout: Request timeout
         """
@@ -2319,23 +2368,6 @@ class Client:
             SearchChatsOnServer(
                 query=query,
                 limit=limit,
-            ),
-            request_timeout=request_timeout,
-        )
-
-    async def search_chats_nearby(
-        self,
-        location: Location,
-        request_timeout: float = 10.0,
-    ) -> ChatsNearby:
-        """
-        Returns a list of users and location-based supergroups nearby. The list of users nearby will be updated for 60 seconds after the request by the updates updateUsersNearby.
-        :param location: Current user location
-        :param request_timeout: Request timeout
-        """
-        return await self(
-            SearchChatsNearby(
-                location=location,
             ),
             request_timeout=request_timeout,
         )
@@ -2931,7 +2963,6 @@ class Client:
 
     async def search_messages(
         self,
-        only_in_channels: bool,
         query: str,
         offset: str,
         limit: int,
@@ -2939,11 +2970,11 @@ class Client:
         max_date: int,
         chat_list: ChatList | None = None,
         filter: SearchMessagesFilter | None = None,
+        chat_type_filter: SearchMessagesChatTypeFilter | None = None,
         request_timeout: float = 10.0,
     ) -> FoundMessages:
         """
         Searches for messages in all chats except secret chats. Returns the results in reverse chronological order (i.e., in order of decreasing (date, chat_id, message_id)).
-        :param only_in_channels: Pass true to search only for messages in channels
         :param query: Query to search for
         :param offset: Offset of the first entry to return as received from the previous request; use empty string to get the first chunk of results
         :param limit: The maximum number of messages to be returned; up to 100. For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
@@ -2951,11 +2982,11 @@ class Client:
         :param max_date: If not 0, the maximum date of the messages to return
         :param chat_list: Chat list in which to search messages; pass null to search in all chats regardless of their chat list. Only Main and Archive chat lists are supported
         :param filter: Additional filter for messages to search; pass null to search for all messages. Filters searchMessagesFilterMention, searchMessagesFilterUnreadMention, searchMessagesFilterUnreadReaction, searchMessagesFilterFailedToSend, and searchMessagesFilterPinned are unsupported in this function
+        :param chat_type_filter: Additional filter for type of the chat of the searched messages; pass null to search for messages in all chats
         :param request_timeout: Request timeout
         """
         return await self(
             SearchMessages(
-                only_in_channels=only_in_channels,
                 query=query,
                 offset=offset,
                 limit=limit,
@@ -2963,6 +2994,7 @@ class Client:
                 max_date=max_date,
                 chat_list=chat_list,
                 filter=filter,
+                chat_type_filter=chat_type_filter,
             ),
             request_timeout=request_timeout,
         )
@@ -3096,6 +3128,7 @@ class Client:
 
     async def search_public_stories_by_tag(
         self,
+        story_sender_chat_id: int,
         tag: str,
         offset: str,
         limit: int,
@@ -3103,6 +3136,7 @@ class Client:
     ) -> FoundStories:
         """
         Searches for public stories containing the given hashtag or cashtag. For optimal performance, the number of returned stories is chosen by TDLib and can be smaller than the specified limit
+        :param story_sender_chat_id: Identifier of the chat that posted the stories to search for; pass 0 to search stories in all chats
         :param tag: Hashtag or cashtag to search for
         :param offset: Offset of the first entry to return as received from the previous request; use empty string to get the first chunk of results
         :param limit: The maximum number of stories to be returned; up to 100. For optimal performance, the number of returned stories is chosen by TDLib and can be smaller than the specified limit
@@ -3110,6 +3144,7 @@ class Client:
         """
         return await self(
             SearchPublicStoriesByTag(
+                story_sender_chat_id=story_sender_chat_id,
                 tag=tag,
                 offset=offset,
                 limit=limit,
@@ -3264,7 +3299,7 @@ class Client:
         request_timeout: float = 10.0,
     ) -> Message:
         """
-        Returns the last message sent in a chat no later than the specified date
+        Returns the last message sent in a chat no later than the specified date. Returns a 404 error if such message doesn't exist
         :param chat_id: Chat identifier
         :param date: Point in time (Unix timestamp) relative to which to search for messages
         :param request_timeout: Request timeout
@@ -3410,7 +3445,7 @@ class Client:
         request_timeout: float = 10.0,
     ) -> SponsoredMessages:
         """
-        Returns sponsored messages to be shown in a chat; for channel chats only
+        Returns sponsored messages to be shown in a chat; for channel chats and chats with bots only
         :param chat_id: Identifier of the chat
         :param request_timeout: Request timeout
         """
@@ -3425,18 +3460,24 @@ class Client:
         self,
         chat_id: int,
         message_id: int,
+        is_media_click: bool,
+        from_fullscreen: bool,
         request_timeout: float = 10.0,
     ) -> Ok:
         """
-        Informs TDLib that the user opened the sponsored chat via the button, the name, the photo, or a mention in the sponsored message
+        Informs TDLib that the user opened the sponsored chat via the button, the name, the chat photo, a mention in the sponsored message text, or the media in the sponsored message
         :param chat_id: Chat identifier of the sponsored message
         :param message_id: Identifier of the sponsored message
+        :param is_media_click: Pass true if the media was clicked in the sponsored message
+        :param from_fullscreen: Pass true if the user expanded the video from the sponsored message fullscreen before the click
         :param request_timeout: Request timeout
         """
         return await self(
             ClickChatSponsoredMessage(
                 chat_id=chat_id,
                 message_id=message_id,
+                is_media_click=is_media_click,
+                from_fullscreen=from_fullscreen,
             ),
             request_timeout=request_timeout,
         )
@@ -3832,7 +3873,7 @@ class Client:
         :param message_thread_id: If not 0, the message thread identifier in which the message will be sent; for forum threads only
         :param from_chat_id: Identifier of the chat from which to forward messages
         :param message_ids: Identifiers of the messages to forward. Message identifiers must be in a strictly increasing order. At most 100 messages can be forwarded simultaneously. A message can be forwarded only if messageProperties.can_be_forwarded
-        :param send_copy: Pass true to copy content of the messages without reference to the original sender. Always true if the messages are forwarded to a secret chat or are local
+        :param send_copy: Pass true to copy content of the messages without reference to the original sender. Always true if the messages are forwarded to a secret chat or are local.
         :param remove_caption: Pass true to remove media captions of message copies. Ignored if send_copy is false
         :param options: Options to be used to send the messages; pass null to use default options
         :param request_timeout: Request timeout
@@ -4064,9 +4105,9 @@ class Client:
         request_timeout: float = 10.0,
     ) -> Message:
         """
-        Edits the content of a message with an animation, an audio, a document, a photo or a video, including message caption. If only the caption needs to be edited, use editMessageCaption instead.
+        Edits the media content of a message, including message caption. If only the caption needs to be edited, use editMessageCaption instead.
         :param chat_id: The chat the message belongs to
-        :param message_id: Identifier of the message. Use messageProperties.can_be_edited to check whether the message can be edited
+        :param message_id: Identifier of the message. Use messageProperties.can_edit_media to check whether the message can be edited
         :param input_message_content: New content of the message. Must be one of the following types: inputMessageAnimation, inputMessageAudio, inputMessageDocument, inputMessagePhoto or inputMessageVideo
         :param reply_markup: The new message reply markup; pass null if none; for bots only
         :param request_timeout: Request timeout
@@ -4094,7 +4135,7 @@ class Client:
         Edits the message content caption. Returns the edited message after the edit is completed on the server side
         :param chat_id: The chat the message belongs to
         :param message_id: Identifier of the message. Use messageProperties.can_be_edited to check whether the message can be edited
-        :param show_caption_above_media: Pass true to show the caption above the media; otherwise, the caption will be shown below the media. Can be true only for animation, photo, and video messages
+        :param show_caption_above_media: Pass true to show the caption above the media; otherwise, the caption will be shown below the media. May be true only for animation, photo, and video messages
         :param reply_markup: The new message reply markup; pass null if none; for bots only
         :param caption: New message content caption; 0-getOption('message_caption_length_max') characters; pass null to remove caption
         :param request_timeout: Request timeout
@@ -4196,7 +4237,7 @@ class Client:
         request_timeout: float = 10.0,
     ) -> Ok:
         """
-        Edits the content of a message with an animation, an audio, a document, a photo or a video in an inline message sent via a bot; for bots only
+        Edits the media content of a message with a text, an animation, an audio, a document, a photo or a video in an inline message sent via a bot; for bots only
         :param inline_message_id: Inline message identifier
         :param input_message_content: New content of the message. Must be one of the following types: inputMessageAnimation, inputMessageAudio, inputMessageDocument, inputMessagePhoto or inputMessageVideo
         :param reply_markup: The new message reply markup; pass null if none; for bots only
@@ -4222,7 +4263,7 @@ class Client:
         """
         Edits the caption of an inline message sent via a bot; for bots only
         :param inline_message_id: Inline message identifier
-        :param show_caption_above_media: Pass true to show the caption above the media; otherwise, the caption will be shown below the media. Can be true only for animation, photo, and video messages
+        :param show_caption_above_media: Pass true to show the caption above the media; otherwise, the caption will be shown below the media. May be true only for animation, photo, and video messages
         :param reply_markup: The new message reply markup; pass null if none
         :param caption: New message content caption; pass null to remove caption; 0-getOption('message_caption_length_max') characters
         :param request_timeout: Request timeout
@@ -4268,7 +4309,7 @@ class Client:
         Edits the time when a scheduled message will be sent. Scheduling state of all messages in the same album or forwarded together with the message will be also changed
         :param chat_id: The chat the message belongs to
         :param message_id: Identifier of the message. Use messageProperties.can_edit_scheduling_state to check whether the message is suitable
-        :param scheduling_state: The new message scheduling state; pass null to send the message immediately
+        :param scheduling_state: The new message scheduling state; pass null to send the message immediately. Must be null for messages in the state messageSchedulingStateSendWhenVideoProcessed
         :param request_timeout: Request timeout
         """
         return await self(
@@ -4453,7 +4494,7 @@ class Client:
         request_timeout: float = 10.0,
     ) -> BusinessMessage:
         """
-        Edits the content of a message with an animation, an audio, a document, a photo or a video in a message sent on behalf of a business account; for bots only
+        Edits the media content of a message with a text, an animation, an audio, a document, a photo or a video in a message sent on behalf of a business account; for bots only
         :param business_connection_id: Unique identifier of business connection on behalf of which the message was sent
         :param chat_id: The chat the message belongs to
         :param message_id: Identifier of the message
@@ -4487,7 +4528,7 @@ class Client:
         :param business_connection_id: Unique identifier of business connection on behalf of which the message was sent
         :param chat_id: The chat the message belongs to
         :param message_id: Identifier of the message
-        :param show_caption_above_media: Pass true to show the caption above the media; otherwise, the caption will be shown below the media. Can be true only for animation, photo, and video messages
+        :param show_caption_above_media: Pass true to show the caption above the media; otherwise, the caption will be shown below the media. May be true only for animation, photo, and video messages
         :param reply_markup: The new message reply markup; pass null if none
         :param caption: New message content caption; pass null to remove caption; 0-getOption('message_caption_length_max') characters
         :param request_timeout: Request timeout
@@ -4604,7 +4645,7 @@ class Client:
         request_timeout: float = 10.0,
     ) -> Ok:
         """
-        Loads quick reply shortcuts created by the current user. The loaded topics will be sent through updateQuickReplyShortcuts
+        Loads quick reply shortcuts created by the current user. The loaded data will be sent through updateQuickReplyShortcut and updateQuickReplyShortcuts
         :param request_timeout: Request timeout
         """
         return await self(
@@ -5166,7 +5207,7 @@ class Client:
         Adds a reaction or a tag to a message. Use getMessageAvailableReactions to receive the list of available reactions for the message
         :param chat_id: Identifier of the chat to which the message belongs
         :param message_id: Identifier of the message
-        :param reaction_type: Type of the reaction to add. Use addPaidMessageReaction instead to add the paid reaction
+        :param reaction_type: Type of the reaction to add. Use addPendingPaidMessageReaction instead to add the paid reaction
         :param is_big: Pass true if the reaction is added with a big animation
         :param update_recent_reactions: Pass true if the reaction needs to be added to recent reactions; tags are never added to the list of recent reactions
         :param request_timeout: Request timeout
@@ -5205,28 +5246,51 @@ class Client:
             request_timeout=request_timeout,
         )
 
-    async def add_paid_message_reaction(
+    async def add_pending_paid_message_reaction(
         self,
         chat_id: int,
         message_id: int,
         star_count: int,
+        use_default_is_anonymous: bool,
         is_anonymous: bool,
         request_timeout: float = 10.0,
     ) -> Ok:
         """
-        Adds the paid message reaction to a message. Use getMessageAvailableReactions to receive the list of available reactions for the message
+        Adds the paid message reaction to a message. Use getMessageAvailableReactions to check whether the reaction is available for the message
         :param chat_id: Identifier of the chat to which the message belongs
         :param message_id: Identifier of the message
-        :param star_count: Number of Telegram Stars to be used for the reaction; 1-getOption('paid_reaction_star_count_max')
-        :param is_anonymous: Pass true to make paid reaction of the user on the message anonymous; pass false to make the user's profile visible among top reactors
+        :param star_count: Number of Telegram Stars to be used for the reaction. The total number of pending paid reactions must not exceed getOption('paid_reaction_star_count_max')
+        :param use_default_is_anonymous: Pass true if the user didn't choose anonymity explicitly, for example, the reaction is set from the message bubble
+        :param is_anonymous: Pass true to make paid reaction of the user on the message anonymous; pass false to make the user's profile visible among top reactors. Ignored if use_default_is_anonymous == true
         :param request_timeout: Request timeout
         """
         return await self(
-            AddPaidMessageReaction(
+            AddPendingPaidMessageReaction(
                 chat_id=chat_id,
                 message_id=message_id,
                 star_count=star_count,
+                use_default_is_anonymous=use_default_is_anonymous,
                 is_anonymous=is_anonymous,
+            ),
+            request_timeout=request_timeout,
+        )
+
+    async def commit_pending_paid_message_reactions(
+        self,
+        chat_id: int,
+        message_id: int,
+        request_timeout: float = 10.0,
+    ) -> Ok:
+        """
+        Applies all pending paid reactions on a message
+        :param chat_id: Identifier of the chat to which the message belongs
+        :param message_id: Identifier of the message
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            CommitPendingPaidMessageReactions(
+                chat_id=chat_id,
+                message_id=message_id,
             ),
             request_timeout=request_timeout,
         )
@@ -5238,7 +5302,7 @@ class Client:
         request_timeout: float = 10.0,
     ) -> Ok:
         """
-        Removes all pending paid reactions on a message. Can be called within 5 seconds after the last addPaidMessageReaction call
+        Removes all pending paid reactions on a message
         :param chat_id: Identifier of the chat to which the message belongs
         :param message_id: Identifier of the message
         :param request_timeout: Request timeout
@@ -5286,7 +5350,7 @@ class Client:
         Sets reactions on a message; for bots only
         :param chat_id: Identifier of the chat to which the message belongs
         :param message_id: Identifier of the message
-        :param reaction_types: Types of the reaction to set
+        :param reaction_types: Types of the reaction to set; pass an empty list to remove the reactions
         :param is_big: Pass true if the reactions are added with a big animation
         :param request_timeout: Request timeout
         """
@@ -5551,7 +5615,7 @@ class Client:
         request_timeout: float = 10.0,
     ) -> Text:
         """
-        Removes potentially dangerous characters from the name of a file. The encoding of the file name is supposed to be UTF-8. Returns an empty string on failure. Can be called synchronously
+        Removes potentially dangerous characters from the name of a file. Returns an empty string on failure. Can be called synchronously
         :param file_name: File name or path to the file
         :param request_timeout: Request timeout
         """
@@ -5929,20 +5993,63 @@ class Client:
             request_timeout=request_timeout,
         )
 
-    async def get_popular_web_app_bots(
+    async def save_prepared_inline_message(
+        self,
+        user_id: int,
+        result: InputInlineQueryResult,
+        chat_types: TargetChatTypes,
+        request_timeout: float = 10.0,
+    ) -> PreparedInlineMessageId:
+        """
+        Saves an inline message to be sent by the given user; for bots only
+        :param user_id: Identifier of the user
+        :param result: The description of the message
+        :param chat_types: Types of the chats to which the message can be sent
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            SavePreparedInlineMessage(
+                user_id=user_id,
+                result=result,
+                chat_types=chat_types,
+            ),
+            request_timeout=request_timeout,
+        )
+
+    async def get_prepared_inline_message(
+        self,
+        bot_user_id: int,
+        prepared_message_id: str,
+        request_timeout: float = 10.0,
+    ) -> PreparedInlineMessage:
+        """
+        Saves an inline message to be sent by the given user
+        :param bot_user_id: Identifier of the bot that created the message
+        :param prepared_message_id: Identifier of the prepared message
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            GetPreparedInlineMessage(
+                bot_user_id=bot_user_id,
+                prepared_message_id=prepared_message_id,
+            ),
+            request_timeout=request_timeout,
+        )
+
+    async def get_grossing_web_app_bots(
         self,
         offset: str,
         limit: int,
         request_timeout: float = 10.0,
     ) -> FoundUsers:
         """
-        Returns popular Web App bots
+        Returns the most grossing Web App bots
         :param offset: Offset of the first entry to return as received from the previous request; use empty string to get the first chunk of results
         :param limit: The maximum number of bots to be returned; up to 100
         :param request_timeout: Request timeout
         """
         return await self(
-            GetPopularWebAppBots(
+            GetGrossingWebAppBots(
                 offset=offset,
                 limit=limit,
             ),
@@ -5969,15 +6076,31 @@ class Client:
             request_timeout=request_timeout,
         )
 
+    async def get_web_app_placeholder(
+        self,
+        bot_user_id: int,
+        request_timeout: float = 10.0,
+    ) -> Outline:
+        """
+        Returns a default placeholder for Web Apps of a bot; this is an offline request. Returns a 404 error if the placeholder isn't known
+        :param bot_user_id: Identifier of the target bot
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            GetWebAppPlaceholder(
+                bot_user_id=bot_user_id,
+            ),
+            request_timeout=request_timeout,
+        )
+
     async def get_web_app_link_url(
         self,
         chat_id: int,
         bot_user_id: int,
         web_app_short_name: str,
         start_parameter: str,
-        application_name: str,
         allow_write_access: bool,
-        theme: ThemeParameters | None = None,
+        parameters: WebAppOpenParameters,
         request_timeout: float = 10.0,
     ) -> HttpUrl:
         """
@@ -5986,9 +6109,8 @@ class Client:
         :param bot_user_id: Identifier of the target bot
         :param web_app_short_name: Short name of the Web App
         :param start_parameter: Start parameter from internalLinkTypeWebApp
-        :param application_name: Short name of the current application; 0-64 English letters, digits, and underscores
         :param allow_write_access: Pass true if the current user allowed the bot to send them messages
-        :param theme: Preferred Web App theme; pass null to use the default theme
+        :param parameters: Parameters to use to open the Web App
         :param request_timeout: Request timeout
         """
         return await self(
@@ -5997,9 +6119,8 @@ class Client:
                 bot_user_id=bot_user_id,
                 web_app_short_name=web_app_short_name,
                 start_parameter=start_parameter,
-                application_name=application_name,
                 allow_write_access=allow_write_access,
-                theme=theme,
+                parameters=parameters,
             ),
             request_timeout=request_timeout,
         )
@@ -6009,8 +6130,7 @@ class Client:
         chat_id: int,
         bot_user_id: int,
         start_parameter: str,
-        application_name: str,
-        theme: ThemeParameters | None = None,
+        parameters: WebAppOpenParameters,
         request_timeout: float = 10.0,
     ) -> MainWebApp:
         """
@@ -6018,8 +6138,7 @@ class Client:
         :param chat_id: Identifier of the chat in which the Web App is opened; pass 0 if none
         :param bot_user_id: Identifier of the target bot
         :param start_parameter: Start parameter from internalLinkTypeMainWebApp
-        :param application_name: Short name of the current application; 0-64 English letters, digits, and underscores
-        :param theme: Preferred Web App theme; pass null to use the default theme
+        :param parameters: Parameters to use to open the Web App
         :param request_timeout: Request timeout
         """
         return await self(
@@ -6027,8 +6146,7 @@ class Client:
                 chat_id=chat_id,
                 bot_user_id=bot_user_id,
                 start_parameter=start_parameter,
-                application_name=application_name,
-                theme=theme,
+                parameters=parameters,
             ),
             request_timeout=request_timeout,
         )
@@ -6037,24 +6155,21 @@ class Client:
         self,
         bot_user_id: int,
         url: str,
-        application_name: str,
-        theme: ThemeParameters | None = None,
+        parameters: WebAppOpenParameters,
         request_timeout: float = 10.0,
     ) -> HttpUrl:
         """
         Returns an HTTPS URL of a Web App to open from the side menu, a keyboardButtonTypeWebApp button, or an inlineQueryResultsButtonTypeWebApp button
         :param bot_user_id: Identifier of the target bot
         :param url: The URL from a keyboardButtonTypeWebApp button, inlineQueryResultsButtonTypeWebApp button, or an empty string when the bot is opened from the side menu
-        :param application_name: Short name of the current application; 0-64 English letters, digits, and underscores
-        :param theme: Preferred Web App theme; pass null to use the default theme
+        :param parameters: Parameters to use to open the Web App
         :param request_timeout: Request timeout
         """
         return await self(
             GetWebAppUrl(
                 bot_user_id=bot_user_id,
                 url=url,
-                application_name=application_name,
-                theme=theme,
+                parameters=parameters,
             ),
             request_timeout=request_timeout,
         )
@@ -6087,9 +6202,8 @@ class Client:
         chat_id: int,
         bot_user_id: int,
         url: str,
-        application_name: str,
         message_thread_id: int,
-        theme: ThemeParameters | None = None,
+        parameters: WebAppOpenParameters,
         reply_to: InputMessageReplyTo | None = None,
         request_timeout: float = 10.0,
     ) -> WebAppInfo:
@@ -6098,9 +6212,8 @@ class Client:
         :param chat_id: Identifier of the chat in which the Web App is opened. The Web App can't be opened in secret chats
         :param bot_user_id: Identifier of the bot, providing the Web App
         :param url: The URL from an inlineKeyboardButtonTypeWebApp button, a botMenuButton button, an internalLinkTypeAttachmentMenuBot link, or an empty string otherwise
-        :param application_name: Short name of the current application; 0-64 English letters, digits, and underscores
         :param message_thread_id: If not 0, the message thread identifier in which the message will be sent
-        :param theme: Preferred Web App theme; pass null to use the default theme
+        :param parameters: Parameters to use to open the Web App
         :param reply_to: Information about the message or story to be replied in the message sent by the Web App; pass null if none
         :param request_timeout: Request timeout
         """
@@ -6109,9 +6222,8 @@ class Client:
                 chat_id=chat_id,
                 bot_user_id=bot_user_id,
                 url=url,
-                application_name=application_name,
                 message_thread_id=message_thread_id,
-                theme=theme,
+                parameters=parameters,
                 reply_to=reply_to,
             ),
             request_timeout=request_timeout,
@@ -6150,6 +6262,29 @@ class Client:
             AnswerWebAppQuery(
                 web_app_query_id=web_app_query_id,
                 result=result,
+            ),
+            request_timeout=request_timeout,
+        )
+
+    async def check_web_app_file_download(
+        self,
+        bot_user_id: int,
+        file_name: str,
+        url: str,
+        request_timeout: float = 10.0,
+    ) -> Ok:
+        """
+        Checks whether a file can be downloaded and saved locally by Web App request
+        :param bot_user_id: Identifier of the bot, providing the Web App
+        :param file_name: Name of the file
+        :param url: URL of the file
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            CheckWebAppFileDownload(
+                bot_user_id=bot_user_id,
+                file_name=file_name,
+                url=url,
             ),
             request_timeout=request_timeout,
         )
@@ -7328,7 +7463,7 @@ class Client:
         request_timeout: float = 10.0,
     ) -> Ok:
         """
-        Changes the message auto-delete or self-destruct (for secret chats) time in a chat. Requires change_info administrator right in basic groups, supergroups and channels
+        Changes the message auto-delete or self-destruct (for secret chats) time in a chat. Requires change_info administrator right in basic groups, supergroups and channels.
         :param chat_id: Chat identifier
         :param message_auto_delete_time: New time value, in seconds; unless the chat is secret, it must be from 0 up to 365 * 86400 and be divisible by 86400. If 0, then messages aren't deleted automatically
         :param request_timeout: Request timeout
@@ -8421,7 +8556,7 @@ class Client:
         """
         Changes privacy settings of a story. The method can be called only for stories posted on behalf of the current user and if story.can_be_edited == true
         :param story_id: Identifier of the story
-        :param privacy_settings: The new privacy settigs for the story
+        :param privacy_settings: The new privacy settings for the story
         :param request_timeout: Request timeout
         """
         return await self(
@@ -8553,7 +8688,7 @@ class Client:
         Returns the list of stories that posted by the given chat to its chat page. If from_story_id == 0, then pinned stories are returned first.
         :param chat_id: Chat identifier
         :param from_story_id: Identifier of the story starting from which stories must be returned; use 0 to get results from pinned and the newest story
-        :param limit: The maximum number of stories to be returned
+        :param limit: The maximum number of stories to be returned.
         :param request_timeout: Request timeout
         """
         return await self(
@@ -8576,7 +8711,7 @@ class Client:
         Returns the list of all stories posted by the given chat; requires can_edit_stories right in the chat.
         :param chat_id: Chat identifier
         :param from_story_id: Identifier of the story starting from which stories must be returned; use 0 to get results from the last story
-        :param limit: The maximum number of stories to be returned
+        :param limit: The maximum number of stories to be returned.
         :param request_timeout: Request timeout
         """
         return await self(
@@ -8762,23 +8897,23 @@ class Client:
         self,
         story_sender_chat_id: int,
         story_id: int,
-        reason: ReportReason,
+        option_id: bytes,
         text: str,
         request_timeout: float = 10.0,
-    ) -> Ok:
+    ) -> ReportStoryResult:
         """
         Reports a story to the Telegram moderators
         :param story_sender_chat_id: The identifier of the sender of the story to report
         :param story_id: The identifier of the story to report
-        :param reason: The reason for reporting the story
-        :param text: Additional report details; 0-1024 characters
+        :param option_id: Option identifier chosen by the user; leave empty for the initial request
+        :param text: Additional report details; 0-1024 characters; leave empty for the initial request
         :param request_timeout: Request timeout
         """
         return await self(
             ReportStory(
                 story_sender_chat_id=story_sender_chat_id,
                 story_id=story_id,
-                reason=reason,
+                option_id=option_id,
                 text=text,
             ),
             request_timeout=request_timeout,
@@ -9199,7 +9334,7 @@ class Client:
         """
         Returns suggested name for saving a file in a given directory
         :param file_id: Identifier of the file
-        :param directory: Directory in which the file is supposed to be saved
+        :param directory: Directory in which the file is expected to be saved
         :param request_timeout: Request timeout
         """
         return await self(
@@ -9239,7 +9374,7 @@ class Client:
         request_timeout: float = 10.0,
     ) -> Ok:
         """
-        Stops the preliminary uploading of a file. Supported only for files uploaded by using preliminaryUploadFile. For other files the behavior is undefined
+        Stops the preliminary uploading of a file. Supported only for files uploaded by using preliminaryUploadFile
         :param file_id: Identifier of the file to stop uploading
         :param request_timeout: Request timeout
         """
@@ -9964,6 +10099,7 @@ class Client:
         user_id: int,
         protocol: CallProtocol,
         is_video: bool,
+        group_call_id: int,
         request_timeout: float = 10.0,
     ) -> CallId:
         """
@@ -9971,6 +10107,7 @@ class Client:
         :param user_id: Identifier of the user to be called
         :param protocol: The call protocols supported by the application
         :param is_video: Pass true to create a video call
+        :param group_call_id: Identifier of the group call to which the user will be added after exchanging private key via the call; pass 0 if none; currently, ignored
         :param request_timeout: Request timeout
         """
         return await self(
@@ -9978,6 +10115,7 @@ class Client:
                 user_id=user_id,
                 protocol=protocol,
                 is_video=is_video,
+                group_call_id=group_call_id,
             ),
             request_timeout=request_timeout,
         )
@@ -10166,8 +10304,8 @@ class Client:
         Creates a video chat (a group call bound to a chat). Available only for basic groups, supergroups and channels; requires can_manage_video_chats administrator right
         :param chat_id: Identifier of a chat in which the video chat will be created
         :param title: Group call title; if empty, chat title will be used
-        :param start_date: Point in time (Unix timestamp) when the group call is supposed to be started by an administrator; 0 to start the video chat immediately. The date must be at least 10 seconds and at most 8 days in the future
-        :param is_rtmp_stream: Pass true to create an RTMP stream instead of an ordinary video chat; requires owner privileges
+        :param start_date: Point in time (Unix timestamp) when the group call is expected to be started by an administrator; 0 to start the video chat immediately. The date must be at least 10 seconds and at most 8 days in the future
+        :param is_rtmp_stream: Pass true to create an RTMP stream instead of an ordinary video chat
         :param request_timeout: Request timeout
         """
         return await self(
@@ -10180,13 +10318,30 @@ class Client:
             request_timeout=request_timeout,
         )
 
+    async def create_group_call(
+        self,
+        call_id: int,
+        request_timeout: float = 10.0,
+    ) -> Ok:
+        """
+        Creates a group call from a one-to-one call
+        :param call_id: Call identifier
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            CreateGroupCall(
+                call_id=call_id,
+            ),
+            request_timeout=request_timeout,
+        )
+
     async def get_video_chat_rtmp_url(
         self,
         chat_id: int,
         request_timeout: float = 10.0,
     ) -> RtmpUrl:
         """
-        Returns RTMP URL for streaming to the chat; requires owner privileges
+        Returns RTMP URL for streaming to the chat; requires can_manage_video_chats administrator right
         :param chat_id: Chat identifier
         :param request_timeout: Request timeout
         """
@@ -11004,6 +11159,46 @@ class Client:
             request_timeout=request_timeout,
         )
 
+    async def toggle_bot_can_manage_emoji_status(
+        self,
+        bot_user_id: int,
+        can_manage_emoji_status: bool,
+        request_timeout: float = 10.0,
+    ) -> Ok:
+        """
+        Toggles whether the bot can manage emoji status of the current user
+        :param bot_user_id: User identifier of the bot
+        :param can_manage_emoji_status: Pass true if the bot is allowed to change emoji status of the user; pass false otherwise
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            ToggleBotCanManageEmojiStatus(
+                bot_user_id=bot_user_id,
+                can_manage_emoji_status=can_manage_emoji_status,
+            ),
+            request_timeout=request_timeout,
+        )
+
+    async def set_user_emoji_status(
+        self,
+        user_id: int,
+        emoji_status: EmojiStatus | None = None,
+        request_timeout: float = 10.0,
+    ) -> Ok:
+        """
+        Changes the emoji status of a user; for bots only
+        :param user_id: Identifier of the user
+        :param emoji_status: New emoji status; pass null to switch to the default badge
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            SetUserEmojiStatus(
+                user_id=user_id,
+                emoji_status=emoji_status,
+            ),
+            request_timeout=request_timeout,
+        )
+
     async def search_user_by_phone_number(
         self,
         phone_number: str,
@@ -11064,6 +11259,29 @@ class Client:
             request_timeout=request_timeout,
         )
 
+    async def get_sticker_outline(
+        self,
+        sticker_file_id: int,
+        for_animated_emoji: bool,
+        for_clicked_animated_emoji_message: bool,
+        request_timeout: float = 10.0,
+    ) -> Outline:
+        """
+        Returns outline of a sticker; this is an offline request. Returns a 404 error if the outline isn't known
+        :param sticker_file_id: File identifier of the sticker
+        :param for_animated_emoji: Pass true to get the outline scaled for animated emoji
+        :param for_clicked_animated_emoji_message: Pass true to get the outline scaled for clicked animated emoji message
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            GetStickerOutline(
+                sticker_file_id=sticker_file_id,
+                for_animated_emoji=for_animated_emoji,
+                for_clicked_animated_emoji_message=for_clicked_animated_emoji_message,
+            ),
+            request_timeout=request_timeout,
+        )
+
     async def get_stickers(
         self,
         sticker_type: StickerType,
@@ -11120,21 +11338,30 @@ class Client:
         self,
         sticker_type: StickerType,
         emojis: str,
+        offset: int,
         limit: int,
+        query: str | None = None,
+        input_language_codes: list[str] | None = None,
         request_timeout: float = 10.0,
     ) -> Stickers:
         """
         Searches for stickers from public sticker sets that correspond to any of the given emoji
         :param sticker_type: Type of the stickers to return
-        :param emojis: Space-separated list of emojis to search for; must be non-empty
+        :param emojis: Space-separated list of emojis to search for
+        :param offset: The offset from which to return the stickers; must be non-negative
         :param limit: The maximum number of stickers to be returned; 0-100
+        :param query: Query to search for; may be empty to search for emoji only
+        :param input_language_codes: List of possible IETF language tags of the user's input language; may be empty if unknown
         :param request_timeout: Request timeout
         """
         return await self(
             SearchStickers(
                 sticker_type=sticker_type,
                 emojis=emojis,
+                offset=offset,
                 limit=limit,
+                query=query,
+                input_language_codes=input_language_codes,
             ),
             request_timeout=request_timeout,
         )
@@ -11266,19 +11493,39 @@ class Client:
             request_timeout=request_timeout,
         )
 
+    async def get_sticker_set_name(
+        self,
+        set_id: int,
+        request_timeout: float = 10.0,
+    ) -> Text:
+        """
+        Returns name of a sticker set by its identifier
+        :param set_id: Identifier of the sticker set
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            GetStickerSetName(
+                set_id=set_id,
+            ),
+            request_timeout=request_timeout,
+        )
+
     async def search_sticker_set(
         self,
         name: str,
+        ignore_cache: bool,
         request_timeout: float = 10.0,
     ) -> StickerSet:
         """
         Searches for a sticker set by its name
         :param name: Name of the sticker set
+        :param ignore_cache: Pass true to ignore local cache of sticker sets and always send a network request
         :param request_timeout: Request timeout
         """
         return await self(
             SearchStickerSet(
                 name=name,
+                ignore_cache=ignore_cache,
             ),
             request_timeout=request_timeout,
         )
@@ -11731,6 +11978,19 @@ class Client:
             request_timeout=request_timeout,
         )
 
+    async def get_owned_bots(
+        self,
+        request_timeout: float = 10.0,
+    ) -> Users:
+        """
+        Returns the list of bots owned by the current user
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            GetOwnedBots(),
+            request_timeout=request_timeout,
+        )
+
     async def search_hashtags(
         self,
         prefix: str,
@@ -12023,23 +12283,6 @@ class Client:
         return await self(
             SetEmojiStatus(
                 emoji_status=emoji_status,
-            ),
-            request_timeout=request_timeout,
-        )
-
-    async def set_location(
-        self,
-        location: Location,
-        request_timeout: float = 10.0,
-    ) -> Ok:
-        """
-        Changes the location of the current user. Needs to be called if getOption('is_location_visible') is true and location changes for more than 1 kilometer. Must not be called if the user has a business location
-        :param location: The new location of the user
-        :param request_timeout: Request timeout
-        """
-        return await self(
-            SetLocation(
-                location=location,
             ),
             request_timeout=request_timeout,
         )
@@ -12950,6 +13193,49 @@ class Client:
             request_timeout=request_timeout,
         )
 
+    async def set_message_sender_bot_verification(
+        self,
+        bot_user_id: int,
+        verified_id: MessageSender,
+        custom_description: str,
+        request_timeout: float = 10.0,
+    ) -> Ok:
+        """
+        Changes the verification status of a user or a chat by an owned bot
+        :param bot_user_id: Identifier of the owned bot, which will verify the user or the chat
+        :param verified_id: Identifier of the user or the supergroup or channel chat, which will be verified by the bot
+        :param custom_description: Custom description of verification reason; 0-getOption('bot_verification_custom_description_length_max').
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            SetMessageSenderBotVerification(
+                bot_user_id=bot_user_id,
+                verified_id=verified_id,
+                custom_description=custom_description,
+            ),
+            request_timeout=request_timeout,
+        )
+
+    async def remove_message_sender_bot_verification(
+        self,
+        bot_user_id: int,
+        verified_id: MessageSender,
+        request_timeout: float = 10.0,
+    ) -> Ok:
+        """
+        Removes the verification status of a user or a chat by an owned bot
+        :param bot_user_id: Identifier of the owned bot, which verified the user or the chat
+        :param verified_id: Identifier of the user or the supergroup or channel chat, which verification is removed
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            RemoveMessageSenderBotVerification(
+                bot_user_id=bot_user_id,
+                verified_id=verified_id,
+            ),
+            request_timeout=request_timeout,
+        )
+
     async def get_active_sessions(
         self,
         request_timeout: float = 10.0,
@@ -13439,7 +13725,7 @@ class Client:
         """
         Reports messages in a supergroup as spam; requires administrator rights in the supergroup
         :param supergroup_id: Supergroup identifier
-        :param message_ids: Identifiers of messages to report. Use messageProperties.can_be_reported to check whether the message can be reported
+        :param message_ids: Identifiers of messages to report. Use messageProperties.can_report_supergroup_spam to check whether the message can be reported
         :param request_timeout: Request timeout
         """
         return await self(
@@ -13692,18 +13978,212 @@ class Client:
             request_timeout=request_timeout,
         )
 
+    async def get_available_gifts(
+        self,
+        request_timeout: float = 10.0,
+    ) -> Gifts:
+        """
+        Returns gifts that can be sent to other users
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            GetAvailableGifts(),
+            request_timeout=request_timeout,
+        )
+
+    async def send_gift(
+        self,
+        gift_id: int,
+        user_id: int,
+        text: FormattedText,
+        is_private: bool,
+        pay_for_upgrade: bool,
+        request_timeout: float = 10.0,
+    ) -> Ok:
+        """
+        Sends a gift to another user. May return an error with a message 'STARGIFT_USAGE_LIMITED' if the gift was sold out
+        :param gift_id: Identifier of the gift to send
+        :param user_id: Identifier of the user that will receive the gift
+        :param text: Text to show along with the gift; 0-getOption('gift_text_length_max') characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, and CustomEmoji entities are allowed
+        :param is_private: Pass true to show the current user as sender and gift text only to the gift receiver; otherwise, everyone will be able to see them
+        :param pay_for_upgrade: Pass true to additionally pay for the gift upgrade and allow the receiver to upgrade it for free
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            SendGift(
+                gift_id=gift_id,
+                user_id=user_id,
+                text=text,
+                is_private=is_private,
+                pay_for_upgrade=pay_for_upgrade,
+            ),
+            request_timeout=request_timeout,
+        )
+
+    async def sell_gift(
+        self,
+        sender_user_id: int,
+        message_id: int,
+        request_timeout: float = 10.0,
+    ) -> Ok:
+        """
+        Sells a gift received by the current user for Telegram Stars
+        :param sender_user_id: Identifier of the user that sent the gift
+        :param message_id: Identifier of the message with the gift in the chat with the user
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            SellGift(
+                sender_user_id=sender_user_id,
+                message_id=message_id,
+            ),
+            request_timeout=request_timeout,
+        )
+
+    async def toggle_gift_is_saved(
+        self,
+        sender_user_id: int,
+        message_id: int,
+        is_saved: bool,
+        request_timeout: float = 10.0,
+    ) -> Ok:
+        """
+        Toggles whether a gift is shown on the current user's profile page
+        :param sender_user_id: Identifier of the user that sent the gift
+        :param message_id: Identifier of the message with the gift in the chat with the user
+        :param is_saved: Pass true to display the gift on the user's profile page; pass false to remove it from the profile page
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            ToggleGiftIsSaved(
+                sender_user_id=sender_user_id,
+                message_id=message_id,
+                is_saved=is_saved,
+            ),
+            request_timeout=request_timeout,
+        )
+
+    async def get_gift_upgrade_preview(
+        self,
+        gift_id: int,
+        request_timeout: float = 10.0,
+    ) -> GiftUpgradePreview:
+        """
+        Returns examples of possible upgraded gifts for a regular gift
+        :param gift_id: Identifier of the gift
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            GetGiftUpgradePreview(
+                gift_id=gift_id,
+            ),
+            request_timeout=request_timeout,
+        )
+
+    async def upgrade_gift(
+        self,
+        sender_user_id: int,
+        message_id: int,
+        keep_original_details: bool,
+        request_timeout: float = 10.0,
+    ) -> UpgradeGiftResult:
+        """
+        Upgrades a gift received by the current user. Unless the gift has prepaid_upgrade_star_count > 0, the user must pay gift.upgrade_star_count Telegram Stars for the upgrade
+        :param sender_user_id: Identifier of the user that sent the gift
+        :param message_id: Identifier of the message with the gift in the chat with the user
+        :param keep_original_details: Pass true to keep the original gift text, sender and receiver in the upgraded gift
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            UpgradeGift(
+                sender_user_id=sender_user_id,
+                message_id=message_id,
+                keep_original_details=keep_original_details,
+            ),
+            request_timeout=request_timeout,
+        )
+
+    async def transfer_gift(
+        self,
+        sender_user_id: int,
+        message_id: int,
+        receiver_user_id: int,
+        star_count: int,
+        request_timeout: float = 10.0,
+    ) -> Ok:
+        """
+        Sends a gift upgraded by the current user to another user
+        :param sender_user_id: Identifier of the user that sent the gift
+        :param message_id: Identifier of the message with the upgraded gift in the chat with the user
+        :param receiver_user_id: Identifier of the user that will receive the gift
+        :param star_count: The amount of Telegram Stars required for the transfer
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            TransferGift(
+                sender_user_id=sender_user_id,
+                message_id=message_id,
+                receiver_user_id=receiver_user_id,
+                star_count=star_count,
+            ),
+            request_timeout=request_timeout,
+        )
+
+    async def get_user_gifts(
+        self,
+        user_id: int,
+        offset: str,
+        limit: int,
+        request_timeout: float = 10.0,
+    ) -> UserGifts:
+        """
+        Returns gifts saved to profile by the given user
+        :param user_id: Identifier of the user
+        :param offset: Offset of the first entry to return as received from the previous request; use empty string to get the first chunk of results
+        :param limit: The maximum number of gifts to be returned; must be positive and can't be greater than 100. For optimal performance, the number of returned objects is chosen by TDLib and can be smaller than the specified limit
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            GetUserGifts(
+                user_id=user_id,
+                offset=offset,
+                limit=limit,
+            ),
+            request_timeout=request_timeout,
+        )
+
+    async def get_user_gift(
+        self,
+        message_id: int,
+        request_timeout: float = 10.0,
+    ) -> UserGift:
+        """
+        Returns information about a gift received or sent by the current user
+        :param message_id: Identifier of the message with the gift
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            GetUserGift(
+                message_id=message_id,
+            ),
+            request_timeout=request_timeout,
+        )
+
     async def create_invoice_link(
         self,
+        business_connection_id: str,
         invoice: InputMessageContent,
         request_timeout: float = 10.0,
     ) -> HttpUrl:
         """
         Creates a link for the given invoice; for bots only
+        :param business_connection_id: Unique identifier of business connection on behalf of which to send the request
         :param invoice: Information about the invoice of the type inputMessageInvoice
         :param request_timeout: Request timeout
         """
         return await self(
             CreateInvoiceLink(
+                business_connection_id=business_connection_id,
                 invoice=invoice,
             ),
             request_timeout=request_timeout,
@@ -13716,7 +14196,7 @@ class Client:
         request_timeout: float = 10.0,
     ) -> Ok:
         """
-        Refunds a previously done payment in Telegram Stars
+        Refunds a previously done payment in Telegram Stars; for bots only
         :param user_id: Identifier of the user that did the payment
         :param telegram_payment_charge_id: Telegram payment identifier
         :param request_timeout: Request timeout
@@ -14353,25 +14833,25 @@ class Client:
     async def report_chat(
         self,
         chat_id: int,
-        reason: ReportReason,
+        option_id: bytes,
+        message_ids: list[int],
         text: str,
-        message_ids: list[int] | None = None,
         request_timeout: float = 10.0,
-    ) -> Ok:
+    ) -> ReportChatResult:
         """
         Reports a chat to the Telegram moderators. A chat can be reported only from the chat action bar, or if chat.can_be_reported
         :param chat_id: Chat identifier
-        :param reason: The reason for reporting the chat
-        :param text: Additional report details; 0-1024 characters
-        :param message_ids: Identifiers of reported messages; may be empty to report the whole chat. Use messageProperties.can_be_reported to check whether the message can be reported
+        :param option_id: Option identifier chosen by the user; leave empty for the initial request
+        :param message_ids: Identifiers of reported messages. Use messageProperties.can_report_chat to check whether the message can be reported
+        :param text: Additional report details if asked by the server; 0-1024 characters; leave empty for the initial request
         :param request_timeout: Request timeout
         """
         return await self(
             ReportChat(
                 chat_id=chat_id,
-                reason=reason,
-                text=text,
+                option_id=option_id,
                 message_ids=message_ids,
+                text=text,
             ),
             request_timeout=request_timeout,
         )
@@ -14432,7 +14912,7 @@ class Client:
         request_timeout: float = 10.0,
     ) -> ChatRevenueStatistics:
         """
-        Returns detailed revenue statistics about a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
+        Returns detailed revenue statistics about a chat. Currently, this method can be used only
         :param chat_id: Chat identifier
         :param is_dark: Pass true if a dark theme is used by the application
         :param request_timeout: Request timeout
@@ -14452,7 +14932,7 @@ class Client:
         request_timeout: float = 10.0,
     ) -> HttpUrl:
         """
-        Returns a URL for chat revenue withdrawal; requires owner privileges in the chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true and getOption('can_withdraw_chat_revenue')
+        Returns a URL for chat revenue withdrawal; requires owner privileges in the channel chat or the bot. Currently, this method can be used only
         :param chat_id: Chat identifier
         :param password: The 2-step verification password of the current user
         :param request_timeout: Request timeout
@@ -14473,7 +14953,7 @@ class Client:
         request_timeout: float = 10.0,
     ) -> ChatRevenueTransactions:
         """
-        Returns the list of revenue transactions for a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
+        Returns the list of revenue transactions for a chat. Currently, this method can be used only
         :param chat_id: Chat identifier
         :param offset: Number of transactions to skip
         :param limit: The maximum number of transactions to be returned; up to 200
@@ -15571,6 +16051,23 @@ class Client:
             request_timeout=request_timeout,
         )
 
+    async def get_premium_info_sticker(
+        self,
+        month_count: int,
+        request_timeout: float = 10.0,
+    ) -> Sticker:
+        """
+        Returns the sticker to be used as representation of the Telegram Premium subscription
+        :param month_count: Number of months the Telegram Premium subscription will be active
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            GetPremiumInfoSticker(
+                month_count=month_count,
+            ),
+            request_timeout=request_timeout,
+        )
+
     async def view_premium_feature(
         self,
         feature: PremiumFeature,
@@ -15620,7 +16117,7 @@ class Client:
         request_timeout: float = 10.0,
     ) -> PremiumGiftCodePaymentOptions:
         """
-        Returns available options for Telegram Premium gift code or giveaway creation
+        Returns available options for Telegram Premium gift code or Telegram Premium giveaway creation
         :param boosted_chat_id: Identifier of the supergroup or channel chat, which will be automatically boosted by receivers of the gift codes and which is administered by the user; 0 if none
         :param request_timeout: Request timeout
         """
@@ -15665,40 +16162,46 @@ class Client:
             request_timeout=request_timeout,
         )
 
-    async def launch_prepaid_premium_giveaway(
+    async def launch_prepaid_giveaway(
         self,
         giveaway_id: int,
-        parameters: PremiumGiveawayParameters,
+        parameters: GiveawayParameters,
+        winner_count: int,
+        star_count: int,
         request_timeout: float = 10.0,
     ) -> Ok:
         """
-        Launches a prepaid Telegram Premium giveaway
+        Launches a prepaid giveaway
         :param giveaway_id: Unique identifier of the prepaid giveaway
         :param parameters: Giveaway parameters
+        :param winner_count: The number of users to receive giveaway prize
+        :param star_count: The number of Telegram Stars to be distributed through the giveaway; pass 0 for Telegram Premium giveaways
         :param request_timeout: Request timeout
         """
         return await self(
-            LaunchPrepaidPremiumGiveaway(
+            LaunchPrepaidGiveaway(
                 giveaway_id=giveaway_id,
                 parameters=parameters,
+                winner_count=winner_count,
+                star_count=star_count,
             ),
             request_timeout=request_timeout,
         )
 
-    async def get_premium_giveaway_info(
+    async def get_giveaway_info(
         self,
         chat_id: int,
         message_id: int,
         request_timeout: float = 10.0,
-    ) -> PremiumGiveawayInfo:
+    ) -> GiveawayInfo:
         """
-        Returns information about a Telegram Premium giveaway
+        Returns information about a giveaway
         :param chat_id: Identifier of the channel chat which started the giveaway
         :param message_id: Identifier of the giveaway or a giveaway winners message in the chat
         :param request_timeout: Request timeout
         """
         return await self(
-            GetPremiumGiveawayInfo(
+            GetGiveawayInfo(
                 chat_id=chat_id,
                 message_id=message_id,
             ),
@@ -15732,6 +16235,19 @@ class Client:
             GetStarGiftPaymentOptions(
                 user_id=user_id,
             ),
+            request_timeout=request_timeout,
+        )
+
+    async def get_star_giveaway_payment_options(
+        self,
+        request_timeout: float = 10.0,
+    ) -> StarGiveawayPaymentOptions:
+        """
+        Returns available options for Telegram Star giveaway creation
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            GetStarGiveawayPaymentOptions(),
             request_timeout=request_timeout,
         )
 
@@ -15854,7 +16370,7 @@ class Client:
         request_timeout: float = 10.0,
     ) -> Ok:
         """
-        Cancels or reenables Telegram Star subscription to a channel
+        Cancels or re-enables Telegram Star subscription
         :param subscription_id: Identifier of the subscription to change
         :param is_canceled: New value of is_canceled
         :param request_timeout: Request timeout
@@ -15867,19 +16383,191 @@ class Client:
             request_timeout=request_timeout,
         )
 
+    async def edit_user_star_subscription(
+        self,
+        user_id: int,
+        telegram_payment_charge_id: str,
+        is_canceled: bool,
+        request_timeout: float = 10.0,
+    ) -> Ok:
+        """
+        Cancels or re-enables Telegram Star subscription for a user; for bots only
+        :param user_id: User identifier
+        :param telegram_payment_charge_id: Telegram payment identifier of the subscription
+        :param is_canceled: Pass true to cancel the subscription; pass false to allow the user to enable it
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            EditUserStarSubscription(
+                user_id=user_id,
+                telegram_payment_charge_id=telegram_payment_charge_id,
+                is_canceled=is_canceled,
+            ),
+            request_timeout=request_timeout,
+        )
+
     async def reuse_star_subscription(
         self,
         subscription_id: str,
         request_timeout: float = 10.0,
     ) -> Ok:
         """
-        Reuses an active subscription and joins the subscribed chat again
+        Reuses an active Telegram Star subscription to a channel chat and joins the chat again
         :param subscription_id: Identifier of the subscription
         :param request_timeout: Request timeout
         """
         return await self(
             ReuseStarSubscription(
                 subscription_id=subscription_id,
+            ),
+            request_timeout=request_timeout,
+        )
+
+    async def set_chat_affiliate_program(
+        self,
+        chat_id: int,
+        parameters: AffiliateProgramParameters | None = None,
+        request_timeout: float = 10.0,
+    ) -> Ok:
+        """
+        Changes affiliate program for a bot
+        :param chat_id: Identifier of the chat with an owned bot for which affiliate program is changed
+        :param parameters: Parameters of the affiliate program; pass null to close the currently active program. If there is an active program, then commission and program duration can only be increased.
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            SetChatAffiliateProgram(
+                chat_id=chat_id,
+                parameters=parameters,
+            ),
+            request_timeout=request_timeout,
+        )
+
+    async def search_chat_affiliate_program(
+        self,
+        username: str,
+        referrer: str,
+        request_timeout: float = 10.0,
+    ) -> Chat:
+        """
+        Searches a chat with an affiliate program. Returns the chat if found and the program is active
+        :param username: Username of the chat
+        :param referrer: The referrer from an internalLinkTypeChatAffiliateProgram link
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            SearchChatAffiliateProgram(
+                username=username,
+                referrer=referrer,
+            ),
+            request_timeout=request_timeout,
+        )
+
+    async def search_affiliate_programs(
+        self,
+        affiliate: AffiliateType,
+        sort_order: AffiliateProgramSortOrder,
+        offset: str,
+        limit: int,
+        request_timeout: float = 10.0,
+    ) -> FoundAffiliatePrograms:
+        """
+        Searches affiliate programs that can be connected to the given affiliate
+        :param affiliate: The affiliate for which affiliate programs are searched for
+        :param sort_order: Sort order for the results
+        :param offset: Offset of the first affiliate program to return as received from the previous request; use empty string to get the first chunk of results
+        :param limit: The maximum number of affiliate programs to return
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            SearchAffiliatePrograms(
+                affiliate=affiliate,
+                sort_order=sort_order,
+                offset=offset,
+                limit=limit,
+            ),
+            request_timeout=request_timeout,
+        )
+
+    async def connect_affiliate_program(
+        self,
+        affiliate: AffiliateType,
+        bot_user_id: int,
+        request_timeout: float = 10.0,
+    ) -> ConnectedAffiliateProgram:
+        """
+        Connects an affiliate program to the given affiliate. Returns information about the connected affiliate program
+        :param affiliate: The affiliate to which the affiliate program will be connected
+        :param bot_user_id: Identifier of the bot, which affiliate program is connected
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            ConnectAffiliateProgram(
+                affiliate=affiliate,
+                bot_user_id=bot_user_id,
+            ),
+            request_timeout=request_timeout,
+        )
+
+    async def disconnect_affiliate_program(
+        self,
+        affiliate: AffiliateType,
+        url: str,
+        request_timeout: float = 10.0,
+    ) -> ConnectedAffiliateProgram:
+        """
+        Disconnects an affiliate program from the given affiliate and immediately deactivates its referral link. Returns updated information about the disconnected affiliate program
+        :param affiliate: The affiliate to which the affiliate program is connected
+        :param url: The referral link of the affiliate program
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            DisconnectAffiliateProgram(
+                affiliate=affiliate,
+                url=url,
+            ),
+            request_timeout=request_timeout,
+        )
+
+    async def get_connected_affiliate_program(
+        self,
+        affiliate: AffiliateType,
+        bot_user_id: int,
+        request_timeout: float = 10.0,
+    ) -> ConnectedAffiliateProgram:
+        """
+        Returns an affiliate program that were connected to the given affiliate by identifier of the bot that created the program
+        :param affiliate: The affiliate to which the affiliate program will be connected
+        :param bot_user_id: Identifier of the bot that created the program
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            GetConnectedAffiliateProgram(
+                affiliate=affiliate,
+                bot_user_id=bot_user_id,
+            ),
+            request_timeout=request_timeout,
+        )
+
+    async def get_connected_affiliate_programs(
+        self,
+        affiliate: AffiliateType,
+        offset: str,
+        limit: int,
+        request_timeout: float = 10.0,
+    ) -> ConnectedAffiliatePrograms:
+        """
+        Returns affiliate programs that were connected to the given affiliate
+        :param affiliate: The affiliate to which the affiliate program were connected
+        :param offset: Offset of the first affiliate program to return as received from the previous request; use empty string to get the first chunk of results
+        :param limit: The maximum number of affiliate programs to return
+        :param request_timeout: Request timeout
+        """
+        return await self(
+            GetConnectedAffiliatePrograms(
+                affiliate=affiliate,
+                offset=offset,
+                limit=limit,
             ),
             request_timeout=request_timeout,
         )

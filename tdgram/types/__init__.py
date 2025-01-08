@@ -5,6 +5,16 @@ from .account_ttl import AccountTtl
 from .added_reaction import AddedReaction
 from .added_reactions import AddedReactions
 from .address import Address
+from .affiliate_info import AffiliateInfo
+from .affiliate_program_info import AffiliateProgramInfo
+from .affiliate_program_parameters import AffiliateProgramParameters
+from .affiliate_program_sort_order_creation_date import AffiliateProgramSortOrderCreationDate
+from .affiliate_program_sort_order_profitability import AffiliateProgramSortOrderProfitability
+from .affiliate_program_sort_order_revenue import AffiliateProgramSortOrderRevenue
+from .affiliate_type_bot import AffiliateTypeBot
+from .affiliate_type_channel import AffiliateTypeChannel
+from .affiliate_type_current_user import AffiliateTypeCurrentUser
+from .alternative_video import AlternativeVideo
 from .animated_chat_photo import AnimatedChatPhoto
 from .animated_emoji import AnimatedEmoji
 from .animation import Animation
@@ -79,8 +89,8 @@ from .bot_media_preview import BotMediaPreview
 from .bot_media_preview_info import BotMediaPreviewInfo
 from .bot_media_previews import BotMediaPreviews
 from .bot_menu_button import BotMenuButton
-from .bot_transaction_purpose_invoice_payment import BotTransactionPurposeInvoicePayment
-from .bot_transaction_purpose_paid_media import BotTransactionPurposePaidMedia
+from .bot_verification import BotVerification
+from .bot_verification_parameters import BotVerificationParameters
 from .bot_write_access_allow_reason_accepted_request import (
     BotWriteAccessAllowReasonAcceptedRequest,
 )
@@ -126,6 +136,7 @@ from .business_opening_hours_interval import BusinessOpeningHoursInterval
 from .business_recipients import BusinessRecipients
 from .business_start_page import BusinessStartPage
 from .call import Call
+from .call_discard_reason_allow_group_call import CallDiscardReasonAllowGroupCall
 from .call_discard_reason_declined import CallDiscardReasonDeclined
 from .call_discard_reason_disconnected import CallDiscardReasonDisconnected
 from .call_discard_reason_empty import CallDiscardReasonEmpty
@@ -178,16 +189,12 @@ from .can_transfer_ownership_result_password_too_fresh import (
 from .can_transfer_ownership_result_session_too_fresh import (
     CanTransferOwnershipResultSessionTooFresh,
 )
-from .channel_transaction_purpose_join import ChannelTransactionPurposeJoin
-from .channel_transaction_purpose_paid_media import ChannelTransactionPurposePaidMedia
-from .channel_transaction_purpose_reaction import ChannelTransactionPurposeReaction
 from .chat import Chat
 from .chat_action_bar_add_contact import ChatActionBarAddContact
 from .chat_action_bar_invite_members import ChatActionBarInviteMembers
 from .chat_action_bar_join_request import ChatActionBarJoinRequest
 from .chat_action_bar_report_add_block import ChatActionBarReportAddBlock
 from .chat_action_bar_report_spam import ChatActionBarReportSpam
-from .chat_action_bar_report_unrelated_location import ChatActionBarReportUnrelatedLocation
 from .chat_action_bar_share_phone_number import ChatActionBarSharePhoneNumber
 from .chat_action_cancel import ChatActionCancel
 from .chat_action_choosing_contact import ChatActionChoosingContact
@@ -256,6 +263,7 @@ from .chat_event_member_joined_by_request import ChatEventMemberJoinedByRequest
 from .chat_event_member_left import ChatEventMemberLeft
 from .chat_event_member_promoted import ChatEventMemberPromoted
 from .chat_event_member_restricted import ChatEventMemberRestricted
+from .chat_event_member_subscription_extended import ChatEventMemberSubscriptionExtended
 from .chat_event_message_auto_delete_time_changed import ChatEventMessageAutoDeleteTimeChanged
 from .chat_event_message_deleted import ChatEventMessageDeleted
 from .chat_event_message_edited import ChatEventMessageEdited
@@ -289,6 +297,7 @@ from .chat_folder_info import ChatFolderInfo
 from .chat_folder_invite_link import ChatFolderInviteLink
 from .chat_folder_invite_link_info import ChatFolderInviteLinkInfo
 from .chat_folder_invite_links import ChatFolderInviteLinks
+from .chat_folder_name import ChatFolderName
 from .chat_invite_link import ChatInviteLink
 from .chat_invite_link_count import ChatInviteLinkCount
 from .chat_invite_link_counts import ChatInviteLinkCounts
@@ -322,7 +331,6 @@ from .chat_members_filter_mention import ChatMembersFilterMention
 from .chat_members_filter_restricted import ChatMembersFilterRestricted
 from .chat_message_sender import ChatMessageSender
 from .chat_message_senders import ChatMessageSenders
-from .chat_nearby import ChatNearby
 from .chat_notification_settings import ChatNotificationSettings
 from .chat_permissions import ChatPermissions
 from .chat_photo import ChatPhoto
@@ -355,7 +363,6 @@ from .chat_type_private import ChatTypePrivate
 from .chat_type_secret import ChatTypeSecret
 from .chat_type_supergroup import ChatTypeSupergroup
 from .chats import Chats
-from .chats_nearby import ChatsNearby
 from .check_chat_username_result_ok import CheckChatUsernameResultOk
 from .check_chat_username_result_public_chats_too_many import (
     CheckChatUsernameResultPublicChatsTooMany,
@@ -376,6 +383,8 @@ from .closed_vector_path import ClosedVectorPath
 from .collectible_item_info import CollectibleItemInfo
 from .collectible_item_type_phone_number import CollectibleItemTypePhoneNumber
 from .collectible_item_type_username import CollectibleItemTypeUsername
+from .connected_affiliate_program import ConnectedAffiliateProgram
+from .connected_affiliate_programs import ConnectedAffiliatePrograms
 from .connected_website import ConnectedWebsite
 from .connected_websites import ConnectedWebsites
 from .connection_state_connecting import ConnectionStateConnecting
@@ -453,6 +462,10 @@ from .file_type_profile_photo import FileTypeProfilePhoto
 from .file_type_secret import FileTypeSecret
 from .file_type_secret_thumbnail import FileTypeSecretThumbnail
 from .file_type_secure import FileTypeSecure
+from .file_type_self_destructing_photo import FileTypeSelfDestructingPhoto
+from .file_type_self_destructing_video import FileTypeSelfDestructingVideo
+from .file_type_self_destructing_video_note import FileTypeSelfDestructingVideoNote
+from .file_type_self_destructing_voice_note import FileTypeSelfDestructingVoiceNote
 from .file_type_sticker import FileTypeSticker
 from .file_type_thumbnail import FileTypeThumbnail
 from .file_type_unknown import FileTypeUnknown
@@ -475,6 +488,8 @@ from .forum_topic_icon import ForumTopicIcon
 from .forum_topic_info import ForumTopicInfo
 from .forum_topics import ForumTopics
 from .forward_source import ForwardSource
+from .found_affiliate_program import FoundAffiliateProgram
+from .found_affiliate_programs import FoundAffiliatePrograms
 from .found_chat_boosts import FoundChatBoosts
 from .found_chat_messages import FoundChatMessages
 from .found_file_downloads import FoundFileDownloads
@@ -487,6 +502,23 @@ from .found_web_app import FoundWebApp
 from .game import Game
 from .game_high_score import GameHighScore
 from .game_high_scores import GameHighScores
+from .gift import Gift
+from .gift_upgrade_preview import GiftUpgradePreview
+from .gifts import Gifts
+from .giveaway_info_completed import GiveawayInfoCompleted
+from .giveaway_info_ongoing import GiveawayInfoOngoing
+from .giveaway_parameters import GiveawayParameters
+from .giveaway_participant_status_administrator import GiveawayParticipantStatusAdministrator
+from .giveaway_participant_status_already_was_member import (
+    GiveawayParticipantStatusAlreadyWasMember,
+)
+from .giveaway_participant_status_disallowed_country import (
+    GiveawayParticipantStatusDisallowedCountry,
+)
+from .giveaway_participant_status_eligible import GiveawayParticipantStatusEligible
+from .giveaway_participant_status_participating import GiveawayParticipantStatusParticipating
+from .giveaway_prize_premium import GiveawayPrizePremium
+from .giveaway_prize_stars import GiveawayPrizeStars
 from .group_call import GroupCall
 from .group_call_id import GroupCallId
 from .group_call_participant import GroupCallParticipant
@@ -509,6 +541,7 @@ from .inline_keyboard_button_type_callback_game import InlineKeyboardButtonTypeC
 from .inline_keyboard_button_type_callback_with_password import (
     InlineKeyboardButtonTypeCallbackWithPassword,
 )
+from .inline_keyboard_button_type_copy_text import InlineKeyboardButtonTypeCopyText
 from .inline_keyboard_button_type_login_url import InlineKeyboardButtonTypeLoginUrl
 from .inline_keyboard_button_type_switch_inline import InlineKeyboardButtonTypeSwitchInline
 from .inline_keyboard_button_type_url import InlineKeyboardButtonTypeUrl
@@ -650,6 +683,7 @@ from .internal_link_type_bot_start_in_group import InternalLinkTypeBotStartInGro
 from .internal_link_type_business_chat import InternalLinkTypeBusinessChat
 from .internal_link_type_buy_stars import InternalLinkTypeBuyStars
 from .internal_link_type_change_phone_number import InternalLinkTypeChangePhoneNumber
+from .internal_link_type_chat_affiliate_program import InternalLinkTypeChatAffiliateProgram
 from .internal_link_type_chat_boost import InternalLinkTypeChatBoost
 from .internal_link_type_chat_folder_invite import InternalLinkTypeChatFolderInvite
 from .internal_link_type_chat_folder_settings import InternalLinkTypeChatFolderSettings
@@ -731,6 +765,8 @@ from .link_preview_type_document import LinkPreviewTypeDocument
 from .link_preview_type_embedded_animation_player import LinkPreviewTypeEmbeddedAnimationPlayer
 from .link_preview_type_embedded_audio_player import LinkPreviewTypeEmbeddedAudioPlayer
 from .link_preview_type_embedded_video_player import LinkPreviewTypeEmbeddedVideoPlayer
+from .link_preview_type_external_audio import LinkPreviewTypeExternalAudio
+from .link_preview_type_external_video import LinkPreviewTypeExternalVideo
 from .link_preview_type_invoice import LinkPreviewTypeInvoice
 from .link_preview_type_message import LinkPreviewTypeMessage
 from .link_preview_type_photo import LinkPreviewTypePhoto
@@ -812,8 +848,14 @@ from .message_forum_topic_is_hidden_toggled import MessageForumTopicIsHiddenTogg
 from .message_forward_info import MessageForwardInfo
 from .message_game import MessageGame
 from .message_game_score import MessageGameScore
+from .message_gift import MessageGift
 from .message_gifted_premium import MessageGiftedPremium
 from .message_gifted_stars import MessageGiftedStars
+from .message_giveaway import MessageGiveaway
+from .message_giveaway_completed import MessageGiveawayCompleted
+from .message_giveaway_created import MessageGiveawayCreated
+from .message_giveaway_prize_stars import MessageGiveawayPrizeStars
+from .message_giveaway_winners import MessageGiveawayWinners
 from .message_import_info import MessageImportInfo
 from .message_interaction_info import MessageInteractionInfo
 from .message_invite_video_chat_participants import MessageInviteVideoChatParticipants
@@ -837,10 +879,6 @@ from .message_poll import MessagePoll
 from .message_position import MessagePosition
 from .message_positions import MessagePositions
 from .message_premium_gift_code import MessagePremiumGiftCode
-from .message_premium_giveaway import MessagePremiumGiveaway
-from .message_premium_giveaway_completed import MessagePremiumGiveawayCompleted
-from .message_premium_giveaway_created import MessagePremiumGiveawayCreated
-from .message_premium_giveaway_winners import MessagePremiumGiveawayWinners
 from .message_properties import MessageProperties
 from .message_proximity_alert_triggered import MessageProximityAlertTriggered
 from .message_reaction import MessageReaction
@@ -850,11 +888,15 @@ from .message_read_date_read import MessageReadDateRead
 from .message_read_date_too_old import MessageReadDateTooOld
 from .message_read_date_unread import MessageReadDateUnread
 from .message_read_date_user_privacy_restricted import MessageReadDateUserPrivacyRestricted
+from .message_refunded_upgraded_gift import MessageRefundedUpgradedGift
 from .message_reply_info import MessageReplyInfo
 from .message_reply_to_message import MessageReplyToMessage
 from .message_reply_to_story import MessageReplyToStory
 from .message_scheduling_state_send_at_date import MessageSchedulingStateSendAtDate
 from .message_scheduling_state_send_when_online import MessageSchedulingStateSendWhenOnline
+from .message_scheduling_state_send_when_video_processed import (
+    MessageSchedulingStateSendWhenVideoProcessed,
+)
 from .message_screenshot_taken import MessageScreenshotTaken
 from .message_self_destruct_type_immediately import MessageSelfDestructTypeImmediately
 from .message_self_destruct_type_timer import MessageSelfDestructTypeTimer
@@ -883,6 +925,7 @@ from .message_supergroup_chat_create import MessageSupergroupChatCreate
 from .message_text import MessageText
 from .message_thread_info import MessageThreadInfo
 from .message_unsupported import MessageUnsupported
+from .message_upgraded_gift import MessageUpgradedGift
 from .message_users_shared import MessageUsersShared
 from .message_venue import MessageVenue
 from .message_video import MessageVideo
@@ -927,6 +970,7 @@ from .option_value_empty import OptionValueEmpty
 from .option_value_integer import OptionValueInteger
 from .option_value_string import OptionValueString
 from .order_info import OrderInfo
+from .outline import Outline
 from .page_block_anchor import PageBlockAnchor
 from .page_block_animation import PageBlockAnimation
 from .page_block_audio import PageBlockAudio
@@ -1019,6 +1063,7 @@ from .passport_suitable_element import PassportSuitableElement
 from .password_state import PasswordState
 from .payment_form import PaymentForm
 from .payment_form_type_regular import PaymentFormTypeRegular
+from .payment_form_type_star_subscription import PaymentFormTypeStarSubscription
 from .payment_form_type_stars import PaymentFormTypeStars
 from .payment_option import PaymentOption
 from .payment_provider_other import PaymentProviderOther
@@ -1071,22 +1116,6 @@ from .premium_features import PremiumFeatures
 from .premium_gift_code_info import PremiumGiftCodeInfo
 from .premium_gift_code_payment_option import PremiumGiftCodePaymentOption
 from .premium_gift_code_payment_options import PremiumGiftCodePaymentOptions
-from .premium_giveaway_info_completed import PremiumGiveawayInfoCompleted
-from .premium_giveaway_info_ongoing import PremiumGiveawayInfoOngoing
-from .premium_giveaway_parameters import PremiumGiveawayParameters
-from .premium_giveaway_participant_status_administrator import (
-    PremiumGiveawayParticipantStatusAdministrator,
-)
-from .premium_giveaway_participant_status_already_was_member import (
-    PremiumGiveawayParticipantStatusAlreadyWasMember,
-)
-from .premium_giveaway_participant_status_disallowed_country import (
-    PremiumGiveawayParticipantStatusDisallowedCountry,
-)
-from .premium_giveaway_participant_status_eligible import PremiumGiveawayParticipantStatusEligible
-from .premium_giveaway_participant_status_participating import (
-    PremiumGiveawayParticipantStatusParticipating,
-)
 from .premium_limit import PremiumLimit
 from .premium_limit_type_active_story_count import PremiumLimitTypeActiveStoryCount
 from .premium_limit_type_bio_length import PremiumLimitTypeBioLength
@@ -1135,7 +1164,9 @@ from .premium_story_feature_priority_order import PremiumStoryFeaturePriorityOrd
 from .premium_story_feature_save_stories import PremiumStoryFeatureSaveStories
 from .premium_story_feature_stealth_mode import PremiumStoryFeatureStealthMode
 from .premium_story_feature_video_quality import PremiumStoryFeatureVideoQuality
-from .prepaid_premium_giveaway import PrepaidPremiumGiveaway
+from .prepaid_giveaway import PrepaidGiveaway
+from .prepared_inline_message import PreparedInlineMessage
+from .prepared_inline_message_id import PreparedInlineMessageId
 from .product_info import ProductInfo
 from .profile_accent_color import ProfileAccentColor
 from .profile_accent_colors import ProfileAccentColors
@@ -1166,6 +1197,8 @@ from .push_message_content_contact_registered import PushMessageContentContactRe
 from .push_message_content_document import PushMessageContentDocument
 from .push_message_content_game import PushMessageContentGame
 from .push_message_content_game_score import PushMessageContentGameScore
+from .push_message_content_gift import PushMessageContentGift
+from .push_message_content_giveaway import PushMessageContentGiveaway
 from .push_message_content_hidden import PushMessageContentHidden
 from .push_message_content_invoice import PushMessageContentInvoice
 from .push_message_content_location import PushMessageContentLocation
@@ -1175,13 +1208,13 @@ from .push_message_content_paid_media import PushMessageContentPaidMedia
 from .push_message_content_photo import PushMessageContentPhoto
 from .push_message_content_poll import PushMessageContentPoll
 from .push_message_content_premium_gift_code import PushMessageContentPremiumGiftCode
-from .push_message_content_premium_giveaway import PushMessageContentPremiumGiveaway
 from .push_message_content_recurring_payment import PushMessageContentRecurringPayment
 from .push_message_content_screenshot_taken import PushMessageContentScreenshotTaken
 from .push_message_content_sticker import PushMessageContentSticker
 from .push_message_content_story import PushMessageContentStory
 from .push_message_content_suggest_profile_photo import PushMessageContentSuggestProfilePhoto
 from .push_message_content_text import PushMessageContentText
+from .push_message_content_upgraded_gift import PushMessageContentUpgradedGift
 from .push_message_content_video import PushMessageContentVideo
 from .push_message_content_video_note import PushMessageContentVideoNote
 from .push_message_content_voice_note import PushMessageContentVoiceNote
@@ -1209,7 +1242,10 @@ from .reply_markup_force_reply import ReplyMarkupForceReply
 from .reply_markup_inline_keyboard import ReplyMarkupInlineKeyboard
 from .reply_markup_remove_keyboard import ReplyMarkupRemoveKeyboard
 from .reply_markup_show_keyboard import ReplyMarkupShowKeyboard
-from .report_chat_sponsored_message_option import ReportChatSponsoredMessageOption
+from .report_chat_result_messages_required import ReportChatResultMessagesRequired
+from .report_chat_result_ok import ReportChatResultOk
+from .report_chat_result_option_required import ReportChatResultOptionRequired
+from .report_chat_result_text_required import ReportChatResultTextRequired
 from .report_chat_sponsored_message_result_ads_hidden import (
     ReportChatSponsoredMessageResultAdsHidden,
 )
@@ -1221,6 +1257,7 @@ from .report_chat_sponsored_message_result_option_required import (
 from .report_chat_sponsored_message_result_premium_required import (
     ReportChatSponsoredMessageResultPremiumRequired,
 )
+from .report_option import ReportOption
 from .report_reason_child_abuse import ReportReasonChildAbuse
 from .report_reason_copyright import ReportReasonCopyright
 from .report_reason_custom import ReportReasonCustom
@@ -1231,6 +1268,9 @@ from .report_reason_pornography import ReportReasonPornography
 from .report_reason_spam import ReportReasonSpam
 from .report_reason_unrelated_location import ReportReasonUnrelatedLocation
 from .report_reason_violence import ReportReasonViolence
+from .report_story_result_ok import ReportStoryResultOk
+from .report_story_result_option_required import ReportStoryResultOptionRequired
+from .report_story_result_text_required import ReportStoryResultTextRequired
 from .resend_code_reason_user_request import ResendCodeReasonUserRequest
 from .resend_code_reason_verification_failed import ResendCodeReasonVerificationFailed
 from .reset_password_result_declined import ResetPasswordResultDeclined
@@ -1266,6 +1306,9 @@ from .saved_messages_topic_type_my_notes import SavedMessagesTopicTypeMyNotes
 from .saved_messages_topic_type_saved_from_chat import SavedMessagesTopicTypeSavedFromChat
 from .scope_autosave_settings import ScopeAutosaveSettings
 from .scope_notification_settings import ScopeNotificationSettings
+from .search_messages_chat_type_filter_channel import SearchMessagesChatTypeFilterChannel
+from .search_messages_chat_type_filter_group import SearchMessagesChatTypeFilterGroup
+from .search_messages_chat_type_filter_private import SearchMessagesChatTypeFilterPrivate
 from .search_messages_filter_animation import SearchMessagesFilterAnimation
 from .search_messages_filter_audio import SearchMessagesFilterAudio
 from .search_messages_filter_chat_photo import SearchMessagesFilterChatPhoto
@@ -1288,6 +1331,8 @@ from .secret_chat import SecretChat
 from .secret_chat_state_closed import SecretChatStateClosed
 from .secret_chat_state_pending import SecretChatStatePending
 from .secret_chat_state_ready import SecretChatStateReady
+from .sent_gift_regular import SentGiftRegular
+from .sent_gift_upgraded import SentGiftUpgraded
 from .sent_web_app_message import SentWebAppMessage
 from .session import Session
 from .session_type_android import SessionTypeAndroid
@@ -1316,26 +1361,63 @@ from .speech_recognition_result_pending import SpeechRecognitionResultPending
 from .speech_recognition_result_text import SpeechRecognitionResultText
 from .sponsored_message import SponsoredMessage
 from .sponsored_messages import SponsoredMessages
+from .star_amount import StarAmount
+from .star_giveaway_payment_option import StarGiveawayPaymentOption
+from .star_giveaway_payment_options import StarGiveawayPaymentOptions
+from .star_giveaway_winner_option import StarGiveawayWinnerOption
 from .star_payment_option import StarPaymentOption
 from .star_payment_options import StarPaymentOptions
 from .star_revenue_statistics import StarRevenueStatistics
 from .star_revenue_status import StarRevenueStatus
 from .star_subscription import StarSubscription
 from .star_subscription_pricing import StarSubscriptionPricing
+from .star_subscription_type_bot import StarSubscriptionTypeBot
+from .star_subscription_type_channel import StarSubscriptionTypeChannel
 from .star_subscriptions import StarSubscriptions
 from .star_transaction import StarTransaction
 from .star_transaction_direction_incoming import StarTransactionDirectionIncoming
 from .star_transaction_direction_outgoing import StarTransactionDirectionOutgoing
-from .star_transaction_partner_app_store import StarTransactionPartnerAppStore
-from .star_transaction_partner_bot import StarTransactionPartnerBot
-from .star_transaction_partner_business import StarTransactionPartnerBusiness
-from .star_transaction_partner_channel import StarTransactionPartnerChannel
-from .star_transaction_partner_fragment import StarTransactionPartnerFragment
-from .star_transaction_partner_google_play import StarTransactionPartnerGooglePlay
-from .star_transaction_partner_telegram import StarTransactionPartnerTelegram
-from .star_transaction_partner_telegram_ads import StarTransactionPartnerTelegramAds
-from .star_transaction_partner_unsupported import StarTransactionPartnerUnsupported
-from .star_transaction_partner_user import StarTransactionPartnerUser
+from .star_transaction_type_affiliate_program_commission import (
+    StarTransactionTypeAffiliateProgramCommission,
+)
+from .star_transaction_type_app_store_deposit import StarTransactionTypeAppStoreDeposit
+from .star_transaction_type_bot_invoice_purchase import StarTransactionTypeBotInvoicePurchase
+from .star_transaction_type_bot_invoice_sale import StarTransactionTypeBotInvoiceSale
+from .star_transaction_type_bot_paid_media_purchase import StarTransactionTypeBotPaidMediaPurchase
+from .star_transaction_type_bot_paid_media_sale import StarTransactionTypeBotPaidMediaSale
+from .star_transaction_type_bot_subscription_purchase import (
+    StarTransactionTypeBotSubscriptionPurchase,
+)
+from .star_transaction_type_bot_subscription_sale import StarTransactionTypeBotSubscriptionSale
+from .star_transaction_type_channel_paid_media_purchase import (
+    StarTransactionTypeChannelPaidMediaPurchase,
+)
+from .star_transaction_type_channel_paid_media_sale import StarTransactionTypeChannelPaidMediaSale
+from .star_transaction_type_channel_paid_reaction_receive import (
+    StarTransactionTypeChannelPaidReactionReceive,
+)
+from .star_transaction_type_channel_paid_reaction_send import (
+    StarTransactionTypeChannelPaidReactionSend,
+)
+from .star_transaction_type_channel_subscription_purchase import (
+    StarTransactionTypeChannelSubscriptionPurchase,
+)
+from .star_transaction_type_channel_subscription_sale import (
+    StarTransactionTypeChannelSubscriptionSale,
+)
+from .star_transaction_type_fragment_deposit import StarTransactionTypeFragmentDeposit
+from .star_transaction_type_fragment_withdrawal import StarTransactionTypeFragmentWithdrawal
+from .star_transaction_type_gift_purchase import StarTransactionTypeGiftPurchase
+from .star_transaction_type_gift_sale import StarTransactionTypeGiftSale
+from .star_transaction_type_gift_transfer import StarTransactionTypeGiftTransfer
+from .star_transaction_type_gift_upgrade import StarTransactionTypeGiftUpgrade
+from .star_transaction_type_giveaway_deposit import StarTransactionTypeGiveawayDeposit
+from .star_transaction_type_google_play_deposit import StarTransactionTypeGooglePlayDeposit
+from .star_transaction_type_premium_bot_deposit import StarTransactionTypePremiumBotDeposit
+from .star_transaction_type_telegram_ads_withdrawal import StarTransactionTypeTelegramAdsWithdrawal
+from .star_transaction_type_telegram_api_usage import StarTransactionTypeTelegramApiUsage
+from .star_transaction_type_unsupported import StarTransactionTypeUnsupported
+from .star_transaction_type_user_deposit import StarTransactionTypeUserDeposit
 from .star_transactions import StarTransactions
 from .statistical_graph_async import StatisticalGraphAsync
 from .statistical_graph_data import StatisticalGraphData
@@ -1359,11 +1441,11 @@ from .storage_statistics import StorageStatistics
 from .storage_statistics_by_chat import StorageStatisticsByChat
 from .storage_statistics_by_file_type import StorageStatisticsByFileType
 from .storage_statistics_fast import StorageStatisticsFast
-from .store_payment_purpose_gifted_premium import StorePaymentPurposeGiftedPremium
 from .store_payment_purpose_gifted_stars import StorePaymentPurposeGiftedStars
 from .store_payment_purpose_premium_gift_codes import StorePaymentPurposePremiumGiftCodes
 from .store_payment_purpose_premium_giveaway import StorePaymentPurposePremiumGiveaway
 from .store_payment_purpose_premium_subscription import StorePaymentPurposePremiumSubscription
+from .store_payment_purpose_star_giveaway import StorePaymentPurposeStarGiveaway
 from .store_payment_purpose_stars import StorePaymentPurposeStars
 from .stories import Stories
 from .story import Story
@@ -1409,6 +1491,7 @@ from .suggested_action_gift_premium_for_christmas import SuggestedActionGiftPrem
 from .suggested_action_restore_premium import SuggestedActionRestorePremium
 from .suggested_action_set_birthdate import SuggestedActionSetBirthdate
 from .suggested_action_set_password import SuggestedActionSetPassword
+from .suggested_action_set_profile_photo import SuggestedActionSetProfilePhoto
 from .suggested_action_subscribe_to_annual_premium import SuggestedActionSubscribeToAnnualPremium
 from .suggested_action_upgrade_premium import SuggestedActionUpgradePremium
 from .suggested_action_view_checks_hint import SuggestedActionViewChecksHint
@@ -1431,10 +1514,12 @@ from .t_me_urls import TMeUrls
 from .target_chat_chosen import TargetChatChosen
 from .target_chat_current import TargetChatCurrent
 from .target_chat_internal_link import TargetChatInternalLink
+from .target_chat_types import TargetChatTypes
 from .telegram_payment_purpose_gifted_stars import TelegramPaymentPurposeGiftedStars
 from .telegram_payment_purpose_join_chat import TelegramPaymentPurposeJoinChat
 from .telegram_payment_purpose_premium_gift_codes import TelegramPaymentPurposePremiumGiftCodes
 from .telegram_payment_purpose_premium_giveaway import TelegramPaymentPurposePremiumGiveaway
+from .telegram_payment_purpose_star_giveaway import TelegramPaymentPurposeStarGiveaway
 from .telegram_payment_purpose_stars import TelegramPaymentPurposeStars
 from .temporary_password_state import TemporaryPasswordState
 from .terms_of_service import TermsOfService
@@ -1605,6 +1690,7 @@ from .update_notification import UpdateNotification
 from .update_notification_group import UpdateNotificationGroup
 from .update_option import UpdateOption
 from .update_owned_star_count import UpdateOwnedStarCount
+from .update_paid_media_purchased import UpdatePaidMediaPurchased
 from .update_poll import UpdatePoll
 from .update_poll_answer import UpdatePollAnswer
 from .update_profile_accent_colors import UpdateProfileAccentColors
@@ -1644,11 +1730,19 @@ from .update_user import UpdateUser
 from .update_user_full_info import UpdateUserFullInfo
 from .update_user_privacy_setting_rules import UpdateUserPrivacySettingRules
 from .update_user_status import UpdateUserStatus
-from .update_users_nearby import UpdateUsersNearby
+from .update_video_published import UpdateVideoPublished
 from .update_web_app_message_sent import UpdateWebAppMessageSent
 from .updates import Updates
+from .upgrade_gift_result import UpgradeGiftResult
+from .upgraded_gift import UpgradedGift
+from .upgraded_gift_backdrop import UpgradedGiftBackdrop
+from .upgraded_gift_model import UpgradedGiftModel
+from .upgraded_gift_original_details import UpgradedGiftOriginalDetails
+from .upgraded_gift_symbol import UpgradedGiftSymbol
 from .user import User
 from .user_full_info import UserFullInfo
+from .user_gift import UserGift
+from .user_gifts import UserGifts
 from .user_link import UserLink
 from .user_privacy_setting_allow_calls import UserPrivacySettingAllowCalls
 from .user_privacy_setting_allow_chat_invites import UserPrivacySettingAllowChatInvites
@@ -1659,12 +1753,15 @@ from .user_privacy_setting_allow_peer_to_peer_calls import UserPrivacySettingAll
 from .user_privacy_setting_allow_private_voice_and_video_note_messages import (
     UserPrivacySettingAllowPrivateVoiceAndVideoNoteMessages,
 )
+from .user_privacy_setting_autosave_gifts import UserPrivacySettingAutosaveGifts
 from .user_privacy_setting_rule_allow_all import UserPrivacySettingRuleAllowAll
+from .user_privacy_setting_rule_allow_bots import UserPrivacySettingRuleAllowBots
 from .user_privacy_setting_rule_allow_chat_members import UserPrivacySettingRuleAllowChatMembers
 from .user_privacy_setting_rule_allow_contacts import UserPrivacySettingRuleAllowContacts
 from .user_privacy_setting_rule_allow_premium_users import UserPrivacySettingRuleAllowPremiumUsers
 from .user_privacy_setting_rule_allow_users import UserPrivacySettingRuleAllowUsers
 from .user_privacy_setting_rule_restrict_all import UserPrivacySettingRuleRestrictAll
+from .user_privacy_setting_rule_restrict_bots import UserPrivacySettingRuleRestrictBots
 from .user_privacy_setting_rule_restrict_chat_members import (
     UserPrivacySettingRuleRestrictChatMembers,
 )
@@ -1696,12 +1793,17 @@ from .validated_order_info import ValidatedOrderInfo
 from .vector_path_command_cubic_bezier_curve import VectorPathCommandCubicBezierCurve
 from .vector_path_command_line import VectorPathCommandLine
 from .venue import Venue
+from .verification_status import VerificationStatus
 from .video import Video
 from .video_chat import VideoChat
 from .video_note import VideoNote
 from .voice_note import VoiceNote
 from .web_app import WebApp
 from .web_app_info import WebAppInfo
+from .web_app_open_mode_compact import WebAppOpenModeCompact
+from .web_app_open_mode_full_screen import WebAppOpenModeFullScreen
+from .web_app_open_mode_full_size import WebAppOpenModeFullSize
+from .web_app_open_parameters import WebAppOpenParameters
 from .web_page_instant_view import WebPageInstantView
 
 AuthenticationCodeType = (
@@ -1765,33 +1867,53 @@ ChatPhotoStickerType = ChatPhotoStickerTypeRegularOrMask | ChatPhotoStickerTypeC
 InputChatPhoto = (
     InputChatPhotoPrevious | InputChatPhotoStatic | InputChatPhotoAnimation | InputChatPhotoSticker
 )
+StarSubscriptionType = StarSubscriptionTypeChannel | StarSubscriptionTypeBot
+AffiliateType = AffiliateTypeCurrentUser | AffiliateTypeBot | AffiliateTypeChannel
+AffiliateProgramSortOrder = (
+    AffiliateProgramSortOrderProfitability
+    | AffiliateProgramSortOrderCreationDate
+    | AffiliateProgramSortOrderRevenue
+)
+SentGift = SentGiftRegular | SentGiftUpgraded
 StarTransactionDirection = StarTransactionDirectionIncoming | StarTransactionDirectionOutgoing
-BotTransactionPurpose = BotTransactionPurposePaidMedia | BotTransactionPurposeInvoicePayment
-ChannelTransactionPurpose = (
-    ChannelTransactionPurposePaidMedia
-    | ChannelTransactionPurposeJoin
-    | ChannelTransactionPurposeReaction
+StarTransactionType = (
+    StarTransactionTypePremiumBotDeposit
+    | StarTransactionTypeAppStoreDeposit
+    | StarTransactionTypeGooglePlayDeposit
+    | StarTransactionTypeFragmentDeposit
+    | StarTransactionTypeUserDeposit
+    | StarTransactionTypeGiveawayDeposit
+    | StarTransactionTypeFragmentWithdrawal
+    | StarTransactionTypeTelegramAdsWithdrawal
+    | StarTransactionTypeTelegramApiUsage
+    | StarTransactionTypeBotPaidMediaPurchase
+    | StarTransactionTypeBotPaidMediaSale
+    | StarTransactionTypeChannelPaidMediaPurchase
+    | StarTransactionTypeChannelPaidMediaSale
+    | StarTransactionTypeBotInvoicePurchase
+    | StarTransactionTypeBotInvoiceSale
+    | StarTransactionTypeBotSubscriptionPurchase
+    | StarTransactionTypeBotSubscriptionSale
+    | StarTransactionTypeChannelSubscriptionPurchase
+    | StarTransactionTypeChannelSubscriptionSale
+    | StarTransactionTypeGiftPurchase
+    | StarTransactionTypeGiftTransfer
+    | StarTransactionTypeGiftSale
+    | StarTransactionTypeGiftUpgrade
+    | StarTransactionTypeChannelPaidReactionSend
+    | StarTransactionTypeChannelPaidReactionReceive
+    | StarTransactionTypeAffiliateProgramCommission
+    | StarTransactionTypeUnsupported
 )
-StarTransactionPartner = (
-    StarTransactionPartnerTelegram
-    | StarTransactionPartnerAppStore
-    | StarTransactionPartnerGooglePlay
-    | StarTransactionPartnerFragment
-    | StarTransactionPartnerTelegramAds
-    | StarTransactionPartnerBot
-    | StarTransactionPartnerBusiness
-    | StarTransactionPartnerChannel
-    | StarTransactionPartnerUser
-    | StarTransactionPartnerUnsupported
+GiveawayParticipantStatus = (
+    GiveawayParticipantStatusEligible
+    | GiveawayParticipantStatusParticipating
+    | GiveawayParticipantStatusAlreadyWasMember
+    | GiveawayParticipantStatusAdministrator
+    | GiveawayParticipantStatusDisallowedCountry
 )
-PremiumGiveawayParticipantStatus = (
-    PremiumGiveawayParticipantStatusEligible
-    | PremiumGiveawayParticipantStatusParticipating
-    | PremiumGiveawayParticipantStatusAlreadyWasMember
-    | PremiumGiveawayParticipantStatusAdministrator
-    | PremiumGiveawayParticipantStatusDisallowedCountry
-)
-PremiumGiveawayInfo = PremiumGiveawayInfoOngoing | PremiumGiveawayInfoCompleted
+GiveawayInfo = GiveawayInfoOngoing | GiveawayInfoCompleted
+GiveawayPrize = GiveawayPrizePremium | GiveawayPrizeStars
 ChatMemberStatus = (
     ChatMemberStatusCreator
     | ChatMemberStatusAdministrator
@@ -1877,7 +1999,6 @@ ChatAvailableReactions = ChatAvailableReactionsAll | ChatAvailableReactionsSome
 PublicChatType = PublicChatTypeHasUsername | PublicChatTypeIsLocationBased
 ChatActionBar = (
     ChatActionBarReportSpam
-    | ChatActionBarReportUnrelatedLocation
     | ChatActionBarInviteMembers
     | ChatActionBarReportAddBlock
     | ChatActionBarAddContact
@@ -1903,6 +2024,7 @@ InlineKeyboardButtonType = (
     | InlineKeyboardButtonTypeSwitchInline
     | InlineKeyboardButtonTypeBuy
     | InlineKeyboardButtonTypeUser
+    | InlineKeyboardButtonTypeCopyText
 )
 ReplyMarkup = (
     ReplyMarkupRemoveKeyboard
@@ -1911,6 +2033,7 @@ ReplyMarkup = (
     | ReplyMarkupInlineKeyboard
 )
 LoginUrlInfo = LoginUrlInfoOpen | LoginUrlInfoRequestConfirmation
+WebAppOpenMode = WebAppOpenModeCompact | WebAppOpenModeFullSize | WebAppOpenModeFullScreen
 SavedMessagesTopicType = (
     SavedMessagesTopicTypeMyNotes
     | SavedMessagesTopicTypeAuthorHidden
@@ -1990,6 +2113,8 @@ LinkPreviewType = (
     | LinkPreviewTypeEmbeddedAnimationPlayer
     | LinkPreviewTypeEmbeddedAudioPlayer
     | LinkPreviewTypeEmbeddedVideoPlayer
+    | LinkPreviewTypeExternalAudio
+    | LinkPreviewTypeExternalVideo
     | LinkPreviewTypeInvoice
     | LinkPreviewTypeMessage
     | LinkPreviewTypePhoto
@@ -2016,7 +2141,7 @@ InputCredentials = (
     | InputCredentialsGooglePay
 )
 PaymentProvider = PaymentProviderSmartGlocal | PaymentProviderStripe | PaymentProviderOther
-PaymentFormType = PaymentFormTypeRegular | PaymentFormTypeStars
+PaymentFormType = PaymentFormTypeRegular | PaymentFormTypeStars | PaymentFormTypeStarSubscription
 PaymentReceiptType = PaymentReceiptTypeRegular | PaymentReceiptTypeStars
 InputInvoice = InputInvoiceMessage | InputInvoiceName | InputInvoiceTelegram
 PaidMedia = PaidMediaPreview | PaidMediaPhoto | PaidMediaVideo | PaidMediaUnsupported
@@ -2145,11 +2270,15 @@ MessageContent = (
     | MessagePaymentRefunded
     | MessageGiftedPremium
     | MessagePremiumGiftCode
-    | MessagePremiumGiveawayCreated
-    | MessagePremiumGiveaway
-    | MessagePremiumGiveawayCompleted
-    | MessagePremiumGiveawayWinners
+    | MessageGiveawayCreated
+    | MessageGiveaway
+    | MessageGiveawayCompleted
+    | MessageGiveawayWinners
     | MessageGiftedStars
+    | MessageGiveawayPrizeStars
+    | MessageGift
+    | MessageUpgradedGift
+    | MessageRefundedUpgradedGift
     | MessageContactRegistered
     | MessageUsersShared
     | MessageChatShared
@@ -2186,7 +2315,11 @@ TextEntityType = (
     | TextEntityTypeMediaTimestamp
 )
 InputPaidMediaType = InputPaidMediaTypePhoto | InputPaidMediaTypeVideo
-MessageSchedulingState = MessageSchedulingStateSendAtDate | MessageSchedulingStateSendWhenOnline
+MessageSchedulingState = (
+    MessageSchedulingStateSendAtDate
+    | MessageSchedulingStateSendWhenOnline
+    | MessageSchedulingStateSendWhenVideoProcessed
+)
 MessageSelfDestructType = MessageSelfDestructTypeTimer | MessageSelfDestructTypeImmediately
 InputMessageContent = (
     InputMessageText
@@ -2227,6 +2360,11 @@ SearchMessagesFilter = (
     | SearchMessagesFilterUnreadReaction
     | SearchMessagesFilterFailedToSend
     | SearchMessagesFilterPinned
+)
+SearchMessagesChatTypeFilter = (
+    SearchMessagesChatTypeFilterPrivate
+    | SearchMessagesChatTypeFilterGroup
+    | SearchMessagesChatTypeFilterChannel
 )
 ChatAction = (
     ChatActionTyping
@@ -2293,6 +2431,7 @@ CallDiscardReason = (
     | CallDiscardReasonDeclined
     | CallDiscardReasonDisconnected
     | CallDiscardReasonHungUp
+    | CallDiscardReasonAllowGroupCall
 )
 CallServerType = CallServerTypeTelegramReflector | CallServerTypeWebrtc
 CallState = (
@@ -2333,6 +2472,7 @@ BotWriteAccessAllowReason = (
     | BotWriteAccessAllowReasonLaunchedWebApp
     | BotWriteAccessAllowReasonAcceptedRequest
 )
+TargetChat = TargetChatCurrent | TargetChatChosen | TargetChatInternalLink
 InputInlineQueryResult = (
     InputInlineQueryResultAnimation
     | InputInlineQueryResultArticle
@@ -2380,6 +2520,7 @@ ChatEventAction = (
     | ChatEventMemberLeft
     | ChatEventMemberPromoted
     | ChatEventMemberRestricted
+    | ChatEventMemberSubscriptionExtended
     | ChatEventAvailableReactionsChanged
     | ChatEventBackgroundChanged
     | ChatEventDescriptionChanged
@@ -2503,9 +2644,9 @@ PremiumSource = (
 )
 StorePaymentPurpose = (
     StorePaymentPurposePremiumSubscription
-    | StorePaymentPurposeGiftedPremium
     | StorePaymentPurposePremiumGiftCodes
     | StorePaymentPurposePremiumGiveaway
+    | StorePaymentPurposeStarGiveaway
     | StorePaymentPurposeStars
     | StorePaymentPurposeGiftedStars
 )
@@ -2514,6 +2655,7 @@ TelegramPaymentPurpose = (
     | TelegramPaymentPurposePremiumGiveaway
     | TelegramPaymentPurposeStars
     | TelegramPaymentPurposeGiftedStars
+    | TelegramPaymentPurposeStarGiveaway
     | TelegramPaymentPurposeJoinChat
 )
 DeviceToken = (
@@ -2581,7 +2723,9 @@ PushMessageContent = (
     | PushMessageContentPhoto
     | PushMessageContentPoll
     | PushMessageContentPremiumGiftCode
-    | PushMessageContentPremiumGiveaway
+    | PushMessageContentGiveaway
+    | PushMessageContentGift
+    | PushMessageContentUpgradedGift
     | PushMessageContentScreenshotTaken
     | PushMessageContentSticker
     | PushMessageContentStory
@@ -2633,11 +2777,13 @@ StoryPrivacySettings = (
 UserPrivacySettingRule = (
     UserPrivacySettingRuleAllowAll
     | UserPrivacySettingRuleAllowContacts
+    | UserPrivacySettingRuleAllowBots
     | UserPrivacySettingRuleAllowPremiumUsers
     | UserPrivacySettingRuleAllowUsers
     | UserPrivacySettingRuleAllowChatMembers
     | UserPrivacySettingRuleRestrictAll
     | UserPrivacySettingRuleRestrictContacts
+    | UserPrivacySettingRuleRestrictBots
     | UserPrivacySettingRuleRestrictUsers
     | UserPrivacySettingRuleRestrictChatMembers
 )
@@ -2653,6 +2799,7 @@ UserPrivacySetting = (
     | UserPrivacySettingAllowPeerToPeerCalls
     | UserPrivacySettingAllowFindingByPhoneNumber
     | UserPrivacySettingAllowPrivateVoiceAndVideoNoteMessages
+    | UserPrivacySettingAutosaveGifts
 )
 CanSendMessageToUserResult = (
     CanSendMessageToUserResultOk
@@ -2690,7 +2837,15 @@ ReportReason = (
     | ReportReasonPersonalDetails
     | ReportReasonCustom
 )
-TargetChat = TargetChatCurrent | TargetChatChosen | TargetChatInternalLink
+ReportChatResult = (
+    ReportChatResultOk
+    | ReportChatResultOptionRequired
+    | ReportChatResultTextRequired
+    | ReportChatResultMessagesRequired
+)
+ReportStoryResult = (
+    ReportStoryResultOk | ReportStoryResultOptionRequired | ReportStoryResultTextRequired
+)
 InternalLinkType = (
     InternalLinkTypeActiveSessions
     | InternalLinkTypeAttachmentMenuBot
@@ -2702,6 +2857,7 @@ InternalLinkType = (
     | InternalLinkTypeBusinessChat
     | InternalLinkTypeBuyStars
     | InternalLinkTypeChangePhoneNumber
+    | InternalLinkTypeChatAffiliateProgram
     | InternalLinkTypeChatBoost
     | InternalLinkTypeChatFolderInvite
     | InternalLinkTypeChatFolderSettings
@@ -2751,6 +2907,10 @@ FileType = (
     | FileTypeSecret
     | FileTypeSecretThumbnail
     | FileTypeSecure
+    | FileTypeSelfDestructingPhoto
+    | FileTypeSelfDestructingVideo
+    | FileTypeSelfDestructingVideoNote
+    | FileTypeSelfDestructingVoiceNote
     | FileTypeSticker
     | FileTypeThumbnail
     | FileTypeUnknown
@@ -2804,6 +2964,7 @@ SuggestedAction = (
     | SuggestedActionSubscribeToAnnualPremium
     | SuggestedActionGiftPremiumForChristmas
     | SuggestedActionSetBirthdate
+    | SuggestedActionSetProfilePhoto
     | SuggestedActionExtendPremium
     | SuggestedActionExtendStarSubscriptions
 )
@@ -2848,6 +3009,7 @@ Update = (
     | UpdateMessageUnreadReactions
     | UpdateMessageFactCheck
     | UpdateMessageLiveLocationViewed
+    | UpdateVideoPublished
     | UpdateNewChat
     | UpdateChatTitle
     | UpdateChatPhoto
@@ -2944,7 +3106,6 @@ Update = (
     | UpdateLanguagePackStrings
     | UpdateConnectionState
     | UpdateTermsOfService
-    | UpdateUsersNearby
     | UpdateUnconfirmedSession
     | UpdateAttachmentMenuBots
     | UpdateWebAppMessageSent
@@ -2984,6 +3145,7 @@ Update = (
     | UpdateChatBoost
     | UpdateMessageReaction
     | UpdateMessageReactions
+    | UpdatePaidMediaPurchased
 )
 LogStream = LogStreamDefault | LogStreamFile | LogStreamEmpty
 
@@ -3062,6 +3224,7 @@ __all__ = [
     "StickerFullTypeMask",
     "StickerFullTypeCustomEmoji",
     "ClosedVectorPath",
+    "Outline",
     "PollOption",
     "PollTypeRegular",
     "PollTypeQuiz",
@@ -3080,6 +3243,7 @@ __all__ = [
     "Game",
     "WebApp",
     "Poll",
+    "AlternativeVideo",
     "Background",
     "Backgrounds",
     "ChatBackground",
@@ -3092,6 +3256,9 @@ __all__ = [
     "BotCommand",
     "BotCommands",
     "BotMenuButton",
+    "BotVerificationParameters",
+    "BotVerification",
+    "VerificationStatus",
     "ChatLocation",
     "Birthdate",
     "CloseBirthdayUser",
@@ -3124,9 +3291,25 @@ __all__ = [
     "InputChatPhotoSticker",
     "ChatPermissions",
     "ChatAdministratorRights",
+    "StarAmount",
+    "StarSubscriptionTypeChannel",
+    "StarSubscriptionTypeBot",
     "StarSubscriptionPricing",
     "StarSubscription",
     "StarSubscriptions",
+    "AffiliateTypeCurrentUser",
+    "AffiliateTypeBot",
+    "AffiliateTypeChannel",
+    "AffiliateProgramSortOrderProfitability",
+    "AffiliateProgramSortOrderCreationDate",
+    "AffiliateProgramSortOrderRevenue",
+    "AffiliateProgramParameters",
+    "AffiliateProgramInfo",
+    "AffiliateInfo",
+    "FoundAffiliateProgram",
+    "FoundAffiliatePrograms",
+    "ConnectedAffiliateProgram",
+    "ConnectedAffiliatePrograms",
     "ProductInfo",
     "PremiumPaymentOption",
     "PremiumStatePaymentOption",
@@ -3135,32 +3318,62 @@ __all__ = [
     "PremiumGiftCodeInfo",
     "StarPaymentOption",
     "StarPaymentOptions",
+    "StarGiveawayWinnerOption",
+    "StarGiveawayPaymentOption",
+    "StarGiveawayPaymentOptions",
+    "UpgradedGiftModel",
+    "UpgradedGiftSymbol",
+    "UpgradedGiftBackdrop",
+    "UpgradedGiftOriginalDetails",
+    "Gift",
+    "Gifts",
+    "UpgradedGift",
+    "UpgradeGiftResult",
+    "SentGiftRegular",
+    "SentGiftUpgraded",
+    "UserGift",
+    "UserGifts",
+    "GiftUpgradePreview",
     "StarTransactionDirectionIncoming",
     "StarTransactionDirectionOutgoing",
-    "BotTransactionPurposePaidMedia",
-    "BotTransactionPurposeInvoicePayment",
-    "ChannelTransactionPurposePaidMedia",
-    "ChannelTransactionPurposeJoin",
-    "ChannelTransactionPurposeReaction",
-    "StarTransactionPartnerTelegram",
-    "StarTransactionPartnerAppStore",
-    "StarTransactionPartnerGooglePlay",
-    "StarTransactionPartnerFragment",
-    "StarTransactionPartnerTelegramAds",
-    "StarTransactionPartnerBot",
-    "StarTransactionPartnerBusiness",
-    "StarTransactionPartnerChannel",
-    "StarTransactionPartnerUser",
-    "StarTransactionPartnerUnsupported",
+    "StarTransactionTypePremiumBotDeposit",
+    "StarTransactionTypeAppStoreDeposit",
+    "StarTransactionTypeGooglePlayDeposit",
+    "StarTransactionTypeFragmentDeposit",
+    "StarTransactionTypeUserDeposit",
+    "StarTransactionTypeGiveawayDeposit",
+    "StarTransactionTypeFragmentWithdrawal",
+    "StarTransactionTypeTelegramAdsWithdrawal",
+    "StarTransactionTypeTelegramApiUsage",
+    "StarTransactionTypeBotPaidMediaPurchase",
+    "StarTransactionTypeBotPaidMediaSale",
+    "StarTransactionTypeChannelPaidMediaPurchase",
+    "StarTransactionTypeChannelPaidMediaSale",
+    "StarTransactionTypeBotInvoicePurchase",
+    "StarTransactionTypeBotInvoiceSale",
+    "StarTransactionTypeBotSubscriptionPurchase",
+    "StarTransactionTypeBotSubscriptionSale",
+    "StarTransactionTypeChannelSubscriptionPurchase",
+    "StarTransactionTypeChannelSubscriptionSale",
+    "StarTransactionTypeGiftPurchase",
+    "StarTransactionTypeGiftTransfer",
+    "StarTransactionTypeGiftSale",
+    "StarTransactionTypeGiftUpgrade",
+    "StarTransactionTypeChannelPaidReactionSend",
+    "StarTransactionTypeChannelPaidReactionReceive",
+    "StarTransactionTypeAffiliateProgramCommission",
+    "StarTransactionTypeUnsupported",
     "StarTransaction",
     "StarTransactions",
-    "PremiumGiveawayParticipantStatusEligible",
-    "PremiumGiveawayParticipantStatusParticipating",
-    "PremiumGiveawayParticipantStatusAlreadyWasMember",
-    "PremiumGiveawayParticipantStatusAdministrator",
-    "PremiumGiveawayParticipantStatusDisallowedCountry",
-    "PremiumGiveawayInfoOngoing",
-    "PremiumGiveawayInfoCompleted",
+    "GiveawayParticipantStatusEligible",
+    "GiveawayParticipantStatusParticipating",
+    "GiveawayParticipantStatusAlreadyWasMember",
+    "GiveawayParticipantStatusAdministrator",
+    "GiveawayParticipantStatusDisallowedCountry",
+    "GiveawayInfoOngoing",
+    "GiveawayInfoCompleted",
+    "GiveawayPrizePremium",
+    "GiveawayPrizeStars",
     "AccentColor",
     "ProfileAccentColors",
     "ProfileAccentColor",
@@ -3283,7 +3496,7 @@ __all__ = [
     "MessageSponsor",
     "SponsoredMessage",
     "SponsoredMessages",
-    "ReportChatSponsoredMessageOption",
+    "ReportOption",
     "ReportChatSponsoredMessageResultOk",
     "ReportChatSponsoredMessageResultFailed",
     "ReportChatSponsoredMessageResultOptionRequired",
@@ -3307,6 +3520,7 @@ __all__ = [
     "ChatTypeSupergroup",
     "ChatTypeSecret",
     "ChatFolderIcon",
+    "ChatFolderName",
     "ChatFolder",
     "ChatFolderInfo",
     "ChatFolderInviteLink",
@@ -3333,12 +3547,9 @@ __all__ = [
     "FailedToAddMember",
     "FailedToAddMembers",
     "CreatedBasicGroupChat",
-    "ChatNearby",
-    "ChatsNearby",
     "PublicChatTypeHasUsername",
     "PublicChatTypeIsLocationBased",
     "ChatActionBarReportSpam",
-    "ChatActionBarReportUnrelatedLocation",
     "ChatActionBarInviteMembers",
     "ChatActionBarReportAddBlock",
     "ChatActionBarAddContact",
@@ -3361,6 +3572,7 @@ __all__ = [
     "InlineKeyboardButtonTypeSwitchInline",
     "InlineKeyboardButtonTypeBuy",
     "InlineKeyboardButtonTypeUser",
+    "InlineKeyboardButtonTypeCopyText",
     "InlineKeyboardButton",
     "ReplyMarkupRemoveKeyboard",
     "ReplyMarkupForceReply",
@@ -3368,9 +3580,14 @@ __all__ = [
     "ReplyMarkupInlineKeyboard",
     "LoginUrlInfoOpen",
     "LoginUrlInfoRequestConfirmation",
+    "ThemeParameters",
+    "WebAppOpenModeCompact",
+    "WebAppOpenModeFullSize",
+    "WebAppOpenModeFullScreen",
     "FoundWebApp",
     "WebAppInfo",
     "MainWebApp",
+    "WebAppOpenParameters",
     "MessageThreadInfo",
     "SavedMessagesTopicTypeMyNotes",
     "SavedMessagesTopicTypeAuthorHidden",
@@ -3455,6 +3672,8 @@ __all__ = [
     "LinkPreviewTypeEmbeddedAnimationPlayer",
     "LinkPreviewTypeEmbeddedAudioPlayer",
     "LinkPreviewTypeEmbeddedVideoPlayer",
+    "LinkPreviewTypeExternalAudio",
+    "LinkPreviewTypeExternalVideo",
     "LinkPreviewTypeInvoice",
     "LinkPreviewTypeMessage",
     "LinkPreviewTypePhoto",
@@ -3483,7 +3702,6 @@ __all__ = [
     "BankCardInfo",
     "Address",
     "LocationAddress",
-    "ThemeParameters",
     "LabeledPricePart",
     "Invoice",
     "OrderInfo",
@@ -3499,6 +3717,7 @@ __all__ = [
     "PaymentOption",
     "PaymentFormTypeRegular",
     "PaymentFormTypeStars",
+    "PaymentFormTypeStarSubscription",
     "PaymentForm",
     "ValidatedOrderInfo",
     "PaymentResult",
@@ -3512,7 +3731,7 @@ __all__ = [
     "PaidMediaPhoto",
     "PaidMediaVideo",
     "PaidMediaUnsupported",
-    "PremiumGiveawayParameters",
+    "GiveawayParameters",
     "DatedFile",
     "PassportElementTypePersonalDetails",
     "PassportElementTypePassport",
@@ -3643,11 +3862,15 @@ __all__ = [
     "MessagePaymentRefunded",
     "MessageGiftedPremium",
     "MessagePremiumGiftCode",
-    "MessagePremiumGiveawayCreated",
-    "MessagePremiumGiveaway",
-    "MessagePremiumGiveawayCompleted",
-    "MessagePremiumGiveawayWinners",
+    "MessageGiveawayCreated",
+    "MessageGiveaway",
+    "MessageGiveawayCompleted",
+    "MessageGiveawayWinners",
     "MessageGiftedStars",
+    "MessageGiveawayPrizeStars",
+    "MessageGift",
+    "MessageUpgradedGift",
+    "MessageRefundedUpgradedGift",
     "MessageContactRegistered",
     "MessageUsersShared",
     "MessageChatShared",
@@ -3686,6 +3909,7 @@ __all__ = [
     "InputPaidMedia",
     "MessageSchedulingStateSendAtDate",
     "MessageSchedulingStateSendWhenOnline",
+    "MessageSchedulingStateSendWhenVideoProcessed",
     "MessageSelfDestructTypeTimer",
     "MessageSelfDestructTypeImmediately",
     "MessageSendOptions",
@@ -3727,6 +3951,9 @@ __all__ = [
     "SearchMessagesFilterUnreadReaction",
     "SearchMessagesFilterFailedToSend",
     "SearchMessagesFilterPinned",
+    "SearchMessagesChatTypeFilterPrivate",
+    "SearchMessagesChatTypeFilterGroup",
+    "SearchMessagesChatTypeFilterChannel",
     "ChatActionTyping",
     "ChatActionRecordingVideo",
     "ChatActionUploadingVideo",
@@ -3819,7 +4046,7 @@ __all__ = [
     "ChatBoostSourceGiftCode",
     "ChatBoostSourceGiveaway",
     "ChatBoostSourcePremium",
-    "PrepaidPremiumGiveaway",
+    "PrepaidGiveaway",
     "ChatBoostStatus",
     "ChatBoost",
     "FoundChatBoosts",
@@ -3832,6 +4059,7 @@ __all__ = [
     "CallDiscardReasonDeclined",
     "CallDiscardReasonDisconnected",
     "CallDiscardReasonHungUp",
+    "CallDiscardReasonAllowGroupCall",
     "CallProtocol",
     "CallServerTypeTelegramReflector",
     "CallServerTypeWebrtc",
@@ -3892,6 +4120,10 @@ __all__ = [
     "BotWriteAccessAllowReasonAcceptedRequest",
     "HttpUrl",
     "UserLink",
+    "TargetChatTypes",
+    "TargetChatCurrent",
+    "TargetChatChosen",
+    "TargetChatInternalLink",
     "InputInlineQueryResultAnimation",
     "InputInlineQueryResultArticle",
     "InputInlineQueryResultAudio",
@@ -3920,6 +4152,8 @@ __all__ = [
     "InlineQueryResultsButtonTypeWebApp",
     "InlineQueryResultsButton",
     "InlineQueryResults",
+    "PreparedInlineMessageId",
+    "PreparedInlineMessage",
     "CallbackQueryPayloadData",
     "CallbackQueryPayloadDataWithPassword",
     "CallbackQueryPayloadGame",
@@ -3939,6 +4173,7 @@ __all__ = [
     "ChatEventMemberLeft",
     "ChatEventMemberPromoted",
     "ChatEventMemberRestricted",
+    "ChatEventMemberSubscriptionExtended",
     "ChatEventAvailableReactionsChanged",
     "ChatEventBackgroundChanged",
     "ChatEventDescriptionChanged",
@@ -4061,15 +4296,16 @@ __all__ = [
     "BusinessFeaturePromotionAnimation",
     "PremiumState",
     "StorePaymentPurposePremiumSubscription",
-    "StorePaymentPurposeGiftedPremium",
     "StorePaymentPurposePremiumGiftCodes",
     "StorePaymentPurposePremiumGiveaway",
+    "StorePaymentPurposeStarGiveaway",
     "StorePaymentPurposeStars",
     "StorePaymentPurposeGiftedStars",
     "TelegramPaymentPurposePremiumGiftCodes",
     "TelegramPaymentPurposePremiumGiveaway",
     "TelegramPaymentPurposeStars",
     "TelegramPaymentPurposeGiftedStars",
+    "TelegramPaymentPurposeStarGiveaway",
     "TelegramPaymentPurposeJoinChat",
     "DeviceTokenFirebaseCloudMessaging",
     "DeviceTokenApplePush",
@@ -4137,7 +4373,9 @@ __all__ = [
     "PushMessageContentPhoto",
     "PushMessageContentPoll",
     "PushMessageContentPremiumGiftCode",
-    "PushMessageContentPremiumGiveaway",
+    "PushMessageContentGiveaway",
+    "PushMessageContentGift",
+    "PushMessageContentUpgradedGift",
     "PushMessageContentScreenshotTaken",
     "PushMessageContentSticker",
     "PushMessageContentStory",
@@ -4187,11 +4425,13 @@ __all__ = [
     "StoryPrivacySettingsSelectedUsers",
     "UserPrivacySettingRuleAllowAll",
     "UserPrivacySettingRuleAllowContacts",
+    "UserPrivacySettingRuleAllowBots",
     "UserPrivacySettingRuleAllowPremiumUsers",
     "UserPrivacySettingRuleAllowUsers",
     "UserPrivacySettingRuleAllowChatMembers",
     "UserPrivacySettingRuleRestrictAll",
     "UserPrivacySettingRuleRestrictContacts",
+    "UserPrivacySettingRuleRestrictBots",
     "UserPrivacySettingRuleRestrictUsers",
     "UserPrivacySettingRuleRestrictChatMembers",
     "UserPrivacySettingRules",
@@ -4206,6 +4446,7 @@ __all__ = [
     "UserPrivacySettingAllowPeerToPeerCalls",
     "UserPrivacySettingAllowFindingByPhoneNumber",
     "UserPrivacySettingAllowPrivateVoiceAndVideoNoteMessages",
+    "UserPrivacySettingAutosaveGifts",
     "ReadDatePrivacySettings",
     "NewChatPrivacySettings",
     "CanSendMessageToUserResultOk",
@@ -4245,9 +4486,13 @@ __all__ = [
     "ReportReasonIllegalDrugs",
     "ReportReasonPersonalDetails",
     "ReportReasonCustom",
-    "TargetChatCurrent",
-    "TargetChatChosen",
-    "TargetChatInternalLink",
+    "ReportChatResultOk",
+    "ReportChatResultOptionRequired",
+    "ReportChatResultTextRequired",
+    "ReportChatResultMessagesRequired",
+    "ReportStoryResultOk",
+    "ReportStoryResultOptionRequired",
+    "ReportStoryResultTextRequired",
     "InternalLinkTypeActiveSessions",
     "InternalLinkTypeAttachmentMenuBot",
     "InternalLinkTypeAuthenticationCode",
@@ -4258,6 +4503,7 @@ __all__ = [
     "InternalLinkTypeBusinessChat",
     "InternalLinkTypeBuyStars",
     "InternalLinkTypeChangePhoneNumber",
+    "InternalLinkTypeChatAffiliateProgram",
     "InternalLinkTypeChatBoost",
     "InternalLinkTypeChatFolderInvite",
     "InternalLinkTypeChatFolderSettings",
@@ -4311,6 +4557,10 @@ __all__ = [
     "FileTypeSecret",
     "FileTypeSecretThumbnail",
     "FileTypeSecure",
+    "FileTypeSelfDestructingPhoto",
+    "FileTypeSelfDestructingVideo",
+    "FileTypeSelfDestructingVideoNote",
+    "FileTypeSelfDestructingVoiceNote",
     "FileTypeSticker",
     "FileTypeThumbnail",
     "FileTypeUnknown",
@@ -4373,6 +4623,7 @@ __all__ = [
     "SuggestedActionSubscribeToAnnualPremium",
     "SuggestedActionGiftPremiumForChristmas",
     "SuggestedActionSetBirthdate",
+    "SuggestedActionSetProfilePhoto",
     "SuggestedActionExtendPremium",
     "SuggestedActionExtendStarSubscriptions",
     "Count",
@@ -4455,6 +4706,7 @@ __all__ = [
     "UpdateMessageUnreadReactions",
     "UpdateMessageFactCheck",
     "UpdateMessageLiveLocationViewed",
+    "UpdateVideoPublished",
     "UpdateNewChat",
     "UpdateChatTitle",
     "UpdateChatPhoto",
@@ -4551,7 +4803,6 @@ __all__ = [
     "UpdateLanguagePackStrings",
     "UpdateConnectionState",
     "UpdateTermsOfService",
-    "UpdateUsersNearby",
     "UpdateUnconfirmedSession",
     "UpdateAttachmentMenuBots",
     "UpdateWebAppMessageSent",
@@ -4591,6 +4842,7 @@ __all__ = [
     "UpdateChatBoost",
     "UpdateMessageReaction",
     "UpdateMessageReactions",
+    "UpdatePaidMediaPurchased",
     "Updates",
     "AuthenticationCodeType",
     "EmailAddressAuthentication",
@@ -4608,12 +4860,15 @@ __all__ = [
     "BusinessAwayMessageSchedule",
     "ChatPhotoStickerType",
     "InputChatPhoto",
+    "StarSubscriptionType",
+    "AffiliateType",
+    "AffiliateProgramSortOrder",
+    "SentGift",
     "StarTransactionDirection",
-    "BotTransactionPurpose",
-    "ChannelTransactionPurpose",
-    "StarTransactionPartner",
-    "PremiumGiveawayParticipantStatus",
-    "PremiumGiveawayInfo",
+    "StarTransactionType",
+    "GiveawayParticipantStatus",
+    "GiveawayInfo",
+    "GiveawayPrize",
     "ChatMemberStatus",
     "ChatMembersFilter",
     "SupergroupMembersFilter",
@@ -4641,6 +4896,7 @@ __all__ = [
     "InlineKeyboardButtonType",
     "ReplyMarkup",
     "LoginUrlInfo",
+    "WebAppOpenMode",
     "SavedMessagesTopicType",
     "RichText",
     "PageBlockHorizontalAlignment",
@@ -4667,6 +4923,7 @@ __all__ = [
     "MessageSelfDestructType",
     "InputMessageContent",
     "SearchMessagesFilter",
+    "SearchMessagesChatTypeFilter",
     "ChatAction",
     "UserStatus",
     "EmojiCategorySource",
@@ -4691,6 +4948,7 @@ __all__ = [
     "DiceStickers",
     "SpeechRecognitionResult",
     "BotWriteAccessAllowReason",
+    "TargetChat",
     "InputInlineQueryResult",
     "InlineQueryResult",
     "InlineQueryResultsButtonType",
@@ -4725,7 +4983,8 @@ __all__ = [
     "CanSendMessageToUserResult",
     "SessionType",
     "ReportReason",
-    "TargetChat",
+    "ReportChatResult",
+    "ReportStoryResult",
     "InternalLinkType",
     "BlockList",
     "FileType",
@@ -4822,6 +5081,7 @@ exec_type_checking(sticker_full_type_regular)
 exec_type_checking(sticker_full_type_mask)
 exec_type_checking(sticker_full_type_custom_emoji)
 exec_type_checking(closed_vector_path)
+exec_type_checking(outline)
 exec_type_checking(poll_option)
 exec_type_checking(poll_type_regular)
 exec_type_checking(poll_type_quiz)
@@ -4840,6 +5100,7 @@ exec_type_checking(venue)
 exec_type_checking(game)
 exec_type_checking(web_app)
 exec_type_checking(poll)
+exec_type_checking(alternative_video)
 exec_type_checking(background)
 exec_type_checking(backgrounds)
 exec_type_checking(chat_background)
@@ -4852,6 +5113,9 @@ exec_type_checking(user_type_unknown)
 exec_type_checking(bot_command)
 exec_type_checking(bot_commands)
 exec_type_checking(bot_menu_button)
+exec_type_checking(bot_verification_parameters)
+exec_type_checking(bot_verification)
+exec_type_checking(verification_status)
 exec_type_checking(chat_location)
 exec_type_checking(birthdate)
 exec_type_checking(close_birthday_user)
@@ -4884,9 +5148,25 @@ exec_type_checking(input_chat_photo_animation)
 exec_type_checking(input_chat_photo_sticker)
 exec_type_checking(chat_permissions)
 exec_type_checking(chat_administrator_rights)
+exec_type_checking(star_amount)
+exec_type_checking(star_subscription_type_channel)
+exec_type_checking(star_subscription_type_bot)
 exec_type_checking(star_subscription_pricing)
 exec_type_checking(star_subscription)
 exec_type_checking(star_subscriptions)
+exec_type_checking(affiliate_type_current_user)
+exec_type_checking(affiliate_type_bot)
+exec_type_checking(affiliate_type_channel)
+exec_type_checking(affiliate_program_sort_order_profitability)
+exec_type_checking(affiliate_program_sort_order_creation_date)
+exec_type_checking(affiliate_program_sort_order_revenue)
+exec_type_checking(affiliate_program_parameters)
+exec_type_checking(affiliate_program_info)
+exec_type_checking(affiliate_info)
+exec_type_checking(found_affiliate_program)
+exec_type_checking(found_affiliate_programs)
+exec_type_checking(connected_affiliate_program)
+exec_type_checking(connected_affiliate_programs)
 exec_type_checking(product_info)
 exec_type_checking(premium_payment_option)
 exec_type_checking(premium_state_payment_option)
@@ -4895,32 +5175,62 @@ exec_type_checking(premium_gift_code_payment_options)
 exec_type_checking(premium_gift_code_info)
 exec_type_checking(star_payment_option)
 exec_type_checking(star_payment_options)
+exec_type_checking(star_giveaway_winner_option)
+exec_type_checking(star_giveaway_payment_option)
+exec_type_checking(star_giveaway_payment_options)
+exec_type_checking(upgraded_gift_model)
+exec_type_checking(upgraded_gift_symbol)
+exec_type_checking(upgraded_gift_backdrop)
+exec_type_checking(upgraded_gift_original_details)
+exec_type_checking(gift)
+exec_type_checking(gifts)
+exec_type_checking(upgraded_gift)
+exec_type_checking(upgrade_gift_result)
+exec_type_checking(sent_gift_regular)
+exec_type_checking(sent_gift_upgraded)
+exec_type_checking(user_gift)
+exec_type_checking(user_gifts)
+exec_type_checking(gift_upgrade_preview)
 exec_type_checking(star_transaction_direction_incoming)
 exec_type_checking(star_transaction_direction_outgoing)
-exec_type_checking(bot_transaction_purpose_paid_media)
-exec_type_checking(bot_transaction_purpose_invoice_payment)
-exec_type_checking(channel_transaction_purpose_paid_media)
-exec_type_checking(channel_transaction_purpose_join)
-exec_type_checking(channel_transaction_purpose_reaction)
-exec_type_checking(star_transaction_partner_telegram)
-exec_type_checking(star_transaction_partner_app_store)
-exec_type_checking(star_transaction_partner_google_play)
-exec_type_checking(star_transaction_partner_fragment)
-exec_type_checking(star_transaction_partner_telegram_ads)
-exec_type_checking(star_transaction_partner_bot)
-exec_type_checking(star_transaction_partner_business)
-exec_type_checking(star_transaction_partner_channel)
-exec_type_checking(star_transaction_partner_user)
-exec_type_checking(star_transaction_partner_unsupported)
+exec_type_checking(star_transaction_type_premium_bot_deposit)
+exec_type_checking(star_transaction_type_app_store_deposit)
+exec_type_checking(star_transaction_type_google_play_deposit)
+exec_type_checking(star_transaction_type_fragment_deposit)
+exec_type_checking(star_transaction_type_user_deposit)
+exec_type_checking(star_transaction_type_giveaway_deposit)
+exec_type_checking(star_transaction_type_fragment_withdrawal)
+exec_type_checking(star_transaction_type_telegram_ads_withdrawal)
+exec_type_checking(star_transaction_type_telegram_api_usage)
+exec_type_checking(star_transaction_type_bot_paid_media_purchase)
+exec_type_checking(star_transaction_type_bot_paid_media_sale)
+exec_type_checking(star_transaction_type_channel_paid_media_purchase)
+exec_type_checking(star_transaction_type_channel_paid_media_sale)
+exec_type_checking(star_transaction_type_bot_invoice_purchase)
+exec_type_checking(star_transaction_type_bot_invoice_sale)
+exec_type_checking(star_transaction_type_bot_subscription_purchase)
+exec_type_checking(star_transaction_type_bot_subscription_sale)
+exec_type_checking(star_transaction_type_channel_subscription_purchase)
+exec_type_checking(star_transaction_type_channel_subscription_sale)
+exec_type_checking(star_transaction_type_gift_purchase)
+exec_type_checking(star_transaction_type_gift_transfer)
+exec_type_checking(star_transaction_type_gift_sale)
+exec_type_checking(star_transaction_type_gift_upgrade)
+exec_type_checking(star_transaction_type_channel_paid_reaction_send)
+exec_type_checking(star_transaction_type_channel_paid_reaction_receive)
+exec_type_checking(star_transaction_type_affiliate_program_commission)
+exec_type_checking(star_transaction_type_unsupported)
 exec_type_checking(star_transaction)
 exec_type_checking(star_transactions)
-exec_type_checking(premium_giveaway_participant_status_eligible)
-exec_type_checking(premium_giveaway_participant_status_participating)
-exec_type_checking(premium_giveaway_participant_status_already_was_member)
-exec_type_checking(premium_giveaway_participant_status_administrator)
-exec_type_checking(premium_giveaway_participant_status_disallowed_country)
-exec_type_checking(premium_giveaway_info_ongoing)
-exec_type_checking(premium_giveaway_info_completed)
+exec_type_checking(giveaway_participant_status_eligible)
+exec_type_checking(giveaway_participant_status_participating)
+exec_type_checking(giveaway_participant_status_already_was_member)
+exec_type_checking(giveaway_participant_status_administrator)
+exec_type_checking(giveaway_participant_status_disallowed_country)
+exec_type_checking(giveaway_info_ongoing)
+exec_type_checking(giveaway_info_completed)
+exec_type_checking(giveaway_prize_premium)
+exec_type_checking(giveaway_prize_stars)
 exec_type_checking(accent_color)
 exec_type_checking(profile_accent_colors)
 exec_type_checking(profile_accent_color)
@@ -5043,7 +5353,7 @@ exec_type_checking(message_source_other)
 exec_type_checking(message_sponsor)
 exec_type_checking(sponsored_message)
 exec_type_checking(sponsored_messages)
-exec_type_checking(report_chat_sponsored_message_option)
+exec_type_checking(report_option)
 exec_type_checking(report_chat_sponsored_message_result_ok)
 exec_type_checking(report_chat_sponsored_message_result_failed)
 exec_type_checking(report_chat_sponsored_message_result_option_required)
@@ -5067,6 +5377,7 @@ exec_type_checking(chat_type_basic_group)
 exec_type_checking(chat_type_supergroup)
 exec_type_checking(chat_type_secret)
 exec_type_checking(chat_folder_icon)
+exec_type_checking(chat_folder_name)
 exec_type_checking(chat_folder)
 exec_type_checking(chat_folder_info)
 exec_type_checking(chat_folder_invite_link)
@@ -5093,12 +5404,9 @@ exec_type_checking(chats)
 exec_type_checking(failed_to_add_member)
 exec_type_checking(failed_to_add_members)
 exec_type_checking(created_basic_group_chat)
-exec_type_checking(chat_nearby)
-exec_type_checking(chats_nearby)
 exec_type_checking(public_chat_type_has_username)
 exec_type_checking(public_chat_type_is_location_based)
 exec_type_checking(chat_action_bar_report_spam)
-exec_type_checking(chat_action_bar_report_unrelated_location)
 exec_type_checking(chat_action_bar_invite_members)
 exec_type_checking(chat_action_bar_report_add_block)
 exec_type_checking(chat_action_bar_add_contact)
@@ -5121,6 +5429,7 @@ exec_type_checking(inline_keyboard_button_type_callback_game)
 exec_type_checking(inline_keyboard_button_type_switch_inline)
 exec_type_checking(inline_keyboard_button_type_buy)
 exec_type_checking(inline_keyboard_button_type_user)
+exec_type_checking(inline_keyboard_button_type_copy_text)
 exec_type_checking(inline_keyboard_button)
 exec_type_checking(reply_markup_remove_keyboard)
 exec_type_checking(reply_markup_force_reply)
@@ -5128,9 +5437,14 @@ exec_type_checking(reply_markup_show_keyboard)
 exec_type_checking(reply_markup_inline_keyboard)
 exec_type_checking(login_url_info_open)
 exec_type_checking(login_url_info_request_confirmation)
+exec_type_checking(theme_parameters)
+exec_type_checking(web_app_open_mode_compact)
+exec_type_checking(web_app_open_mode_full_size)
+exec_type_checking(web_app_open_mode_full_screen)
 exec_type_checking(found_web_app)
 exec_type_checking(web_app_info)
 exec_type_checking(main_web_app)
+exec_type_checking(web_app_open_parameters)
 exec_type_checking(message_thread_info)
 exec_type_checking(saved_messages_topic_type_my_notes)
 exec_type_checking(saved_messages_topic_type_author_hidden)
@@ -5215,6 +5529,8 @@ exec_type_checking(link_preview_type_document)
 exec_type_checking(link_preview_type_embedded_animation_player)
 exec_type_checking(link_preview_type_embedded_audio_player)
 exec_type_checking(link_preview_type_embedded_video_player)
+exec_type_checking(link_preview_type_external_audio)
+exec_type_checking(link_preview_type_external_video)
 exec_type_checking(link_preview_type_invoice)
 exec_type_checking(link_preview_type_message)
 exec_type_checking(link_preview_type_photo)
@@ -5243,7 +5559,6 @@ exec_type_checking(bank_card_action_open_url)
 exec_type_checking(bank_card_info)
 exec_type_checking(address)
 exec_type_checking(location_address)
-exec_type_checking(theme_parameters)
 exec_type_checking(labeled_price_part)
 exec_type_checking(invoice)
 exec_type_checking(order_info)
@@ -5259,6 +5574,7 @@ exec_type_checking(payment_provider_other)
 exec_type_checking(payment_option)
 exec_type_checking(payment_form_type_regular)
 exec_type_checking(payment_form_type_stars)
+exec_type_checking(payment_form_type_star_subscription)
 exec_type_checking(payment_form)
 exec_type_checking(validated_order_info)
 exec_type_checking(payment_result)
@@ -5272,7 +5588,7 @@ exec_type_checking(paid_media_preview)
 exec_type_checking(paid_media_photo)
 exec_type_checking(paid_media_video)
 exec_type_checking(paid_media_unsupported)
-exec_type_checking(premium_giveaway_parameters)
+exec_type_checking(giveaway_parameters)
 exec_type_checking(dated_file)
 exec_type_checking(passport_element_type_personal_details)
 exec_type_checking(passport_element_type_passport)
@@ -5403,11 +5719,15 @@ exec_type_checking(message_payment_successful_bot)
 exec_type_checking(message_payment_refunded)
 exec_type_checking(message_gifted_premium)
 exec_type_checking(message_premium_gift_code)
-exec_type_checking(message_premium_giveaway_created)
-exec_type_checking(message_premium_giveaway)
-exec_type_checking(message_premium_giveaway_completed)
-exec_type_checking(message_premium_giveaway_winners)
+exec_type_checking(message_giveaway_created)
+exec_type_checking(message_giveaway)
+exec_type_checking(message_giveaway_completed)
+exec_type_checking(message_giveaway_winners)
 exec_type_checking(message_gifted_stars)
+exec_type_checking(message_giveaway_prize_stars)
+exec_type_checking(message_gift)
+exec_type_checking(message_upgraded_gift)
+exec_type_checking(message_refunded_upgraded_gift)
 exec_type_checking(message_contact_registered)
 exec_type_checking(message_users_shared)
 exec_type_checking(message_chat_shared)
@@ -5446,6 +5766,7 @@ exec_type_checking(input_paid_media_type_video)
 exec_type_checking(input_paid_media)
 exec_type_checking(message_scheduling_state_send_at_date)
 exec_type_checking(message_scheduling_state_send_when_online)
+exec_type_checking(message_scheduling_state_send_when_video_processed)
 exec_type_checking(message_self_destruct_type_timer)
 exec_type_checking(message_self_destruct_type_immediately)
 exec_type_checking(message_send_options)
@@ -5487,6 +5808,9 @@ exec_type_checking(search_messages_filter_unread_mention)
 exec_type_checking(search_messages_filter_unread_reaction)
 exec_type_checking(search_messages_filter_failed_to_send)
 exec_type_checking(search_messages_filter_pinned)
+exec_type_checking(search_messages_chat_type_filter_private)
+exec_type_checking(search_messages_chat_type_filter_group)
+exec_type_checking(search_messages_chat_type_filter_channel)
 exec_type_checking(chat_action_typing)
 exec_type_checking(chat_action_recording_video)
 exec_type_checking(chat_action_uploading_video)
@@ -5579,7 +5903,7 @@ exec_type_checking(chat_boost_features)
 exec_type_checking(chat_boost_source_gift_code)
 exec_type_checking(chat_boost_source_giveaway)
 exec_type_checking(chat_boost_source_premium)
-exec_type_checking(prepaid_premium_giveaway)
+exec_type_checking(prepaid_giveaway)
 exec_type_checking(chat_boost_status)
 exec_type_checking(chat_boost)
 exec_type_checking(found_chat_boosts)
@@ -5592,6 +5916,7 @@ exec_type_checking(call_discard_reason_missed)
 exec_type_checking(call_discard_reason_declined)
 exec_type_checking(call_discard_reason_disconnected)
 exec_type_checking(call_discard_reason_hung_up)
+exec_type_checking(call_discard_reason_allow_group_call)
 exec_type_checking(call_protocol)
 exec_type_checking(call_server_type_telegram_reflector)
 exec_type_checking(call_server_type_webrtc)
@@ -5652,6 +5977,10 @@ exec_type_checking(bot_write_access_allow_reason_launched_web_app)
 exec_type_checking(bot_write_access_allow_reason_accepted_request)
 exec_type_checking(http_url)
 exec_type_checking(user_link)
+exec_type_checking(target_chat_types)
+exec_type_checking(target_chat_current)
+exec_type_checking(target_chat_chosen)
+exec_type_checking(target_chat_internal_link)
 exec_type_checking(input_inline_query_result_animation)
 exec_type_checking(input_inline_query_result_article)
 exec_type_checking(input_inline_query_result_audio)
@@ -5680,6 +6009,8 @@ exec_type_checking(inline_query_results_button_type_start_bot)
 exec_type_checking(inline_query_results_button_type_web_app)
 exec_type_checking(inline_query_results_button)
 exec_type_checking(inline_query_results)
+exec_type_checking(prepared_inline_message_id)
+exec_type_checking(prepared_inline_message)
 exec_type_checking(callback_query_payload_data)
 exec_type_checking(callback_query_payload_data_with_password)
 exec_type_checking(callback_query_payload_game)
@@ -5699,6 +6030,7 @@ exec_type_checking(chat_event_member_invited)
 exec_type_checking(chat_event_member_left)
 exec_type_checking(chat_event_member_promoted)
 exec_type_checking(chat_event_member_restricted)
+exec_type_checking(chat_event_member_subscription_extended)
 exec_type_checking(chat_event_available_reactions_changed)
 exec_type_checking(chat_event_background_changed)
 exec_type_checking(chat_event_description_changed)
@@ -5821,15 +6153,16 @@ exec_type_checking(premium_feature_promotion_animation)
 exec_type_checking(business_feature_promotion_animation)
 exec_type_checking(premium_state)
 exec_type_checking(store_payment_purpose_premium_subscription)
-exec_type_checking(store_payment_purpose_gifted_premium)
 exec_type_checking(store_payment_purpose_premium_gift_codes)
 exec_type_checking(store_payment_purpose_premium_giveaway)
+exec_type_checking(store_payment_purpose_star_giveaway)
 exec_type_checking(store_payment_purpose_stars)
 exec_type_checking(store_payment_purpose_gifted_stars)
 exec_type_checking(telegram_payment_purpose_premium_gift_codes)
 exec_type_checking(telegram_payment_purpose_premium_giveaway)
 exec_type_checking(telegram_payment_purpose_stars)
 exec_type_checking(telegram_payment_purpose_gifted_stars)
+exec_type_checking(telegram_payment_purpose_star_giveaway)
 exec_type_checking(telegram_payment_purpose_join_chat)
 exec_type_checking(device_token_firebase_cloud_messaging)
 exec_type_checking(device_token_apple_push)
@@ -5897,7 +6230,9 @@ exec_type_checking(push_message_content_paid_media)
 exec_type_checking(push_message_content_photo)
 exec_type_checking(push_message_content_poll)
 exec_type_checking(push_message_content_premium_gift_code)
-exec_type_checking(push_message_content_premium_giveaway)
+exec_type_checking(push_message_content_giveaway)
+exec_type_checking(push_message_content_gift)
+exec_type_checking(push_message_content_upgraded_gift)
 exec_type_checking(push_message_content_screenshot_taken)
 exec_type_checking(push_message_content_sticker)
 exec_type_checking(push_message_content_story)
@@ -5947,11 +6282,13 @@ exec_type_checking(story_privacy_settings_close_friends)
 exec_type_checking(story_privacy_settings_selected_users)
 exec_type_checking(user_privacy_setting_rule_allow_all)
 exec_type_checking(user_privacy_setting_rule_allow_contacts)
+exec_type_checking(user_privacy_setting_rule_allow_bots)
 exec_type_checking(user_privacy_setting_rule_allow_premium_users)
 exec_type_checking(user_privacy_setting_rule_allow_users)
 exec_type_checking(user_privacy_setting_rule_allow_chat_members)
 exec_type_checking(user_privacy_setting_rule_restrict_all)
 exec_type_checking(user_privacy_setting_rule_restrict_contacts)
+exec_type_checking(user_privacy_setting_rule_restrict_bots)
 exec_type_checking(user_privacy_setting_rule_restrict_users)
 exec_type_checking(user_privacy_setting_rule_restrict_chat_members)
 exec_type_checking(user_privacy_setting_rules)
@@ -5966,6 +6303,7 @@ exec_type_checking(user_privacy_setting_allow_calls)
 exec_type_checking(user_privacy_setting_allow_peer_to_peer_calls)
 exec_type_checking(user_privacy_setting_allow_finding_by_phone_number)
 exec_type_checking(user_privacy_setting_allow_private_voice_and_video_note_messages)
+exec_type_checking(user_privacy_setting_autosave_gifts)
 exec_type_checking(read_date_privacy_settings)
 exec_type_checking(new_chat_privacy_settings)
 exec_type_checking(can_send_message_to_user_result_ok)
@@ -6005,9 +6343,13 @@ exec_type_checking(report_reason_fake)
 exec_type_checking(report_reason_illegal_drugs)
 exec_type_checking(report_reason_personal_details)
 exec_type_checking(report_reason_custom)
-exec_type_checking(target_chat_current)
-exec_type_checking(target_chat_chosen)
-exec_type_checking(target_chat_internal_link)
+exec_type_checking(report_chat_result_ok)
+exec_type_checking(report_chat_result_option_required)
+exec_type_checking(report_chat_result_text_required)
+exec_type_checking(report_chat_result_messages_required)
+exec_type_checking(report_story_result_ok)
+exec_type_checking(report_story_result_option_required)
+exec_type_checking(report_story_result_text_required)
 exec_type_checking(internal_link_type_active_sessions)
 exec_type_checking(internal_link_type_attachment_menu_bot)
 exec_type_checking(internal_link_type_authentication_code)
@@ -6018,6 +6360,7 @@ exec_type_checking(internal_link_type_bot_start_in_group)
 exec_type_checking(internal_link_type_business_chat)
 exec_type_checking(internal_link_type_buy_stars)
 exec_type_checking(internal_link_type_change_phone_number)
+exec_type_checking(internal_link_type_chat_affiliate_program)
 exec_type_checking(internal_link_type_chat_boost)
 exec_type_checking(internal_link_type_chat_folder_invite)
 exec_type_checking(internal_link_type_chat_folder_settings)
@@ -6071,6 +6414,10 @@ exec_type_checking(file_type_profile_photo)
 exec_type_checking(file_type_secret)
 exec_type_checking(file_type_secret_thumbnail)
 exec_type_checking(file_type_secure)
+exec_type_checking(file_type_self_destructing_photo)
+exec_type_checking(file_type_self_destructing_video)
+exec_type_checking(file_type_self_destructing_video_note)
+exec_type_checking(file_type_self_destructing_voice_note)
 exec_type_checking(file_type_sticker)
 exec_type_checking(file_type_thumbnail)
 exec_type_checking(file_type_unknown)
@@ -6133,6 +6480,7 @@ exec_type_checking(suggested_action_restore_premium)
 exec_type_checking(suggested_action_subscribe_to_annual_premium)
 exec_type_checking(suggested_action_gift_premium_for_christmas)
 exec_type_checking(suggested_action_set_birthdate)
+exec_type_checking(suggested_action_set_profile_photo)
 exec_type_checking(suggested_action_extend_premium)
 exec_type_checking(suggested_action_extend_star_subscriptions)
 exec_type_checking(count)
@@ -6215,6 +6563,7 @@ exec_type_checking(update_message_mention_read)
 exec_type_checking(update_message_unread_reactions)
 exec_type_checking(update_message_fact_check)
 exec_type_checking(update_message_live_location_viewed)
+exec_type_checking(update_video_published)
 exec_type_checking(update_new_chat)
 exec_type_checking(update_chat_title)
 exec_type_checking(update_chat_photo)
@@ -6311,7 +6660,6 @@ exec_type_checking(update_profile_accent_colors)
 exec_type_checking(update_language_pack_strings)
 exec_type_checking(update_connection_state)
 exec_type_checking(update_terms_of_service)
-exec_type_checking(update_users_nearby)
 exec_type_checking(update_unconfirmed_session)
 exec_type_checking(update_attachment_menu_bots)
 exec_type_checking(update_web_app_message_sent)
@@ -6351,4 +6699,5 @@ exec_type_checking(update_new_chat_join_request)
 exec_type_checking(update_chat_boost)
 exec_type_checking(update_message_reaction)
 exec_type_checking(update_message_reactions)
+exec_type_checking(update_paid_media_purchased)
 exec_type_checking(updates)

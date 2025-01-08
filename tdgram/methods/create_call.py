@@ -22,3 +22,5 @@ class CreateCall(BaseMethod):
     """The call protocols supported by the application"""
     is_video: bool
     """Pass true to create a video call"""
+    group_call_id: int
+    """Identifier of the group call to which the user will be added after exchanging private key via the call; pass 0 if none; currently, ignored"""

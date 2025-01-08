@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Literal
 
-from ..types import HttpUrl, ThemeParameters
+from ..types import HttpUrl, WebAppOpenParameters
 from .base import BaseMethod
 
 
@@ -20,7 +20,5 @@ class GetWebAppUrl(BaseMethod):
     """Identifier of the target bot"""
     url: str
     """The URL from a keyboardButtonTypeWebApp button, inlineQueryResultsButtonTypeWebApp button, or an empty string when the bot is opened from the side menu"""
-    theme: ThemeParameters | None = None
-    """Preferred Web App theme; pass null to use the default theme"""
-    application_name: str
-    """Short name of the current application; 0-64 English letters, digits, and underscores"""
+    parameters: WebAppOpenParameters
+    """Parameters to use to open the Web App"""

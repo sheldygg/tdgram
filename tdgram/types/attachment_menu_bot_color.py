@@ -15,6 +15,6 @@ class AttachmentMenuBotColor(BaseType):
     __type__: Literal["attachmentMenuBotColor"] = "attachmentMenuBotColor"
 
     light_color: int
-    """Color in the RGB24 format for light themes"""
+    """Color in the RGB format for light themes"""
     dark_color: int
-    """Color in the RGB24 format for dark themes"""
+    """Color in the RGB format for dark themes"""

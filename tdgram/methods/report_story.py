@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Literal
 
-from ..types import Ok, ReportReason
+from ..types import ReportStoryResult
 from .base import BaseMethod
 
 
@@ -14,13 +14,13 @@ class ReportStory(BaseMethod):
     """
 
     __type__: Literal["reportStory"] = "reportStory"
-    __returning_type__ = Ok
+    __returning_type__ = ReportStoryResult
 
     story_sender_chat_id: int
     """The identifier of the sender of the story to report"""
     story_id: int
     """The identifier of the story to report"""
-    reason: ReportReason
-    """The reason for reporting the story"""
+    option_id: bytes
+    """Option identifier chosen by the user; leave empty for the initial request"""
     text: str
-    """Additional report details; 0-1024 characters"""
+    """Additional report details; 0-1024 characters; leave empty for the initial request"""

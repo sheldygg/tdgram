@@ -40,3 +40,5 @@ class ChatEventLogFilters(BaseType):
     """True, if video chat actions need to be returned"""
     forum_changes: bool
     """True, if forum-related actions need to be returned"""
+    subscription_extensions: bool
+    """True, if subscription extensions need to be returned"""

@@ -12,7 +12,7 @@ if TYPE_CHECKING:
 @dataclass(kw_only=True)
 class ClosedVectorPath(BaseType):
     """
-    Represents a closed vector path. The path begins at the end point of the last command
+    Represents a closed vector path. The path begins at the end point of the last command. The coordinate system origin is in the upper-left corner
     """
 
     __type__: Literal["closedVectorPath"] = "closedVectorPath"

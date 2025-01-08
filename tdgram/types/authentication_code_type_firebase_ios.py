@@ -17,6 +17,6 @@ class AuthenticationCodeTypeFirebaseIos(BaseType):
     receipt: str
     """Receipt of successful application token validation to compare with receipt from push notification"""
     push_timeout: int
-    """Time after the next authentication method is supposed to be used if verification push notification isn't received, in seconds"""
+    """Time after the next authentication method is expected to be used if verification push notification isn't received, in seconds"""
     length: int
     """Length of the code"""

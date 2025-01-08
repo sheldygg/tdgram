@@ -16,5 +16,7 @@ class CreateInvoiceLink(BaseMethod):
     __type__: Literal["createInvoiceLink"] = "createInvoiceLink"
     __returning_type__ = HttpUrl
 
+    business_connection_id: str
+    """Unique identifier of business connection on behalf of which to send the request"""
     invoice: InputMessageContent
     """Information about the invoice of the type inputMessageInvoice"""

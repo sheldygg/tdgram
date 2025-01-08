@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Literal
+from typing import TYPE_CHECKING, Literal
 
 from .base import BaseType
+
+if TYPE_CHECKING:
+    from . import StarAmount
 
 
 @dataclass(kw_only=True)
@@ -14,5 +17,5 @@ class UpdateOwnedStarCount(BaseType):
 
     __type__: Literal["updateOwnedStarCount"] = "updateOwnedStarCount"
 
-    star_count: int
-    """The new number of Telegram Stars owned"""
+    star_amount: StarAmount
+    """The new amount of owned Telegram Stars"""

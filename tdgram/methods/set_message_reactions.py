@@ -21,6 +21,6 @@ class SetMessageReactions(BaseMethod):
     message_id: int
     """Identifier of the message"""
     reaction_types: list[ReactionType]
-    """Types of the reaction to set"""
+    """Types of the reaction to set; pass an empty list to remove the reactions"""
     is_big: bool
     """Pass true if the reactions are added with a big animation"""

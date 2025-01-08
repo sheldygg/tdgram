@@ -19,7 +19,7 @@ class Dispatcher:
 
     async def _polling(self, client: Client, receive_timeout: float = 2.0):
         async for update in self._receive_updates(client, receive_timeout):
-            pass
+            print(update)
 
     async def start_polling(
         self,

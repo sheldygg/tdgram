@@ -17,4 +17,4 @@ class InputPaidMediaTypeVideo(BaseType):
     duration: int
     """Duration of the video, in seconds"""
     supports_streaming: bool
-    """True, if the video is supposed to be streamed"""
+    """True, if the video is expected to be streamed"""

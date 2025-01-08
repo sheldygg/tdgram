@@ -10,7 +10,7 @@ from .base import BaseMethod
 @dataclass(kw_only=True)
 class SetChatMessageAutoDeleteTime(BaseMethod):
     """
-    Changes the message auto-delete or self-destruct (for secret chats) time in a chat. Requires change_info administrator right in basic groups, supergroups and channels
+    Changes the message auto-delete or self-destruct (for secret chats) time in a chat. Requires change_info administrator right in basic groups, supergroups and channels.
     """
 
     __type__: Literal["setChatMessageAutoDeleteTime"] = "setChatMessageAutoDeleteTime"

@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Literal
 
-from ..types import HttpUrl, ThemeParameters
+from ..types import HttpUrl, WebAppOpenParameters
 from .base import BaseMethod
 
 
@@ -24,9 +24,7 @@ class GetWebAppLinkUrl(BaseMethod):
     """Short name of the Web App"""
     start_parameter: str
     """Start parameter from internalLinkTypeWebApp"""
-    theme: ThemeParameters | None = None
-    """Preferred Web App theme; pass null to use the default theme"""
-    application_name: str
-    """Short name of the current application; 0-64 English letters, digits, and underscores"""
     allow_write_access: bool
     """Pass true if the current user allowed the bot to send them messages"""
+    parameters: WebAppOpenParameters
+    """Parameters to use to open the Web App"""

@@ -6,7 +6,7 @@ from typing import TYPE_CHECKING, Literal
 from .base import BaseType
 
 if TYPE_CHECKING:
-    from . import ChatFolderIcon
+    from . import ChatFolderIcon, ChatFolderName
 
 
 @dataclass(kw_only=True)
@@ -19,8 +19,8 @@ class ChatFolderInfo(BaseType):
 
     id: int
     """Unique chat folder identifier"""
-    title: str
-    """The title of the folder; 1-12 characters without line feeds"""
+    name: ChatFolderName
+    """The name of the folder"""
     icon: ChatFolderIcon
     """The chosen or default icon for the chat folder"""
     color_id: int

@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Literal
+from typing import TYPE_CHECKING, Literal
 
 from .base import BaseType
+
+if TYPE_CHECKING:
+    from . import FormattedText
 
 
 @dataclass(kw_only=True)
@@ -26,3 +29,5 @@ class TelegramPaymentPurposePremiumGiftCodes(BaseType):
     """Identifiers of the users which can activate the gift codes"""
     month_count: int
     """Number of months the Telegram Premium subscription will be active for the users"""
+    text: FormattedText
+    """Text to show along with the gift codes; 0-getOption('gift_text_length_max') characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, and CustomEmoji entities are allowed"""

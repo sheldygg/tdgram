@@ -6,7 +6,7 @@ from typing import TYPE_CHECKING, Literal
 from .base import BaseType
 
 if TYPE_CHECKING:
-    from . import ClosedVectorPath, Emojis, Sticker, StickerType, Thumbnail
+    from . import Emojis, Outline, Sticker, StickerType, Thumbnail
 
 
 @dataclass(kw_only=True)
@@ -25,8 +25,8 @@ class StickerSet(BaseType):
     """Name of the sticker set"""
     thumbnail: Thumbnail | None = None
     """Sticker set thumbnail in WEBP, TGS, or WEBM format with width and height 100; may be null. The file can be downloaded only before the thumbnail is changed"""
-    thumbnail_outline: list[ClosedVectorPath] | None = None
-    """Sticker set thumbnail's outline represented as a list of closed vector paths; may be empty. The coordinate system origin is in the upper-left corner"""
+    thumbnail_outline: Outline | None = None
+    """Sticker set thumbnail's outline; may be null if unknown"""
     is_owned: bool
     """True, if the sticker set is owned by the current user"""
     is_installed: bool

@@ -19,4 +19,4 @@ class GetSuggestedFileName(BaseMethod):
     file_id: int
     """Identifier of the file"""
     directory: str
-    """Directory in which the file is supposed to be saved"""
+    """Directory in which the file is expected to be saved"""

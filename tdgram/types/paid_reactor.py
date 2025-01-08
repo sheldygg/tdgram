@@ -22,7 +22,7 @@ class PaidReactor(BaseType):
     star_count: int
     """Number of Telegram Stars added"""
     is_top: bool
-    """True, if the reactor is one of the most active reactors; can be false if the reactor is the current user"""
+    """True, if the reactor is one of the most active reactors; may be false if the reactor is the current user"""
     is_me: bool
     """True, if the paid reaction was added by the current user"""
     is_anonymous: bool

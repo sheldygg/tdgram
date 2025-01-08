@@ -21,7 +21,7 @@ class AddMessageReaction(BaseMethod):
     message_id: int
     """Identifier of the message"""
     reaction_type: ReactionType
-    """Type of the reaction to add. Use addPaidMessageReaction instead to add the paid reaction"""
+    """Type of the reaction to add. Use addPendingPaidMessageReaction instead to add the paid reaction"""
     is_big: bool
     """Pass true if the reaction is added with a big animation"""
     update_recent_reactions: bool

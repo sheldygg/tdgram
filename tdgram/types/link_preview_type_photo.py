@@ -19,5 +19,3 @@ class LinkPreviewTypePhoto(BaseType):
 
     photo: Photo
     """The photo"""
-    author: str
-    """Author of the photo"""

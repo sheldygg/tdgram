@@ -24,4 +24,6 @@ class InputMessagePaidMedia(BaseType):
     caption: FormattedText | None = None
     """Message caption; pass null to use an empty caption; 0-getOption('message_caption_length_max') characters"""
     show_caption_above_media: bool
-    """True, if the caption must be shown above the video; otherwise, the caption must be shown below the video; not supported in secret chats"""
+    """True, if the caption must be shown above the media; otherwise, the caption must be shown below the media; not supported in secret chats"""
+    payload: str
+    """Bot-provided data for the paid media; bots only"""

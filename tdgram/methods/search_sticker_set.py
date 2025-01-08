@@ -18,3 +18,5 @@ class SearchStickerSet(BaseMethod):
 
     name: str
     """Name of the sticker set"""
+    ignore_cache: bool
+    """Pass true to ignore local cache of sticker sets and always send a network request"""

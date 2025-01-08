@@ -1,15 +1,18 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Literal
+from typing import TYPE_CHECKING, Literal
 
 from .base import BaseType
+
+if TYPE_CHECKING:
+    from . import Sticker
 
 
 @dataclass(kw_only=True)
 class PremiumGiftCodePaymentOption(BaseType):
     """
-    Describes an option for creating Telegram Premium gift codes. Use telegramPaymentPurposePremiumGiftCodes for out-of-store payments
+    Describes an option for creating Telegram Premium gift codes or Telegram Premium giveaway. Use telegramPaymentPurposePremiumGiftCodes or telegramPaymentPurposePremiumGiveaway for out-of-store payments
     """
 
     __type__: Literal["premiumGiftCodePaymentOption"] = "premiumGiftCodePaymentOption"
@@ -18,7 +21,9 @@ class PremiumGiftCodePaymentOption(BaseType):
     """ISO 4217 currency code for Telegram Premium gift code payment"""
     amount: int
     """The amount to pay, in the smallest units of the currency"""
-    user_count: int
+    discount_percentage: int
+    """The discount associated with this option, as a percentage"""
+    winner_count: int
     """Number of users which will be able to activate the gift codes"""
     month_count: int
     """Number of months the Telegram Premium subscription will be active"""
@@ -26,3 +31,5 @@ class PremiumGiftCodePaymentOption(BaseType):
     """Identifier of the store product associated with the option; may be empty if none"""
     store_product_quantity: int
     """Number of times the store product must be paid"""
+    sticker: Sticker | None = None
+    """A sticker to be shown along with the gift code; may be null if unknown"""

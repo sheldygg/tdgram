@@ -23,6 +23,8 @@ class MessageSendOptions(BaseType):
     """Pass true if the message is sent from the background"""
     protect_content: bool
     """Pass true if the content of the message must be protected from forwarding and saving; for bots only"""
+    allow_paid_broadcast: bool
+    """Pass true to allow the message to ignore regular broadcast limits for a small fee; for bots only"""
     update_order_of_installed_sticker_sets: bool
     """Pass true if the user explicitly chosen a sticker or a custom emoji from an installed sticker set; applicable only to sendMessage and sendMessageAlbum"""
     scheduling_state: MessageSchedulingState | None = None

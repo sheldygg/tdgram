@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Literal
 
-from ..types import InputMessageReplyTo, ThemeParameters, WebAppInfo
+from ..types import InputMessageReplyTo, WebAppInfo, WebAppOpenParameters
 from .base import BaseMethod
 
 
@@ -22,11 +22,9 @@ class OpenWebApp(BaseMethod):
     """Identifier of the bot, providing the Web App"""
     url: str
     """The URL from an inlineKeyboardButtonTypeWebApp button, a botMenuButton button, an internalLinkTypeAttachmentMenuBot link, or an empty string otherwise"""
-    theme: ThemeParameters | None = None
-    """Preferred Web App theme; pass null to use the default theme"""
-    application_name: str
-    """Short name of the current application; 0-64 English letters, digits, and underscores"""
     message_thread_id: int
     """If not 0, the message thread identifier in which the message will be sent"""
     reply_to: InputMessageReplyTo | None = None
     """Information about the message or story to be replied in the message sent by the Web App; pass null if none"""
+    parameters: WebAppOpenParameters
+    """Parameters to use to open the Web App"""

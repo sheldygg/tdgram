@@ -25,8 +25,6 @@ class LinkPreviewTypeEmbeddedAnimationPlayer(BaseType):
     """Thumbnail of the animation; may be null if unknown"""
     duration: int
     """Duration of the animation, in seconds"""
-    author: str
-    """Author of the animation"""
     width: int
     """Expected width of the embedded player"""
     height: int

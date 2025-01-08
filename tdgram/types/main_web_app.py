@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Literal
+from typing import TYPE_CHECKING, Literal
 
 from .base import BaseType
+
+if TYPE_CHECKING:
+    from . import WebAppOpenMode
 
 
 @dataclass(kw_only=True)
@@ -16,5 +19,5 @@ class MainWebApp(BaseType):
 
     url: str
     """URL of the Web App to open"""
-    is_compact: bool
-    """True, if the Web App must always be opened in the compact mode instead of the full-size mode"""
+    mode: WebAppOpenMode
+    """The mode in which the Web App must be opened"""

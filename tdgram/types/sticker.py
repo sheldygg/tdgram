@@ -6,7 +6,7 @@ from typing import TYPE_CHECKING, Literal
 from .base import BaseType
 
 if TYPE_CHECKING:
-    from . import ClosedVectorPath, File, StickerFormat, StickerFullType, Thumbnail
+    from . import File, StickerFormat, StickerFullType, Thumbnail
 
 
 @dataclass(kw_only=True)
@@ -31,8 +31,6 @@ class Sticker(BaseType):
     """Sticker format"""
     full_type: StickerFullType
     """Sticker's full type"""
-    outline: list[ClosedVectorPath] | None = None
-    """Sticker's outline represented as a list of closed vector paths; may be empty. The coordinate system origin is in the upper-left corner"""
     thumbnail: Thumbnail | None = None
     """Sticker thumbnail in WEBP or JPEG format; may be null"""
     sticker: File

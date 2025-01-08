@@ -6,7 +6,12 @@ from typing import TYPE_CHECKING, Literal
 from .base import BaseType
 
 if TYPE_CHECKING:
-    from . import ChatInviteLinkSubscriptionInfo, ChatPhotoInfo, InviteLinkChatType
+    from . import (
+        ChatInviteLinkSubscriptionInfo,
+        ChatPhotoInfo,
+        InviteLinkChatType,
+        VerificationStatus,
+    )
 
 
 @dataclass(kw_only=True)
@@ -41,9 +46,5 @@ class ChatInviteLinkInfo(BaseType):
     """True, if the link only creates join request"""
     is_public: bool
     """True, if the chat is a public supergroup or channel, i.e. it has a username or it is a location-based supergroup"""
-    is_verified: bool
-    """True, if the chat is verified"""
-    is_scam: bool
-    """True, if many users reported this chat as a scam"""
-    is_fake: bool
-    """True, if many users reported this chat as a fake account"""
+    verification_status: VerificationStatus | None = None
+    """Information about verification status of the chat; may be null if none"""

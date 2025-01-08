@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Literal
+from typing import TYPE_CHECKING, Literal
 
 from .base import BaseType
+
+if TYPE_CHECKING:
+    from . import StarAmount
 
 
 @dataclass(kw_only=True)
@@ -14,12 +17,12 @@ class StarRevenueStatus(BaseType):
 
     __type__: Literal["starRevenueStatus"] = "starRevenueStatus"
 
-    total_count: int
-    """Total number of Telegram Stars earned"""
-    current_count: int
-    """The number of Telegram Stars that aren't withdrawn yet"""
-    available_count: int
-    """The number of Telegram Stars that are available for withdrawal"""
+    total_amount: StarAmount
+    """Total amount of Telegram Stars earned"""
+    current_amount: StarAmount
+    """The amount of Telegram Stars that aren't withdrawn yet"""
+    available_amount: StarAmount
+    """The amount of Telegram Stars that are available for withdrawal"""
     withdrawal_enabled: bool
     """True, if Telegram Stars can be withdrawn now or later"""
     next_withdrawal_in: int

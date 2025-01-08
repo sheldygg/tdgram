@@ -10,7 +10,7 @@ from .base import BaseMethod
 @dataclass(kw_only=True)
 class GetChatMessageByDate(BaseMethod):
     """
-    Returns the last message sent in a chat no later than the specified date
+    Returns the last message sent in a chat no later than the specified date. Returns a 404 error if such message doesn't exist
     """
 
     __type__: Literal["getChatMessageByDate"] = "getChatMessageByDate"

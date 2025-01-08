@@ -23,8 +23,6 @@ class LinkPreviewTypeEmbeddedAudioPlayer(BaseType):
     """Thumbnail of the audio; may be null if unknown"""
     duration: int
     """Duration of the audio, in seconds"""
-    author: str
-    """Author of the audio"""
     width: int
     """Expected width of the embedded player"""
     height: int

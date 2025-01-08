@@ -6,7 +6,7 @@ from typing import TYPE_CHECKING, Literal
 from .base import BaseType
 
 if TYPE_CHECKING:
-    from . import PrepaidPremiumGiveaway
+    from . import PrepaidGiveaway
 
 
 @dataclass(kw_only=True)
@@ -35,5 +35,5 @@ class ChatBoostStatus(BaseType):
     """Approximate number of Telegram Premium subscribers joined the chat; always 0 if the current user isn't an administrator in the chat"""
     premium_member_percentage: float
     """A percentage of Telegram Premium subscribers joined the chat; always 0 if the current user isn't an administrator in the chat"""
-    prepaid_giveaways: list[PrepaidPremiumGiveaway]
+    prepaid_giveaways: list[PrepaidGiveaway]
     """The list of prepaid giveaways available for the chat; only for chat administrators"""

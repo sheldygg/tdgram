@@ -21,4 +21,4 @@ class GetChatArchivedStories(BaseMethod):
     from_story_id: int
     """Identifier of the story starting from which stories must be returned; use 0 to get results from the last story"""
     limit: int
-    """The maximum number of stories to be returned"""
+    """The maximum number of stories to be returned."""

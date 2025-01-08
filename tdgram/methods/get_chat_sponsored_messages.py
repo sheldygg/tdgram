@@ -10,7 +10,7 @@ from .base import BaseMethod
 @dataclass(kw_only=True)
 class GetChatSponsoredMessages(BaseMethod):
     """
-    Returns sponsored messages to be shown in a chat; for channel chats only
+    Returns sponsored messages to be shown in a chat; for channel chats and chats with bots only
     """
 
     __type__: Literal["getChatSponsoredMessages"] = "getChatSponsoredMessages"

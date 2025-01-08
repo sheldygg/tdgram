@@ -24,7 +24,7 @@ class SponsoredMessage(BaseType):
     can_be_reported: bool
     """True, if the message can be reported to Telegram moderators through reportChatSponsoredMessage"""
     content: MessageContent
-    """Content of the message. Currently, can be only of the types messageText, messageAnimation, messagePhoto, or messageVideo"""
+    """Content of the message. Currently, can be only of the types messageText, messageAnimation, messagePhoto, or messageVideo. Video messages can be viewed fullscreen"""
     sponsor: MessageSponsor
     """Information about the sponsor of the message"""
     title: str

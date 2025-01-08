@@ -20,7 +20,7 @@ class ReplyMarkupShowKeyboard(BaseType):
     rows: list[list[KeyboardButton]]
     """A list of rows of bot keyboard buttons"""
     is_persistent: bool
-    """True, if the keyboard is supposed to always be shown when the ordinary keyboard is hidden"""
+    """True, if the keyboard is expected to always be shown when the ordinary keyboard is hidden"""
     resize_keyboard: bool
     """True, if the application needs to resize the keyboard vertically"""
     one_time: bool

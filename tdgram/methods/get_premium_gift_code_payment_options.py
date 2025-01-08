@@ -10,7 +10,7 @@ from .base import BaseMethod
 @dataclass(kw_only=True)
 class GetPremiumGiftCodePaymentOptions(BaseMethod):
     """
-    Returns available options for Telegram Premium gift code or giveaway creation
+    Returns available options for Telegram Premium gift code or Telegram Premium giveaway creation
     """
 
     __type__: Literal["getPremiumGiftCodePaymentOptions"] = "getPremiumGiftCodePaymentOptions"

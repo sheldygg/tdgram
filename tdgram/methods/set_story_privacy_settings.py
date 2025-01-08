@@ -19,4 +19,4 @@ class SetStoryPrivacySettings(BaseMethod):
     story_id: int
     """Identifier of the story"""
     privacy_settings: StoryPrivacySettings
-    """The new privacy settigs for the story"""
+    """The new privacy settings for the story"""

@@ -30,7 +30,7 @@ class Video(BaseType):
     has_stickers: bool
     """True, if stickers were added to the video. The list of corresponding sticker sets can be received using getAttachedStickerSets"""
     supports_streaming: bool
-    """True, if the video is supposed to be streamed"""
+    """True, if the video is expected to be streamed"""
     minithumbnail: Minithumbnail | None = None
     """Video minithumbnail; may be null"""
     thumbnail: Thumbnail | None = None

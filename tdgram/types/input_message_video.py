@@ -18,7 +18,7 @@ class InputMessageVideo(BaseType):
     __type__: Literal["inputMessageVideo"] = "inputMessageVideo"
 
     video: InputFile
-    """Video to be sent"""
+    """Video to be sent. The video is expected to be re-encoded to MPEG4 format with H.264 codec by the sender"""
     thumbnail: InputThumbnail | None = None
     """Video thumbnail; pass null to skip thumbnail uploading"""
     added_sticker_file_ids: list[int]
@@ -30,7 +30,7 @@ class InputMessageVideo(BaseType):
     height: int
     """Video height"""
     supports_streaming: bool
-    """True, if the video is supposed to be streamed"""
+    """True, if the video is expected to be streamed"""
     caption: FormattedText | None = None
     """Video caption; pass null to use an empty caption; 0-getOption('message_caption_length_max') characters"""
     show_caption_above_media: bool

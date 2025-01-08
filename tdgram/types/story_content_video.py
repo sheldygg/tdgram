@@ -20,4 +20,4 @@ class StoryContentVideo(BaseType):
     video: StoryVideo
     """The video in MPEG4 format"""
     alternative_video: StoryVideo | None = None
-    """Alternative version of the video in MPEG4 format, encoded by x264 codec; may be null"""
+    """Alternative version of the video in MPEG4 format, encoded with H.264 codec; may be null"""

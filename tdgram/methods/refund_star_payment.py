@@ -10,7 +10,7 @@ from .base import BaseMethod
 @dataclass(kw_only=True)
 class RefundStarPayment(BaseMethod):
     """
-    Refunds a previously done payment in Telegram Stars
+    Refunds a previously done payment in Telegram Stars; for bots only
     """
 
     __type__: Literal["refundStarPayment"] = "refundStarPayment"

@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Literal
 
-from ..types import Ok, ReportReason
+from ..types import ReportChatResult
 from .base import BaseMethod
 
 
@@ -14,13 +14,13 @@ class ReportChat(BaseMethod):
     """
 
     __type__: Literal["reportChat"] = "reportChat"
-    __returning_type__ = Ok
+    __returning_type__ = ReportChatResult
 
     chat_id: int
     """Chat identifier"""
-    message_ids: list[int] | None = None
-    """Identifiers of reported messages; may be empty to report the whole chat. Use messageProperties.can_be_reported to check whether the message can be reported"""
-    reason: ReportReason
-    """The reason for reporting the chat"""
+    option_id: bytes
+    """Option identifier chosen by the user; leave empty for the initial request"""
+    message_ids: list[int]
+    """Identifiers of reported messages. Use messageProperties.can_report_chat to check whether the message can be reported"""
     text: str
-    """Additional report details; 0-1024 characters"""
+    """Additional report details if asked by the server; 0-1024 characters; leave empty for the initial request"""

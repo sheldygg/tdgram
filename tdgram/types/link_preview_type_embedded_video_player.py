@@ -23,8 +23,6 @@ class LinkPreviewTypeEmbeddedVideoPlayer(BaseType):
     """Thumbnail of the video; may be null if unknown"""
     duration: int
     """Duration of the video, in seconds"""
-    author: str
-    """Author of the video"""
     width: int
     """Expected width of the embedded player"""
     height: int

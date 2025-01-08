@@ -6,7 +6,7 @@ from typing import TYPE_CHECKING, Literal
 from .base import BaseType
 
 if TYPE_CHECKING:
-    from . import FormattedText, Video
+    from . import AlternativeVideo, FormattedText, Video
 
 
 @dataclass(kw_only=True)
@@ -19,6 +19,8 @@ class MessageVideo(BaseType):
 
     video: Video
     """The video description"""
+    alternative_videos: list[AlternativeVideo]
+    """Alternative qualities of the video"""
     caption: FormattedText
     """Video caption"""
     show_caption_above_media: bool

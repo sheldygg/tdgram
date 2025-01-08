@@ -22,3 +22,5 @@ class ChatRevenueAmount(BaseType):
     """Amount of the cryptocurrency that isn't withdrawn yet, in the smallest units of the cryptocurrency"""
     available_amount: int
     """Amount of the cryptocurrency available for withdrawal, in the smallest units of the cryptocurrency"""
+    withdrawal_enabled: bool
+    """True, if Telegram Stars can be withdrawn now or later"""

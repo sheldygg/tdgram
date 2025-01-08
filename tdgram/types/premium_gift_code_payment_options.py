@@ -12,7 +12,7 @@ if TYPE_CHECKING:
 @dataclass(kw_only=True)
 class PremiumGiftCodePaymentOptions(BaseType):
     """
-    Contains a list of options for creating Telegram Premium gift codes
+    Contains a list of options for creating Telegram Premium gift codes or Telegram Premium giveaway
     """
 
     __type__: Literal["premiumGiftCodePaymentOptions"] = "premiumGiftCodePaymentOptions"

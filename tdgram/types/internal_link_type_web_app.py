@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Literal
+from typing import TYPE_CHECKING, Literal
 
 from .base import BaseType
+
+if TYPE_CHECKING:
+    from . import WebAppOpenMode
 
 
 @dataclass(kw_only=True)
@@ -20,5 +23,5 @@ class InternalLinkTypeWebApp(BaseType):
     """Short name of the Web App"""
     start_parameter: str
     """Start parameter to be passed to getWebAppLinkUrl"""
-    is_compact: bool
-    """True, if the Web App must be opened in the compact mode instead of the full-size mode"""
+    mode: WebAppOpenMode
+    """The mode in which the Web App must be opened"""

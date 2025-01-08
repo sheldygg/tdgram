@@ -22,7 +22,7 @@ class GroupCall(BaseType):
     title: str
     """Group call title"""
     scheduled_start_date: int
-    """Point in time (Unix timestamp) when the group call is supposed to be started by an administrator; 0 if it is already active or was ended"""
+    """Point in time (Unix timestamp) when the group call is expected to be started by an administrator; 0 if it is already active or was ended"""
     enabled_start_notification: bool
     """True, if the group call is scheduled and the current user will receive a notification when the group call starts"""
     is_active: bool

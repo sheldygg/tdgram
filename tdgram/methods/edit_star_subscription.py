@@ -10,7 +10,7 @@ from .base import BaseMethod
 @dataclass(kw_only=True)
 class EditStarSubscription(BaseMethod):
     """
-    Cancels or reenables Telegram Star subscription to a channel
+    Cancels or re-enables Telegram Star subscription
     """
 
     __type__: Literal["editStarSubscription"] = "editStarSubscription"

@@ -10,7 +10,7 @@ from .base import BaseMethod
 @dataclass(kw_only=True)
 class EditMessageMedia(BaseMethod):
     """
-    Edits the content of a message with an animation, an audio, a document, a photo or a video, including message caption. If only the caption needs to be edited, use editMessageCaption instead.
+    Edits the media content of a message, including message caption. If only the caption needs to be edited, use editMessageCaption instead.
     """
 
     __type__: Literal["editMessageMedia"] = "editMessageMedia"
@@ -19,7 +19,7 @@ class EditMessageMedia(BaseMethod):
     chat_id: int
     """The chat the message belongs to"""
     message_id: int
-    """Identifier of the message. Use messageProperties.can_be_edited to check whether the message can be edited"""
+    """Identifier of the message. Use messageProperties.can_edit_media to check whether the message can be edited"""
     reply_markup: ReplyMarkup | None = None
     """The new message reply markup; pass null if none; for bots only"""
     input_message_content: InputMessageContent

@@ -27,3 +27,5 @@ class Call(BaseType):
     """True, if the call is a video call"""
     state: CallState
     """Call state"""
+    group_call_id: int
+    """Identifier of the group call associated with the call; 0 if the group call isn't created yet. The group call can be received through the method getGroupCall"""

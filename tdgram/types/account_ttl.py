@@ -15,4 +15,4 @@ class AccountTtl(BaseType):
     __type__: Literal["accountTtl"] = "accountTtl"
 
     days: int
-    """Number of days of inactivity before the account will be flagged for deletion; 30-366 days"""
+    """Number of days of inactivity before the account will be flagged for deletion; 30-730 days"""

@@ -6,7 +6,7 @@ from typing import TYPE_CHECKING, Literal
 from .base import BaseType
 
 if TYPE_CHECKING:
-    from . import MessageSender, Sticker
+    from . import FormattedText, MessageSender, Sticker
 
 
 @dataclass(kw_only=True)
@@ -19,6 +19,8 @@ class MessagePremiumGiftCode(BaseType):
 
     creator_id: MessageSender | None = None
     """Identifier of a chat or a user that created the gift code; may be null if unknown"""
+    text: FormattedText
+    """Message added to the gift"""
     is_from_giveaway: bool
     """True, if the gift code was created for a giveaway"""
     is_unclaimed: bool

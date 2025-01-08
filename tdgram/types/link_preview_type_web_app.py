@@ -17,5 +17,5 @@ class LinkPreviewTypeWebApp(BaseType):
 
     __type__: Literal["linkPreviewTypeWebApp"] = "linkPreviewTypeWebApp"
 
-    photo: Photo
-    """Web App photo"""
+    photo: Photo | None = None
+    """Web App photo; may be null if none"""

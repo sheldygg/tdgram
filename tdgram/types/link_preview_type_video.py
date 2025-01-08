@@ -17,17 +17,5 @@ class LinkPreviewTypeVideo(BaseType):
 
     __type__: Literal["linkPreviewTypeVideo"] = "linkPreviewTypeVideo"
 
-    url: str | None = None
-    """URL of the video; may be empty if none"""
-    mime_type: str
-    """MIME type of the video file"""
-    video: Video | None = None
-    """The video description; may be null if unknown"""
-    width: int
-    """Expected width of the preview"""
-    height: int
-    """Expected height of the preview"""
-    duration: int
-    """Duration of the video, in seconds; 0 if unknown"""
-    author: str
-    """Author of the video"""
+    video: Video
+    """The video description"""

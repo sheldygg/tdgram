@@ -19,5 +19,3 @@ class LinkPreviewTypeDocument(BaseType):
 
     document: Document
     """The document description"""
-    author: str
-    """Author of the document"""

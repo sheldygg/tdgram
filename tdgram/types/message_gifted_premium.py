@@ -6,7 +6,7 @@ from typing import TYPE_CHECKING, Literal
 from .base import BaseType
 
 if TYPE_CHECKING:
-    from . import Sticker
+    from . import FormattedText, Sticker
 
 
 @dataclass(kw_only=True)
@@ -21,6 +21,8 @@ class MessageGiftedPremium(BaseType):
     """The identifier of a user that gifted Telegram Premium; 0 if the gift was anonymous or is outgoing"""
     receiver_user_id: int
     """The identifier of a user that received Telegram Premium; 0 if the gift is incoming"""
+    text: FormattedText
+    """Message added to the gifted Telegram Premium by the sender"""
     currency: str
     """Currency for the paid amount"""
     amount: int

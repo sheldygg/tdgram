@@ -30,7 +30,7 @@ class Audio(BaseType):
     album_cover_minithumbnail: Minithumbnail | None = None
     """The minithumbnail of the album cover; may be null"""
     album_cover_thumbnail: Thumbnail | None = None
-    """The thumbnail of the album cover in JPEG format; as defined by the sender. The full size thumbnail is supposed to be extracted from the downloaded audio file; may be null"""
+    """The thumbnail of the album cover in JPEG format; as defined by the sender. The full size thumbnail is expected to be extracted from the downloaded audio file; may be null"""
     external_album_covers: list[Thumbnail]
     """Album cover variants to use if the downloaded audio file contains no album cover. Provided thumbnail dimensions are approximate"""
     audio: File

@@ -32,7 +32,7 @@ class StoryVideo(BaseType):
     thumbnail: Thumbnail | None = None
     """Video thumbnail in JPEG or MPEG4 format; may be null"""
     preload_prefix_size: int
-    """Size of file prefix, which is supposed to be preloaded, in bytes"""
+    """Size of file prefix, which is expected to be preloaded, in bytes"""
     cover_frame_timestamp: float
     """Timestamp of the frame used as video thumbnail"""
     video: File

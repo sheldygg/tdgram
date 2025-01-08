@@ -20,4 +20,4 @@ class UpdateProfileAccentColors(BaseType):
     colors: list[ProfileAccentColor]
     """Information about supported colors"""
     available_accent_color_ids: list[int]
-    """The list of accent color identifiers, which can be set through setProfileAccentColor and setChatProfileAccentColor. The colors must be shown in the specififed order"""
+    """The list of accent color identifiers, which can be set through setProfileAccentColor and setChatProfileAccentColor. The colors must be shown in the specified order"""

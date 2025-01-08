@@ -10,7 +10,7 @@ from .base import BaseMethod
 @dataclass(kw_only=True)
 class GetMessageLocally(BaseMethod):
     """
-    Returns information about a message, if it is available without sending network request. This is an offline request
+    Returns information about a message, if it is available without sending network request. Returns a 404 error if message isn't available locally. This is an offline request
     """
 
     __type__: Literal["getMessageLocally"] = "getMessageLocally"

@@ -10,7 +10,7 @@ from .base import BaseMethod
 @dataclass(kw_only=True)
 class RemovePendingPaidMessageReactions(BaseMethod):
     """
-    Removes all pending paid reactions on a message. Can be called within 5 seconds after the last addPaidMessageReaction call
+    Removes all pending paid reactions on a message
     """
 
     __type__: Literal["removePendingPaidMessageReactions"] = "removePendingPaidMessageReactions"

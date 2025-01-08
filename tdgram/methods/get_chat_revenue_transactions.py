@@ -10,7 +10,7 @@ from .base import BaseMethod
 @dataclass(kw_only=True)
 class GetChatRevenueTransactions(BaseMethod):
     """
-    Returns the list of revenue transactions for a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
+    Returns the list of revenue transactions for a chat. Currently, this method can be used only
     """
 
     __type__: Literal["getChatRevenueTransactions"] = "getChatRevenueTransactions"

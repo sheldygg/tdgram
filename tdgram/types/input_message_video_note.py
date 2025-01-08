@@ -18,7 +18,7 @@ class InputMessageVideoNote(BaseType):
     __type__: Literal["inputMessageVideoNote"] = "inputMessageVideoNote"
 
     video_note: InputFile
-    """Video note to be sent"""
+    """Video note to be sent. The video is expected to be encoded to MPEG4 format with H.264 codec and have no data outside of the visible circle"""
     thumbnail: InputThumbnail | None = None
     """Video thumbnail; may be null if empty; pass null to skip thumbnail uploading"""
     duration: int

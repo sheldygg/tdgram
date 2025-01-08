@@ -19,6 +19,12 @@ class SearchStickers(BaseMethod):
     sticker_type: StickerType
     """Type of the stickers to return"""
     emojis: str
-    """Space-separated list of emojis to search for; must be non-empty"""
+    """Space-separated list of emojis to search for"""
+    query: str | None = None
+    """Query to search for; may be empty to search for emoji only"""
+    input_language_codes: list[str] | None = None
+    """List of possible IETF language tags of the user's input language; may be empty if unknown"""
+    offset: int
+    """The offset from which to return the stickers; must be non-negative"""
     limit: int
     """The maximum number of stickers to be returned; 0-100"""

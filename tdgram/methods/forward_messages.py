@@ -27,6 +27,6 @@ class ForwardMessages(BaseMethod):
     options: MessageSendOptions | None = None
     """Options to be used to send the messages; pass null to use default options"""
     send_copy: bool
-    """Pass true to copy content of the messages without reference to the original sender. Always true if the messages are forwarded to a secret chat or are local"""
+    """Pass true to copy content of the messages without reference to the original sender. Always true if the messages are forwarded to a secret chat or are local."""
     remove_caption: bool
     """Pass true to remove media captions of message copies. Ignored if send_copy is false"""

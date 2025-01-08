@@ -15,4 +15,4 @@ class BackgroundFillFreeformGradient(BaseType):
     __type__: Literal["backgroundFillFreeformGradient"] = "backgroundFillFreeformGradient"
 
     colors: list[int]
-    """A list of 3 or 4 colors of the freeform gradient in the RGB24 format"""
+    """A list of 3 or 4 colors of the freeform gradient in the RGB format"""

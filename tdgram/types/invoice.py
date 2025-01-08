@@ -21,6 +21,8 @@ class Invoice(BaseType):
     """ISO 4217 currency code"""
     price_parts: list[LabeledPricePart]
     """A list of objects used to calculate the total price of the product"""
+    subscription_period: int
+    """The number of seconds between consecutive Telegram Star debiting for subscription invoices; 0 if the invoice doesn't create subscription"""
     max_tip_amount: int
     """The maximum allowed amount of tip in the smallest units of the currency"""
     suggested_tip_amounts: list[int]

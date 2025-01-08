@@ -21,8 +21,6 @@ class InlineQueryResultArticle(BaseType):
     """Unique identifier of the query result"""
     url: str
     """URL of the result, if it exists"""
-    hide_url: bool
-    """True, if the URL must be not shown"""
     title: str
     """Title of the result"""
     description: str

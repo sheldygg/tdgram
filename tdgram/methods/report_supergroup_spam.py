@@ -19,4 +19,4 @@ class ReportSupergroupSpam(BaseMethod):
     supergroup_id: int
     """Supergroup identifier"""
     message_ids: list[int]
-    """Identifiers of messages to report. Use messageProperties.can_be_reported to check whether the message can be reported"""
+    """Identifiers of messages to report. Use messageProperties.can_report_supergroup_spam to check whether the message can be reported"""

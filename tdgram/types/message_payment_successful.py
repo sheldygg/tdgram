@@ -9,7 +9,7 @@ from .base import BaseType
 @dataclass(kw_only=True)
 class MessagePaymentSuccessful(BaseType):
     """
-    A payment has been completed
+    A payment has been sent to a bot or a business account
     """
 
     __type__: Literal["messagePaymentSuccessful"] = "messagePaymentSuccessful"
@@ -22,6 +22,8 @@ class MessagePaymentSuccessful(BaseType):
     """Currency for the price of the product"""
     total_amount: int
     """Total price for the product, in the smallest units of the currency"""
+    subscription_until_date: int
+    """Point in time (Unix timestamp) when the subscription will expire; 0 if unknown or the payment isn't recurring"""
     is_recurring: bool
     """True, if this is a recurring payment"""
     is_first_recurring: bool

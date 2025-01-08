@@ -14,12 +14,14 @@ class MessageProperties(BaseType):
 
     __type__: Literal["messageProperties"] = "messageProperties"
 
+    can_be_copied_to_secret_chat: bool
+    """True, if content of the message can be copied to a secret chat using inputMessageForwarded or forwardMessages with copy options"""
     can_be_deleted_only_for_self: bool
     """True, if the message can be deleted only for the current user while other users will continue to see it using the method deleteMessages with revoke == false"""
     can_be_deleted_for_all_users: bool
     """True, if the message can be deleted for all users using the method deleteMessages with revoke == true"""
     can_be_edited: bool
-    """True, if the message can be edited using the methods editMessageText, editMessageMedia, editMessageCaption, or editMessageReplyMarkup."""
+    """True, if the message can be edited using the methods editMessageText, editMessageCaption, or editMessageReplyMarkup."""
     can_be_forwarded: bool
     """True, if the message can be forwarded using inputMessageForwarded or forwardMessages"""
     can_be_paid: bool
@@ -34,6 +36,8 @@ class MessageProperties(BaseType):
     """True, if content of the message can be saved locally or copied using inputMessageForwarded or forwardMessages with copy options"""
     can_be_shared_in_story: bool
     """True, if the message can be shared in a story using inputStoryAreaTypeMessage"""
+    can_edit_media: bool
+    """True, if the message can be edited using the method editMessageMedia"""
     can_edit_scheduling_state: bool
     """True, if scheduling state of the message can be edited"""
     can_get_embedding_code: bool

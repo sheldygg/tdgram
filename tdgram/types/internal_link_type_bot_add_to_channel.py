@@ -12,7 +12,7 @@ if TYPE_CHECKING:
 @dataclass(kw_only=True)
 class InternalLinkTypeBotAddToChannel(BaseType):
     """
-    The link is a link to a Telegram bot, which is supposed to be added to a channel chat as an administrator. Call searchPublicChat with the given bot username and check that the user is a bot,
+    The link is a link to a Telegram bot, which is expected to be added to a channel chat as an administrator. Call searchPublicChat with the given bot username and check that the user is a bot,
     """
 
     __type__: Literal["internalLinkTypeBotAddToChannel"] = "internalLinkTypeBotAddToChannel"

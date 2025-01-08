@@ -12,7 +12,7 @@ if TYPE_CHECKING:
 @dataclass(kw_only=True)
 class InternalLinkTypeBotStartInGroup(BaseType):
     """
-    The link is a link to a Telegram bot, which is supposed to be added to a group chat. Call searchPublicChat with the given bot username, check that the user is a bot and can be added to groups,
+    The link is a link to a Telegram bot, which is expected to be added to a group chat. Call searchPublicChat with the given bot username, check that the user is a bot and can be added to groups,
     """
 
     __type__: Literal["internalLinkTypeBotStartInGroup"] = "internalLinkTypeBotStartInGroup"

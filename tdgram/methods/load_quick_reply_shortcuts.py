@@ -10,7 +10,7 @@ from .base import BaseMethod
 @dataclass(kw_only=True)
 class LoadQuickReplyShortcuts(BaseMethod):
     """
-    Loads quick reply shortcuts created by the current user. The loaded topics will be sent through updateQuickReplyShortcuts
+    Loads quick reply shortcuts created by the current user. The loaded data will be sent through updateQuickReplyShortcut and updateQuickReplyShortcuts
     """
 
     __type__: Literal["loadQuickReplyShortcuts"] = "loadQuickReplyShortcuts"

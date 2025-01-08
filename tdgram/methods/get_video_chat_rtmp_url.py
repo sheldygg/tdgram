@@ -10,7 +10,7 @@ from .base import BaseMethod
 @dataclass(kw_only=True)
 class GetVideoChatRtmpUrl(BaseMethod):
     """
-    Returns RTMP URL for streaming to the chat; requires owner privileges
+    Returns RTMP URL for streaming to the chat; requires can_manage_video_chats administrator right
     """
 
     __type__: Literal["getVideoChatRtmpUrl"] = "getVideoChatRtmpUrl"

@@ -9,7 +9,7 @@ from .base import BaseType
 @dataclass(kw_only=True)
 class InternalLinkTypePublicChat(BaseType):
     """
-    The link is a link to a chat by its username. Call searchPublicChat with the given chat username to process the link
+    The link is a link to a chat by its username. Call searchPublicChat with the given chat username to process the link.
     """
 
     __type__: Literal["internalLinkTypePublicChat"] = "internalLinkTypePublicChat"

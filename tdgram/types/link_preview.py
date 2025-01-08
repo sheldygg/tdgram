@@ -27,6 +27,8 @@ class LinkPreview(BaseType):
     """Title of the content"""
     description: FormattedText
     """Description of the content"""
+    author: str
+    """Author of the content"""
     type: LinkPreviewType
     """Type of the link preview"""
     has_large_media: bool

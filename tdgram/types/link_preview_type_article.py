@@ -19,5 +19,3 @@ class LinkPreviewTypeArticle(BaseType):
 
     photo: Photo | None = None
     """Article's main photo; may be null"""
-    author: str
-    """Author of the article"""

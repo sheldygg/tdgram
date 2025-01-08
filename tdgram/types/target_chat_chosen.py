@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Literal
+from typing import TYPE_CHECKING, Literal
 
 from .base import BaseType
+
+if TYPE_CHECKING:
+    from . import TargetChatTypes
 
 
 @dataclass(kw_only=True)
@@ -14,11 +17,5 @@ class TargetChatChosen(BaseType):
 
     __type__: Literal["targetChatChosen"] = "targetChatChosen"
 
-    allow_user_chats: bool
-    """True, if private chats with ordinary users are allowed"""
-    allow_bot_chats: bool
-    """True, if private chats with other bots are allowed"""
-    allow_group_chats: bool
-    """True, if basic group and supergroup chats are allowed"""
-    allow_channel_chats: bool
-    """True, if channel chats are allowed"""
+    types: TargetChatTypes
+    """Allowed types for the chat"""

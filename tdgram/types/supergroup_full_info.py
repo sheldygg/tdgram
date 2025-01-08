@@ -6,7 +6,7 @@ from typing import TYPE_CHECKING, Literal
 from .base import BaseType
 
 if TYPE_CHECKING:
-    from . import BotCommands, ChatInviteLink, ChatLocation, ChatPhoto
+    from . import BotCommands, BotVerification, ChatInviteLink, ChatLocation, ChatPhoto
 
 
 @dataclass(kw_only=True)
@@ -79,6 +79,8 @@ class SupergroupFullInfo(BaseType):
     """Primary invite link for the chat; may be null. For chat administrators with can_invite_users right only"""
     bot_commands: list[BotCommands]
     """List of commands of bots in the group"""
+    bot_verification: BotVerification | None = None
+    """Information about verification status of the supergroup or the channel provided by a bot; may be null if none or unknown"""
     upgraded_from_basic_group_id: int
     """Identifier of the basic group from which supergroup was upgraded; 0 if none"""
     upgraded_from_max_message_id: int

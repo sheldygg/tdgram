@@ -6,7 +6,7 @@ from typing import TYPE_CHECKING, Literal
 from .base import BaseType
 
 if TYPE_CHECKING:
-    from . import ChatMemberStatus, Usernames
+    from . import ChatMemberStatus, Usernames, VerificationStatus
 
 
 @dataclass(kw_only=True)
@@ -49,16 +49,12 @@ class Supergroup(BaseType):
     """True, if the supergroup is a broadcast group, i.e. only administrators can send messages and there is no limit on the number of members"""
     is_forum: bool
     """True, if the supergroup is a forum with topics"""
-    is_verified: bool
-    """True, if the supergroup or channel is verified"""
+    verification_status: VerificationStatus | None = None
+    """Information about verification status of the supergroup or channel; may be null if none"""
     has_sensitive_content: bool
     """True, if content of media messages in the supergroup or channel chat must be hidden with 18+ spoiler"""
     restriction_reason: str | None = None
     """If non-empty, contains a human-readable description of the reason why access to this supergroup or channel must be restricted"""
-    is_scam: bool
-    """True, if many users reported this supergroup or channel as a scam"""
-    is_fake: bool
-    """True, if many users reported this supergroup or channel as a fake account"""
     has_active_stories: bool
     """True, if the supergroup or channel has non-expired stories available to the current user"""
     has_unread_active_stories: bool

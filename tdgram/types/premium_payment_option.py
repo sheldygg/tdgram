@@ -24,7 +24,7 @@ class PremiumPaymentOption(BaseType):
     discount_percentage: int
     """The discount associated with this option, as a percentage"""
     month_count: int
-    """Number of months the Telegram Premium subscription will be active"""
+    """Number of months the Telegram Premium subscription will be active. Use getPremiumInfoSticker to get the sticker to be used as representation of the Telegram Premium subscription"""
     store_product_id: str
     """Identifier of the store product associated with the option"""
     payment_link: InternalLinkType | None = None

@@ -9,7 +9,7 @@ from .base import BaseType
 @dataclass(kw_only=True)
 class UpdateSpeedLimitNotification(BaseType):
     """
-    Download or upload file speed for the user was limited, but it can be restored by subscription to Telegram Premium. The notification can be postponed until a being downloaded or uploaded file is visible to the user
+    Download or upload file speed for the user was limited, but it can be restored by subscription to Telegram Premium. The notification can be postponed until a being downloaded or uploaded file is visible to the user.
     """
 
     __type__: Literal["updateSpeedLimitNotification"] = "updateSpeedLimitNotification"

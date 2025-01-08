@@ -6,7 +6,7 @@ from typing import TYPE_CHECKING, Literal
 from .base import BaseType
 
 if TYPE_CHECKING:
-    from . import StarTransaction
+    from . import StarAmount, StarTransaction
 
 
 @dataclass(kw_only=True)
@@ -17,7 +17,7 @@ class StarTransactions(BaseType):
 
     __type__: Literal["starTransactions"] = "starTransactions"
 
-    star_count: int
+    star_amount: StarAmount
     """The amount of owned Telegram Stars"""
     transactions: list[StarTransaction]
     """List of transactions with Telegram Stars"""

@@ -15,8 +15,8 @@ class BackgroundFillGradient(BaseType):
     __type__: Literal["backgroundFillGradient"] = "backgroundFillGradient"
 
     top_color: int
-    """A top color of the background in the RGB24 format"""
+    """A top color of the background in the RGB format"""
     bottom_color: int
-    """A bottom color of the background in the RGB24 format"""
+    """A bottom color of the background in the RGB format"""
     rotation_angle: int
     """Clockwise rotation angle of the gradient, in degrees; 0-359. Must always be divisible by 45"""

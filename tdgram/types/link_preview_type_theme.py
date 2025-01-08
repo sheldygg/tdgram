@@ -19,5 +19,5 @@ class LinkPreviewTypeTheme(BaseType):
 
     documents: list[Document]
     """The list of files with theme description"""
-    settings: ThemeSettings
-    """Settings for the cloud theme"""
+    settings: ThemeSettings | None = None
+    """Settings for the cloud theme; may be null if unknown"""

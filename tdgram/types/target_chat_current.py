@@ -9,7 +9,7 @@ from .base import BaseType
 @dataclass(kw_only=True)
 class TargetChatCurrent(BaseType):
     """
-    The currently opened chat needs to be kept
+    The currently opened chat and forum topic must be kept
     """
 
     __type__: Literal["targetChatCurrent"] = "targetChatCurrent"

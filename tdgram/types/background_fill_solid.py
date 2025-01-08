@@ -15,4 +15,4 @@ class BackgroundFillSolid(BaseType):
     __type__: Literal["backgroundFillSolid"] = "backgroundFillSolid"
 
     color: int
-    """A color of the background in the RGB24 format"""
+    """A color of the background in the RGB format"""

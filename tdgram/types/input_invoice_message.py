@@ -17,4 +17,4 @@ class InputInvoiceMessage(BaseType):
     chat_id: int
     """Chat identifier of the message"""
     message_id: int
-    """Message identifier"""
+    """Message identifier. Use messageProperties.can_be_paid to check whether the message can be used in the method"""

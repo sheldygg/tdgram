@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Literal
 
-from ..types import MainWebApp, ThemeParameters
+from ..types import MainWebApp, WebAppOpenParameters
 from .base import BaseMethod
 
 
@@ -22,7 +22,5 @@ class GetMainWebApp(BaseMethod):
     """Identifier of the target bot"""
     start_parameter: str
     """Start parameter from internalLinkTypeMainWebApp"""
-    theme: ThemeParameters | None = None
-    """Preferred Web App theme; pass null to use the default theme"""
-    application_name: str
-    """Short name of the current application; 0-64 English letters, digits, and underscores"""
+    parameters: WebAppOpenParameters
+    """Parameters to use to open the Web App"""

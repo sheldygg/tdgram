@@ -9,7 +9,7 @@ from .base import BaseType
 @dataclass(kw_only=True)
 class UpdateMessageLiveLocationViewed(BaseType):
     """
-    A message with a live location was viewed. When the update is received, the application is supposed to update the live location
+    A message with a live location was viewed. When the update is received, the application is expected to update the live location
     """
 
     __type__: Literal["updateMessageLiveLocationViewed"] = "updateMessageLiveLocationViewed"

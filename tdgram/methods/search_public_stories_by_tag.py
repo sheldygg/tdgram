@@ -16,6 +16,8 @@ class SearchPublicStoriesByTag(BaseMethod):
     __type__: Literal["searchPublicStoriesByTag"] = "searchPublicStoriesByTag"
     __returning_type__ = FoundStories
 
+    story_sender_chat_id: int
+    """Identifier of the chat that posted the stories to search for; pass 0 to search stories in all chats"""
     tag: str
     """Hashtag or cashtag to search for"""
     offset: str
